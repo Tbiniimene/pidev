@@ -1,0 +1,3 @@
+produits_homepage:
+    path:     /
+    defaults: { _controller: produitsBundle:Default:index }

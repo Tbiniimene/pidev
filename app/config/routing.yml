@@ -1,0 +1,27 @@
+evenement:
+    resource: "@evenementBundle/Resources/config/routing.yml"
+    prefix:   /
+
+client:
+    resource: "@clientBundle/Resources/config/routing.yml"
+    prefix:   /
+
+livraison:
+    resource: "@livraisonBundle/Resources/config/routing.yml"
+    prefix:   /
+
+formation:
+    resource: "@formationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+materielle:
+    resource: "@materielleBundle/Resources/config/routing.yml"
+    prefix:   /
+
+produits:
+    resource: "@produitsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
