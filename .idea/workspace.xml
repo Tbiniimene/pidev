@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ce32911-3594-439b-aebf-c370ceacaf14" name="Default Changelist" comment="" />
+    <list default="true" id="6ce32911-3594-439b-aebf-c370ceacaf14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Controller/DefaultController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/config/services.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/about.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/blog.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/cart.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/checkout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/portfolio.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/shop-details.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/shop.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/single-portfolio.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/single-post.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/test.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baseBundle/baseBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/baseBundle/Controller/DefaultControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,34 +55,36 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="html" value="1" />
           <entry key="json" value="2" />
-          <entry key="php" value="10" />
-          <entry key="twig" value="10" />
-          <entry key="yml" value="8" />
+          <entry key="php" value="14" />
+          <entry key="twig" value="41" />
+          <entry key="yml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="10" />
-          <entry key="Twig" value="10" />
-          <entry key="YAML" value="8" />
+          <entry key="PHP" value="14" />
+          <entry key="Twig" value="41" />
+          <entry key="YAML" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="53" />
-          <entry key="twig" value="66" />
-          <entry key="txt" value="27" />
-          <entry key="yml" value="97" />
+          <entry key="php" value="90" />
+          <entry key="twig" value="618" />
+          <entry key="txt" value="33" />
+          <entry key="yml" value="143" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="53" />
-          <entry key="PLAIN_TEXT" value="27" />
-          <entry key="Twig" value="66" />
-          <entry key="YAML" value="97" />
+          <entry key="PHP" value="90" />
+          <entry key="PLAIN_TEXT" value="33" />
+          <entry key="Twig" value="618" />
+          <entry key="YAML" value="143" />
         </counts>
       </usages-collector>
     </session>
@@ -67,24 +92,49 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/about.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="438">
+              <caret line="451" column="11" selection-start-line="451" selection-start-column="11" selection-end-line="451" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="306">
+              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/blog.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -128,6 +178,24 @@
         <option value="$PROJECT_DIR$/src/evenementBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/clientBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/formationBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/cart.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/checkout.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/contact.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/portfolio.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/single-post.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/shop-details.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/shop.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/single-portfolio.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/test.html.twig.html" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/test.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/blog.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/Default/about.html.twig" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Controller/DefaultController.php" />
       </list>
     </option>
   </component>
@@ -184,9 +252,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -207,7 +275,84 @@
             <path>
               <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
               <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
@@ -221,11 +366,20 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="autoload.php&#9;FILE&#9;file://E:/xampp/htdocs/pidev/vendor/autoload.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\pidev\src\baseBundle\Resources\views\Default" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\pidev\src\baseBundle\Resources\views\Default" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -254,32 +408,32 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3014000" />
+    <option name="totallyTimeSpent" value="7438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Command Line Tools Console" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,12 +443,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -455,6 +603,221 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/cart.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="424" column="7" selection-start-line="424" selection-start-column="7" selection-end-line="424" selection-end-column="7" />
+          <folding>
+            <element signature="e#426#431#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#18899#18905#0#HTML" expanded="true" />
+            <element signature="e#19031#19037#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="415" column="7" selection-start-line="415" selection-start-column="7" selection-end-line="415" selection-end-column="7" />
+          <folding>
+            <element signature="e#426#431#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#18213#18219#0#HTML" expanded="true" />
+            <element signature="e#18345#18351#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/single-portfolio.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7293">
+          <caret line="429" column="7" selection-start-line="429" selection-start-column="7" selection-end-line="429" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9319#9324#0#HTML" expanded="true" />
+            <element signature="e#12972#12977#0#HTML" expanded="true" />
+            <element signature="e#13513#13518#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#20286#20292#0#HTML" expanded="true" />
+            <element signature="e#20418#20424#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/shop-details.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="676" column="7" selection-start-line="676" selection-start-column="7" selection-end-line="676" selection-end-column="7" />
+          <folding>
+            <element signature="e#426#431#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ol#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ol#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ol#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#35372#35378#0#HTML" expanded="true" />
+            <element signature="e#35504#35510#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/shop.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="743" column="7" selection-start-line="743" selection-start-column="7" selection-end-line="743" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#38852#38858#0#HTML" expanded="true" />
+            <element signature="e#38984#38990#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/portfolio.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="535" column="8" lean-forward="true" selection-start-line="535" selection-start-column="8" selection-end-line="535" selection-end-column="8" />
+          <folding>
+            <element signature="e#426#431#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#9;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#10;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#11;n#div#1;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#24882#24888#0#HTML" expanded="true" />
+            <element signature="e#25014#25020#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/checkout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="446" column="7" selection-start-line="446" selection-start-column="7" selection-end-line="446" selection-end-column="7" />
+          <folding>
+            <element signature="e#426#431#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#20755#20761#0#HTML" expanded="true" />
+            <element signature="e#20887#20893#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/test.html.twig.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/single-post.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="589" column="43" selection-start-line="589" selection-start-column="43" selection-end-line="589" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/test.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="1054" column="7" selection-start-line="1054" selection-start-column="7" selection-end-line="1054" selection-end-column="7" />
+          <folding>
+            <element signature="e#426#431#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#13188#13193#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#1;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#div#1;n#div#1;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#37206#37211#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#section#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#50111#50117#0#HTML" expanded="true" />
+            <element signature="e#50243#50249#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2195">
+          <caret line="160" column="10" selection-start-line="160" selection-start-column="10" selection-end-line="160" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#13386#13392#0#HTML" expanded="true" />
+            <element signature="e#13518#13524#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/blog.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/Default/about.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="451" column="11" selection-start-line="451" selection-start-column="11" selection-end-line="451" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,11 @@
+base_homepage:
+    path:     /base/index
+    defaults: { _controller: baseBundle:Default:index }
+
+base_blog:
+    path:     /base/blog
+    defaults: { _controller: baseBundle:Default:blog }
+
+base_about:
+    path:     /base/about
+    defaults: { _controller: baseBundle:Default:about }
