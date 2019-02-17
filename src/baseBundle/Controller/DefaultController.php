@@ -60,4 +60,5 @@ class DefaultController extends Controller
     {
         return $this->render('@base/Default/single-post.html.twig');
     }
+
 }
