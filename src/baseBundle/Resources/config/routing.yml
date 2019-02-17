@@ -9,3 +9,35 @@ base_blog:
 base_about:
     path:     /base/about
     defaults: { _controller: baseBundle:Default:about }
+
+base_cart:
+    path:     /base/cart
+    defaults: { _controller: baseBundle:Default:cart }
+
+base_checkout:
+    path:     /base/checkout
+    defaults: { _controller: baseBundle:Default:checkout }
+
+base_contact:
+    path:     /base/contact
+    defaults: { _controller: baseBundle:Default:contact }
+
+base_portfolio:
+    path:     /base/portfolio
+    defaults: { _controller: baseBundle:Default:portfolio }
+
+base_shop:
+    path:     /base/shop
+    defaults: { _controller: baseBundle:Default:shop }
+
+base_shop_details:
+    path:     /base/shop_details
+    defaults: { _controller: baseBundle:Default:shop_details}
+
+base_portfolio_details:
+    path:     /base/portfolio_details
+    defaults: { _controller: baseBundle:Default:portfolio_details}
+
+base_blog_details:
+    path:     /base/blog_details
+    defaults: { _controller: baseBundle:Default:blog_details}

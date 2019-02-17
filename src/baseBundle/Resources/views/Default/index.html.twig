@@ -9,13 +9,13 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+    <title>Secret Garden</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="{{ asset('img/core-img/favicon.ico') }}">
 
     <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 
 </head>
 
@@ -24,7 +24,7 @@
 <div class="preloader d-flex align-items-center justify-content-center">
     <div class="preloader-circle"></div>
     <div class="preloader-img">
-        <img src="img/core-img/leaf.png" alt="">
+        <img src="{{ asset('img/core-img/ss.png') }}" alt="">
     </div>
 </div>
 
@@ -82,7 +82,7 @@
                 <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                     <!-- Nav Brand -->
-                    <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                    <a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/index')}}" class="nav-brand"><img src="{{ asset('img/core-img/sg.png')}}" alt=""></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -100,38 +100,40 @@
                         <!-- Navbar Start -->
                         <div class="classynav">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/index')}}">Home</a></li>
+                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/about')}}">About</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="shop.html">Shop</a>
+                                        <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/index')}}">Home</a></li>
+                                        <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/about')}}">About</a></li>
+                                        <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/shop')}}">Shop</a>
                                             <ul class="dropdown">
-                                                <li><a href="shop.html">Shop</a></li>
-                                                <li><a href="shop-details.html">Shop Details</a></li>
-                                                <li><a href="cart.html">Shopping Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/shop')}}">Shop</a></li>
+                                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/shop_details')}}">Shop Details</a></li>
+                                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/cart')}}">Shopping Cart</a></li>
+                                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/checkout')}}">Checkout</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="portfolio.html">Portfolio</a>
+                                        <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/portfolio')}}">Portfolio</a>
                                             <ul class="dropdown">
-                                                <li><a href="portfolio.html">Portfolio</a></li>
-                                                <li><a href="single-portfolio.html">Portfolio Details</a></li>
+                                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/portfolio')}}">Portfolio</a></li>
+                                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/portfolio_details')}}">Portfolio Details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="blog.html">Blog</a>
+                                        <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/blog')}}">Blog</a>
                                             <ul class="dropdown">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="single-post.html">Blog Details</a></li>
+                                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/blog')}}">Blog</a></li>
+                                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/blog_details')}}">Blog Details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/contact')}}">Contact</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/shop')}}">Shop</a></li>
+                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/contact')}}">Event</a></li>
+                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/contact')}}">Forming</a></li>
+                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/portfolio')}}">Portfolio</a></li>
+                                <li><a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/contact')}}">Contact</a></li>
                             </ul>
 
                             <!-- Search Icon -->
@@ -166,7 +168,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post bg-overlay">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/bg-img/1.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url({{ asset('img/bg-img/1.jpg') }});"></div>
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
@@ -187,7 +189,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post bg-overlay">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/bg-img/2.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url({{ asset('img/bg-img/2.jpg') }});"></div>
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
@@ -230,7 +232,7 @@
                     <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="100ms">
                         <!-- Icon -->
                         <div class="service-icon mr-30">
-                            <img src="img/core-img/s1.png" alt="">
+                            <img src="{{ asset('img/core-img/s1.png') }}" alt="">
                         </div>
                         <!-- Content -->
                         <div class="service-content">
@@ -243,7 +245,7 @@
                     <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="300ms">
                         <!-- Icon -->
                         <div class="service-icon mr-30">
-                            <img src="img/core-img/s2.png" alt="">
+                            <img src="{{ asset('img/core-img/s2.png') }}" alt="">
                         </div>
                         <!-- Content -->
                         <div class="service-content">
@@ -256,7 +258,7 @@
                     <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="500ms">
                         <!-- Icon -->
                         <div class="service-icon mr-30">
-                            <img src="img/core-img/s3.png" alt="">
+                            <img src="{{ asset('img/core-img/s3.png') }}" alt="">
                         </div>
                         <!-- Content -->
                         <div class="service-content">
@@ -270,7 +272,7 @@
 
             <div class="col-12 col-lg-6">
                 <div class="alazea-video-area bg-overlay mb-100">
-                    <img src="img/bg-img/23.jpg" alt="">
+                    <img src="{{ asset('img/bg-img/23.jpg') }}" alt="">
                     <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" class="video-icon">
                         <i class="fa fa-play" aria-hidden="true"></i>
                     </a>
@@ -347,7 +349,7 @@
                         <!-- Single Benefits Area -->
                         <div class="col-12 col-sm-6">
                             <div class="single-benefits-area">
-                                <img src="img/core-img/b1.png" alt="">
+                                <img src="{{ asset('img/core-img/b1.png') }}" alt="">
                                 <h5>Quality Products</h5>
                                 <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
                             </div>
@@ -356,7 +358,7 @@
                         <!-- Single Benefits Area -->
                         <div class="col-12 col-sm-6">
                             <div class="single-benefits-area">
-                                <img src="img/core-img/b2.png" alt="">
+                                <img src="{{ asset('img/core-img/b2.png') }}" alt="">
                                 <h5>Perfect Service</h5>
                                 <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
                             </div>
@@ -365,7 +367,7 @@
                         <!-- Single Benefits Area -->
                         <div class="col-12 col-sm-6">
                             <div class="single-benefits-area">
-                                <img src="img/core-img/b3.png" alt="">
+                                <img src="{{ asset('img/core-img/b3.png') }}" alt="">
                                 <h5>100% Natural</h5>
                                 <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
                             </div>
@@ -374,7 +376,7 @@
                         <!-- Single Benefits Area -->
                         <div class="col-12 col-sm-6">
                             <div class="single-benefits-area">
-                                <img src="img/core-img/b4.png" alt="">
+                                <img src="{{ asset('img/core-img/b4.png') }}" alt="">
                                 <h5>Environmentally friendly</h5>
                                 <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
                             </div>
@@ -905,7 +907,7 @@
 <!-- ##### Contact Area End ##### -->
 
 <!-- ##### Footer Area Start ##### -->
-<footer class="footer-area bg-img" style="background-image: url(img/bg-img/3.jpg);">
+<footer class="footer-area bg-img" style="background-image: url({{ asset('img/bg-img/3.jpg') }});">
     <!-- Main Footer Area -->
     <div class="main-footer-area">
         <div class="container">
@@ -1041,15 +1043,15 @@
 
 <!-- ##### All Javascript Files ##### -->
 <!-- jQuery-2.2.4 js -->
-<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="{{ asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
 <!-- Popper js -->
-<script src="js/bootstrap/popper.min.js"></script>
+<script src="{{ asset('js/bootstrap/popper.min.js')}}"></script>
 <!-- Bootstrap js -->
-<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="{{ asset('js/bootstrap/bootstrap.min.js')}}"></script>
 <!-- All Plugins js -->
-<script src="js/plugins/plugins.js"></script>
+<script src="{{ asset('js/plugins/plugins.js')}}"></script>
 <!-- Active js -->
-<script src="js/active.js"></script>
+<script src="{{ asset('js/active.js')}}"></script>
 </body>
 
 </html>
