@@ -82,7 +82,7 @@
                 <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                     <!-- Nav Brand -->
-                    <a href="{{ path('base_homepage')}}" class="nav-brand"><img src="{{ asset('img/core-img/sg.png')}}" alt=""></a>
+                    <a href="{{ asset('http://localhost/pidev/web/app_dev.php/base/index')}}" class="nav-brand"><img src="{{ asset('img/core-img/sg.png')}}" alt=""></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -107,13 +107,15 @@
                                         <li><a href="{{ path('base_homepage')}}">Home</a></li>
                                         <li><a href="{{ path('base_about')}}">About</a></li>
                                         <li><a href="{{ path('base_shop')}}">Shop</a>
-                                          <ul class="dropdown">
+                                            <ul class="dropdown">
                                                 <li><a href="{{ path('base_shop')}}">Shop</a></li>
                                                 <li><a href="{{ path('base_shop_details')}}">Shop Details</a></li>
                                                 <li><a href="{{ path('base_cart')}}">Shopping Cart</a></li>
                                                 <li><a href="{{ path('base_checkout')}}">Checkout</a></li>
                                             </ul>
                                         </li>
+                                        <li><a href="{{ path('base_event')}}">Event</a></li>
+                                        <li><a href="{{ path('base_contact')}}">Forming</a></li>
                                         <li><a href="{{ path('base_portfolio')}}">Portfolio</a>
                                             <ul class="dropdown">
                                                 <li><a href="{{ path('base_portfolio')}}">Portfolio</a>
@@ -130,9 +132,8 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{ path('base_shop')}}">Shop</a></li>
-                                <li><a href="{{ path('base_contact')}}">Event</a></li>
+                                <li><a href="{{ path('base_event')}}">Event</a></li>
                                 <li><a href="{{ path('base_contact')}}">Forming</a></li>
-                                <li><a href="{{ path('base_portfolio')}}">Portfolio</a>
                                 <li><a href="{{ path('base_contact')}}">Contact</a></li>
                             </ul>
 

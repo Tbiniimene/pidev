@@ -61,4 +61,9 @@ class DefaultController extends Controller
         return $this->render('@base/Default/single-post.html.twig');
     }
 
+    public function eventAction()
+    {
+        return $this->render('@base/Default/event.html.twig');
+    }
+
 }

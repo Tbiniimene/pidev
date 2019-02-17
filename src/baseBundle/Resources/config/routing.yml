@@ -41,3 +41,7 @@ base_portfolio_details:
 base_blog_details:
     path:     /base/blog_details
     defaults: { _controller: baseBundle:Default:blog_details}
+
+base_event:
+    path:     /base/event
+    defaults: { _controller: baseBundle:Default:event}
