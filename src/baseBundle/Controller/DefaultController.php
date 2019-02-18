@@ -66,4 +66,9 @@ class DefaultController extends Controller
         return $this->render('@base/Default/event.html.twig');
     }
 
+    public function loginAction()
+    {
+        return $this->render('@base/Default/login.html.twig');
+    }
+
 }
