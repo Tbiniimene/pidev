@@ -49,3 +49,35 @@ base_event:
 base_login:
     path:     /base/login
     defaults: { _controller: baseBundle:Default:login}
+
+admin_404:
+    path:     /admin/404
+    defaults: { _controller: baseBundle:Admin:a404}
+
+admin_blank:
+    path:     /admin/blank
+    defaults: { _controller: baseBundle:Admin:blank}
+
+admin_charts:
+    path:     /admin/charts
+    defaults: { _controller: baseBundle:Admin:charts}
+
+admin_pass:
+    path:     /admin/pass
+    defaults: { _controller: baseBundle:Admin:pass}
+
+admin_index:
+    path:     /admin/index
+    defaults: { _controller: baseBundle:Admin:index}
+
+admin_login:
+    path:     /admin/login
+    defaults: { _controller: baseBundle:Admin:login}
+
+admin_register:
+    path:     /admin/register
+    defaults: { _controller: baseBundle:Admin:register}
+
+admin_tables:
+    path:     /admin/tables
+    defaults: { _controller: baseBundle:Admin:tables}
