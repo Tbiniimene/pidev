@@ -16,20 +16,28 @@ use FOS\UserBundle\Model\User as BaseUser;
  */
 class User extends BaseUser
 {
+
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
-    protected $id;
+    protected $cin;
 
     /**
      * @return mixed
      */
-    public function getId()
+    public function getCin()
     {
-        return $this->id;
+        return $this->cin;
     }
 
+    /**
+     * @param mixed $cin
+     */
+    public function setCin($cin)
+    {
+        $this->cin = $cin;
+    }
+    
 
 }
