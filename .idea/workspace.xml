@@ -2,27 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce32911-3594-439b-aebf-c370ceacaf14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Commande.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/CommandeJardinier.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Couffin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/DetailCommande.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/DetailCouffin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/DetailMateriel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/DetailReservationMateriel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Disponibilite.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Livraison.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Materiels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantsEvenement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Produits.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/ReservationMateriel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Stand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/CommandeJardinier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/CommandeJardinier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Couffin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Couffin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/DetailCommande.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/DetailCommande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/DetailCouffin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/DetailCouffin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/DetailMateriel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/DetailMateriel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/DetailReservationMateriel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/DetailReservationMateriel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Disponibilite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Disponibilite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Livraison.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Livraison.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Materiels.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Materiels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantsEvenement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantsEvenement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Produits.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Produits.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/ReservationMateriel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/ReservationMateriel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Stand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Stand.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +70,7 @@
         <counts>
           <entry key="html" value="1" />
           <entry key="json" value="4" />
-          <entry key="php" value="42" />
+          <entry key="php" value="61" />
           <entry key="twig" value="48" />
           <entry key="yml" value="17" />
         </counts>
@@ -81,7 +79,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="42" />
+          <entry key="PHP" value="61" />
           <entry key="Twig" value="48" />
           <entry key="YAML" value="17" />
         </counts>
@@ -89,7 +87,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="26" />
-          <entry key="php" value="208" />
+          <entry key="php" value="218" />
           <entry key="twig" value="838" />
           <entry key="txt" value="79" />
           <entry key="yml" value="277" />
@@ -98,7 +96,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="26" />
-          <entry key="PHP" value="208" />
+          <entry key="PHP" value="218" />
           <entry key="PLAIN_TEXT" value="79" />
           <entry key="Twig" value="838" />
           <entry key="YAML" value="277" />
@@ -153,15 +151,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/User.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2618">
-              <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="4" />
-              <folding>
-                <element signature="e#6#86#0#PHP" expanded="true" />
-                <element signature="e#117#149#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Disponibilite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailReservationMateriel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailMateriel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailCouffin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailCommande.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Couffin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/CommandeJardinier.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Commande.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -246,26 +321,26 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Commande.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/CommandeJardinier.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Couffin.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailCommande.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailCouffin.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailMateriel.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailReservationMateriel.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Disponibilite.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Livraison.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Materiels.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantsEvenement.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Produits.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/ReservationMateriel.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Stand.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Stand.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/ReservationMateriel.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Produits.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantsEvenement.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Materiels.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Livraison.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Disponibilite.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailReservationMateriel.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailMateriel.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailCouffin.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailCommande.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Couffin.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/CommandeJardinier.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Commande.php" />
       </list>
     </option>
   </component>
@@ -470,7 +545,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41448000" />
+    <option name="totallyTimeSpent" value="41749000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -702,147 +777,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Commande.php">
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/CommandeJardinier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Couffin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailCommande.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailCouffin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailMateriel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailReservationMateriel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Disponibilite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="180" selection-start-line="180" selection-end-line="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Livraison.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="180" selection-start-line="180" selection-end-line="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Materiels.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="177" selection-start-line="177" selection-end-line="177" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ParticipantsEvenement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Produits.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ReservationMateriel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
+        <state relative-caret-position="136">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-end-line="9" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <element signature="e#117#149#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Stand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ReservationMateriel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="4" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-            <element signature="e#117#149#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Produits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ParticipantsEvenement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Materiels.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Livraison.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Disponibilite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailReservationMateriel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailMateriel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailCouffin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/DetailCommande.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Couffin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/CommandeJardinier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Commande.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
