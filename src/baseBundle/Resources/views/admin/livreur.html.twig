@@ -1,5 +1,5 @@
 {% extends '@base/admin/base.html.twig' %}
-{% block title %}Admin - Blank{% endblock %}
+{% block title %}Admin - Livreur{% endblock %}
 {% block body %}
 
 <div id="content-wrapper">
@@ -9,16 +9,24 @@
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="index.html">Dashboard</a>
+                    <a href="{{ path('admin_index') }}">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">Blank Page</li>
+                <li class="breadcrumb-item active">Ajouter Livreur</li>
             </ol>
 
             <!-- Page Content -->
-            <h1>Blank Page</h1>
+            <h1>Ajouter Livreur</h1>
             <hr>
-            <p>This is a great starting point for new custom pages.</p>
+            {{ form_start(form) }}
 
+            Nom Livreur :  {{ form_widget(form.nom) }} <br/><br/>
+            Prenom Livreur :  {{ form_widget(form.prenom) }}<br/><br/>
+            Numéro du Téléphone Livreur :  {{ form_widget(form.tel) }}<br/><br/>
+            Localisation du Livreur :  {{ form_widget(form.localisation) }}<br/><br/>
+
+            {{ form_widget(form.Ajouter)}}
+
+            {{ form_end(form) }}
         </div>
         <!-- /.container-fluid -->
 

@@ -81,3 +81,15 @@ admin_register:
 admin_tables:
     path:     /admin/tables
     defaults: { _controller: baseBundle:Admin:tables}
+
+admin_livreur:
+    path:     /admin/livreur
+    defaults: { _controller: baseBundle:Admin:livreur}
+
+admin_listeLivreur:
+    path:     /admin/listeLivreur
+    defaults: { _controller: baseBundle:Admin:listeLivreur}
+
+admin_supprimerLivreur:
+    path:     /admin/supprimerLivreur
+    defaults: { _controller: baseBundle:Admin:supprimerLivreur}
