@@ -84,12 +84,16 @@ admin_tables:
 
 admin_livreur:
     path:     /admin/livreur
-    defaults: { _controller: baseBundle:Admin:livreur}
+    defaults: { _controller: baseBundle:Livreur:livreur}
 
 admin_listeLivreur:
     path:     /admin/listeLivreur
-    defaults: { _controller: baseBundle:Admin:listeLivreur}
+    defaults: { _controller: baseBundle:Livreur:listeLivreur}
 
 admin_supprimerLivreur:
     path:     /admin/supprimerLivreur
-    defaults: { _controller: baseBundle:Admin:supprimerLivreur}
+    defaults: { _controller: baseBundle:Livreur:supprimerLivreur}
+
+admin_deleteLivreur:
+    path:     /admin/deleteLivreur/{id}
+    defaults: { _controller: baseBundle:Livreur:deleteLivreur}

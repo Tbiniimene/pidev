@@ -22,4 +22,14 @@ $(document).ready(function ()
         //href="{{ path('reserver',{'idHotel':v.id}) }}"
         var toDelete=$(this).attr("data-delete");
     });
+
+    $("#suppLiv").on("click",function(){
+
+        var hr="{{ path('admin_deleteLivreur',{'id':'4'}) }}";
+        //hr.replace("x","4");
+        $(this).attr("href",hr);
+        alert($(this).attr("href"));
+
+    });
+
 });
