@@ -17,15 +17,25 @@
             <!-- Page Content -->
             <h1>Ajouter Livreur</h1>
             <hr>
+            <div class="form-group">
             {{ form_start(form) }}
+            Nom Livreur :
+                {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
 
-            Nom Livreur :  {{ form_widget(form.nom) }} <br/><br/>
-            Prenom Livreur :  {{ form_widget(form.prenom) }}<br/><br/>
-            Numéro du Téléphone Livreur :  {{ form_widget(form.tel) }}<br/><br/>
-            Localisation du Livreur :  {{ form_widget(form.localisation) }}<br/><br/>
+                Prenom Livreur :
+                {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
 
-            {{ form_widget(form.Ajouter)}}
+                    Numéro du Téléphone Livreur :
+                {{ form_widget(form.tel, {'attr': {'class': 'form-control'}}) }}
 
+            Localisation du Livreur :
+                {{ form_widget(form.localisation, {'attr': {'class': 'form-control'}}) }}
+
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-2"><br/>
+                        {{ form_widget(form.Ajouter, {'attr': {'class': 'btn btn-primary form-control'}})}}
+                    </div>
+                </div>
             {{ form_end(form) }}
         </div>
         <!-- /.container-fluid -->

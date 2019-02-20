@@ -52,7 +52,7 @@ class LivreurController extends Controller
 
     public function deleteLivreurAction($id)
     {
-        //1-2-3-4
+
         if($id!='null')
         {
             $livs = explode("-", $id);
