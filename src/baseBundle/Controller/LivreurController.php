@@ -52,12 +52,20 @@ class LivreurController extends Controller
 
     public function deleteLivreurAction($id)
     {
+        //1-2-3-4
+        if($id!='null')
+        {
+            $livs = explode("-", $id);
+            foreach($livs as $l)
+            {
+                $em = $this->getDoctrine()->getManager();
+                $livreur = $em->getRepository(Livreur::class)->find($l);
+                $em->remove($livreur);
+                $em->flush();
+            }
 
+        }
 
-        $em = $this->getDoctrine()->getManager();
-        $livreur = $em->getRepository(Livreur::class)->find($id);
-        $em->remove($livreur);
-        $em->flush();
         return $this->redirectToRoute('admin_supprimerLivreur');
 
     }

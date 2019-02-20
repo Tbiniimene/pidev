@@ -26,9 +26,10 @@
             <h1>Supprimer des livreurs</h1>
             <hr>
     <div class="card mb-3">
-        <a class="card-header">
+        <div class="card-header">
             <i class="fas fa-table"></i>
-            Liste des Livreurs : Selectionner des livreurs à supprimer  <a class="btn btn-danger float-right" id="suppLiv" href="" />Supprimer</a>
+            Liste des Livreurs : Selectionner des livreurs à supprimer
+            <span ><a class="btn btn-danger float-right" id="suppLiv" href="" hidden>Supprimer</a>  </span>
         </div>
         <div class="card-body">
             <div class="table-responsive table-hover">
@@ -53,7 +54,7 @@
                     </tfoot>
                     <tbody>
                     {% for v in livreurs %}
-                        <tr class="clickable-row" data-delete="false" data="{{ v.idLivreur }}">
+                        <tr class="clickable-row" data="{{ v.idLivreur }}">
                             <td>{{ v.nom }}</td>
                             <td>{{ v.prenom }}</td>
                             <td>{{ v.etat }}</td>

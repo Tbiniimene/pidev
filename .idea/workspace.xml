@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce32911-3594-439b-aebf-c370ceacaf14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseBundle/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/supprimerLivreur.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/supprimerLivreur.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js" afterDir="false" />
     </list>
@@ -62,7 +59,7 @@
           <entry key="js" value="1" />
           <entry key="json" value="4" />
           <entry key="php" value="70" />
-          <entry key="twig" value="64" />
+          <entry key="twig" value="65" />
           <entry key="yml" value="20" />
         </counts>
       </usages-collector>
@@ -73,28 +70,28 @@
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="1" />
           <entry key="PHP" value="70" />
-          <entry key="Twig" value="64" />
+          <entry key="Twig" value="65" />
           <entry key="YAML" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="327" />
+          <entry key="js" value="914" />
           <entry key="json" value="26" />
-          <entry key="php" value="596" />
-          <entry key="twig" value="2388" />
+          <entry key="php" value="678" />
+          <entry key="twig" value="2494" />
           <entry key="txt" value="116" />
-          <entry key="yml" value="385" />
+          <entry key="yml" value="391" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="26" />
-          <entry key="JavaScript" value="327" />
-          <entry key="PHP" value="596" />
+          <entry key="JavaScript" value="914" />
+          <entry key="PHP" value="678" />
           <entry key="PLAIN_TEXT" value="116" />
-          <entry key="Twig" value="2388" />
-          <entry key="YAML" value="385" />
+          <entry key="Twig" value="2494" />
+          <entry key="YAML" value="391" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -167,11 +164,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+            <state relative-caret-position="396">
+              <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -185,11 +182,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/supprimerLivreur.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="527">
+              <caret line="31" column="84" lean-forward="true" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/tables.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -197,8 +203,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="34" />
+            <state relative-caret-position="624">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
@@ -206,8 +212,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="96" column="19" selection-start-line="96" selection-end-line="96" selection-end-column="19" />
+            <state relative-caret-position="5">
+              <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -309,12 +315,12 @@
         <option value="$PROJECT_DIR$/src/baseBundle/Form/LivreurType.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/livreur.html.twig" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/listeLivreur.html.twig" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/baseBundle/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/supprimerLivreur.html.twig" />
-        <option value="$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" />
+        <option value="$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/supprimerLivreur.html.twig" />
       </list>
     </option>
   </component>
@@ -555,12 +561,12 @@
       <workItem from="1550487454979" duration="6347000" />
       <workItem from="1550530479619" duration="3294000" />
       <workItem from="1550582184612" duration="4767000" />
-      <workItem from="1550680272070" duration="14431000" />
+      <workItem from="1550680272070" duration="18360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56180000" />
+    <option name="totallyTimeSpent" value="60109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -884,13 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/tables.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="506" column="18" selection-start-line="501" selection-start-column="28" selection-end-line="506" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -921,10 +920,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/supprimerLivreur.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="255">
+          <caret line="108" column="55" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/tables.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -935,31 +955,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="108" column="55" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="96" column="19" selection-start-line="96" selection-end-line="96" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="34" />
+        <state relative-caret-position="624">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php">
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/supprimerLivreur.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+        <state relative-caret-position="527">
+          <caret line="31" column="84" lean-forward="true" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
         </state>
       </provider>
     </entry>
