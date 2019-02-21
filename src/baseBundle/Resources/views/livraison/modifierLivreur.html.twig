@@ -1,0 +1,131 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Modifier des livreurs{% endblock %}
+{% block body %}
+    <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin/customJs/modifierLivreur.js') }}"></script>
+
+
+    <style>
+        .clickable-row{
+            cursor: pointer;
+        }
+    </style>
+<div id="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{ path('admin_index') }}">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Modifier livreur</li>
+            </ol>
+
+            <!-- Page Content -->
+            <h1>Modifier des livreurs</h1>
+            <hr>
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Liste des Livreurs : Selectionner Le livreur à modifier
+            <span ><a class="btn btn-warning float-right" id="modifLiv" data-toggle="modal" data-target="#modifModal" href="" hidden>Modifier</a>  </span>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive table-hover">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Etat</th>
+                        <th>Téléphone</th>
+                        <th>Localisation</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Etat</th>
+                        <th>Téléphone</th>
+                        <th>Localisation</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for v in livreurs %}
+                        <tr class="clickable-row" data="{{ v.idLivreur }}">
+                            <td>{{ v.nom }}</td>
+                            <td>{{ v.prenom }}</td>
+                            <td>{{ v.etat }}</td>
+                            <td>{{ v.tel }}</td>
+                            <td>{{ v.localisation }}</td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+            <div class="modal fade" id="modifModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Modifier Livreur</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <form method="post" name="modifForm" id="modifForm" action="">
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                                <div class="form-group">
+
+                                <label>Nouveau Nom: </label>
+                                <input type="text" id="nomLiv" class="form-control"/>
+                                    <label>Nouveau Prenom : </label>
+                                <input type="text" id="prenomLiv" class="form-control" />
+                                    <label>Nouveau Etat : </label>
+                                    <select class="form-control" id="etatLiv">
+                                        <option>disponible</option>
+                                        <option>non disponible</option>
+
+                                    </select>
+                                    <label>Nouveau numero de Téléphone : </label>
+                                <input type="number" id="telLiv" class="form-control"/>
+                                    <label>Nouvelle Localisation: </label>
+                                <textarea type="text" id="localisationLiv" class="form-control" ></textarea>
+                                </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                           <input type="submit" class="btn btn-success" id="btnSubmitModif" onclick="submitModif()" value="Submit" /> <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+{% endblock %}

@@ -113,3 +113,12 @@ delete_event:
 change_event:
     path:     /admin/change/{id}
     defaults: { _controller: baseBundle:Event:change }
+
+admin_modifierLivreur:
+    path:     /admin/modifierLivreur
+    defaults: { _controller: baseBundle:Livreur:modifierLivreur}
+
+admin_updateLivreur:
+    path:     /admin/updateLivreur/{id}
+    defaults: { _controller: baseBundle:Livreur:updateLivreur}
+

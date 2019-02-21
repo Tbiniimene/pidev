@@ -25,7 +25,7 @@ class LivreurController extends Controller
             $em->flush();
             return $this->redirectToRoute('admin_listeLivreur');
         }
-        return $this->render('@base/Admin/livreur.html.twig', array(
+        return $this->render('@base/livraison/livreur.html.twig', array(
             'form' => $form->createView()
         ));
 
@@ -33,7 +33,7 @@ class LivreurController extends Controller
     public function listeLivreurAction()
     {
         $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
-        return $this->render('@base/Admin/listeLivreur.html.twig', array(
+        return $this->render('@base/livraison/listeLivreur.html.twig', array(
             'livreurs' => $livreurs
         ));
 
@@ -44,7 +44,7 @@ class LivreurController extends Controller
 
 
         $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
-        return $this->render('@base/Admin/supprimerLivreur.html.twig', array(
+        return $this->render('@base/livraison/supprimerLivreur.html.twig', array(
             'livreurs' => $livreurs
         ));
 
@@ -69,5 +69,47 @@ class LivreurController extends Controller
         return $this->redirectToRoute('admin_supprimerLivreur');
 
     }
+
+    public function modifierLivreurAction()
+    {
+
+
+        $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
+        return $this->render('@base/livraison/modifierLivreur.html.twig', array(
+            'livreurs' => $livreurs
+        ));
+
+    }
+
+    public function updateLivreurAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $livreur = $em->getRepository(Livreur::class)->find($id);
+        $nom = $_POST["nomLiv"];
+        $prenom = $_POST["prenomLiv"];
+        $etat= $_POST["etatLiv"];
+        $tel = $_POST["telLiv"];
+        $local = $_POST["localisationLiv"];
+
+            $livreur->setNom($nom);
+            $livreur->setPrenom($prenom);
+            $livreur->setEtat($etat);
+            $livreur->setTel($tel);
+            $livreur->setLocalisation($local);
+
+
+            $em->persist($livreur);
+            $em->flush();
+            return $this->redirectToRoute("admin_listeLivreur");
+
+
+        /*  $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
+          return $this->render('@base/livraison/modifierLivreur.html.twig', array(
+              'livreurs' => $livreurs
+          ));
+         */
+    }
+
+
 
 }
