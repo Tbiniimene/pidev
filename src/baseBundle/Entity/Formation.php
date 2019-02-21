@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -65,118 +65,6 @@ class Formation
      * })
      */
     private $idFormateur;
-
-    /**
-     * @return int
-     */
-    public function getIdFormation()
-    {
-        return $this->idFormation;
-    }
-
-    /**
-     * @param int $idFormation
-     */
-    public function setIdFormation($idFormation)
-    {
-        $this->idFormation = $idFormation;
-    }
-
-    /**
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param string $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    /**
-     * @param string $nom
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-    }
-
-    /**
-     * @return float
-     */
-    public function getPrix()
-    {
-        return $this->prix;
-    }
-
-    /**
-     * @param float $prix
-     */
-    public function setPrix($prix)
-    {
-        $this->prix = $prix;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateDeb()
-    {
-        return $this->dateDeb;
-    }
-
-    /**
-     * @param \DateTime $dateDeb
-     */
-    public function setDateDeb($dateDeb)
-    {
-        $this->dateDeb = $dateDeb;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateFin()
-    {
-        return $this->dateFin;
-    }
-
-    /**
-     * @param \DateTime $dateFin
-     */
-    public function setDateFin($dateFin)
-    {
-        $this->dateFin = $dateFin;
-    }
-
-    /**
-     * @return \Formateur
-     */
-    public function getIdFormateur()
-    {
-        return $this->idFormateur;
-    }
-
-    /**
-     * @param \Formateur $idFormateur
-     */
-    public function setIdFormateur($idFormateur)
-    {
-        $this->idFormateur = $idFormateur;
-    }
 
 
 }

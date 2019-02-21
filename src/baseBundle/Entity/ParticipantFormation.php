@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -53,86 +53,6 @@ class ParticipantFormation
      * })
      */
     private $idFormation;
-
-    /**
-     * @return int
-     */
-    public function getCin()
-    {
-        return $this->cin;
-    }
-
-    /**
-     * @param int $cin
-     */
-    public function setCin($cin)
-    {
-        $this->cin = $cin;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    /**
-     * @param string $nom
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
-
-    /**
-     * @param string $prenom
-     */
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTel()
-    {
-        return $this->tel;
-    }
-
-    /**
-     * @param int $tel
-     */
-    public function setTel($tel)
-    {
-        $this->tel = $tel;
-    }
-
-    /**
-     * @return \Formation
-     */
-    public function getIdFormation()
-    {
-        return $this->idFormation;
-    }
-
-    /**
-     * @param \Formation $idFormation
-     */
-    public function setIdFormation($idFormation)
-    {
-        $this->idFormation = $idFormation;
-    }
 
 
 }

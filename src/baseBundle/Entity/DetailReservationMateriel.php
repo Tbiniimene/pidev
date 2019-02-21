@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -32,38 +32,6 @@ class DetailReservationMateriel
      * })
      */
     private $idM;
-
-    /**
-     * @return int
-     */
-    public function getIdDrm()
-    {
-        return $this->idDrm;
-    }
-
-    /**
-     * @param int $idDrm
-     */
-    public function setIdDrm($idDrm)
-    {
-        $this->idDrm = $idDrm;
-    }
-
-    /**
-     * @return \Materiels
-     */
-    public function getIdM()
-    {
-        return $this->idM;
-    }
-
-    /**
-     * @param \Materiels $idM
-     */
-    public function setIdM($idM)
-    {
-        $this->idM = $idM;
-    }
 
 
 }

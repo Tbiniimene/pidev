@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -65,118 +65,6 @@ class Couffin
      * })
      */
     private $idDc;
-
-    /**
-     * @return int
-     */
-    public function getIdCouffin()
-    {
-        return $this->idCouffin;
-    }
-
-    /**
-     * @param int $idCouffin
-     */
-    public function setIdCouffin($idCouffin)
-    {
-        $this->idCouffin = $idCouffin;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateDeb()
-    {
-        return $this->dateDeb;
-    }
-
-    /**
-     * @param \DateTime $dateDeb
-     */
-    public function setDateDeb($dateDeb)
-    {
-        $this->dateDeb = $dateDeb;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateFin()
-    {
-        return $this->dateFin;
-    }
-
-    /**
-     * @param \DateTime $dateFin
-     */
-    public function setDateFin($dateFin)
-    {
-        $this->dateFin = $dateFin;
-    }
-
-    /**
-     * @return int
-     */
-    public function getQte()
-    {
-        return $this->qte;
-    }
-
-    /**
-     * @param int $qte
-     */
-    public function setQte($qte)
-    {
-        $this->qte = $qte;
-    }
-
-    /**
-     * @return float
-     */
-    public function getPrix()
-    {
-        return $this->prix;
-    }
-
-    /**
-     * @param float $prix
-     */
-    public function setPrix($prix)
-    {
-        $this->prix = $prix;
-    }
-
-    /**
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param string $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * @return \DetailCouffin
-     */
-    public function getIdDc()
-    {
-        return $this->idDc;
-    }
-
-    /**
-     * @param \DetailCouffin $idDc
-     */
-    public function setIdDc($idDc)
-    {
-        $this->idDc = $idDc;
-    }
 
 
 }

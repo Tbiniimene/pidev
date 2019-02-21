@@ -2,12 +2,14 @@
 # https://symfony.com/doc/current/security.html
 security:
     encoders:
-        baseBundle\Entity\User: bcrypt
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
         fos_userbundle:
             id: fos_user.user_provider.username
+
 
 
     firewalls:
@@ -25,3 +27,5 @@ security:
 
             logout:       true
             anonymous:    true
+
+

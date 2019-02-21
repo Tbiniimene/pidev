@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -34,54 +34,6 @@ class Stand
      * @ORM\Column(name="description", type="text", length=65535, nullable=false)
      */
     private $description;
-
-    /**
-     * @return int
-     */
-    public function getIdStand()
-    {
-        return $this->idStand;
-    }
-
-    /**
-     * @param int $idStand
-     */
-    public function setIdStand($idStand)
-    {
-        $this->idStand = $idStand;
-    }
-
-    /**
-     * @return int
-     */
-    public function getStatutStand()
-    {
-        return $this->statutStand;
-    }
-
-    /**
-     * @param int $statutStand
-     */
-    public function setStatutStand($statutStand)
-    {
-        $this->statutStand = $statutStand;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param string $description
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
 
 
 }

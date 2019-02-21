@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -50,90 +50,10 @@ class Commande
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_client", referencedColumnName="cin")
+     *   @ORM\JoinColumn(name="id_client", referencedColumnName="id")
      * })
      */
     private $idClient;
-
-    /**
-     * @return int
-     */
-    public function getIdCommandeP()
-    {
-        return $this->idCommandeP;
-    }
-
-    /**
-     * @param int $idCommandeP
-     */
-    public function setIdCommandeP($idCommandeP)
-    {
-        $this->idCommandeP = $idCommandeP;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateCmd()
-    {
-        return $this->dateCmd;
-    }
-
-    /**
-     * @param \DateTime $dateCmd
-     */
-    public function setDateCmd($dateCmd)
-    {
-        $this->dateCmd = $dateCmd;
-    }
-
-    /**
-     * @return float
-     */
-    public function getPrix()
-    {
-        return $this->prix;
-    }
-
-    /**
-     * @param float $prix
-     */
-    public function setPrix($prix)
-    {
-        $this->prix = $prix;
-    }
-
-    /**
-     * @return \DetailCommande
-     */
-    public function getIdDc()
-    {
-        return $this->idDc;
-    }
-
-    /**
-     * @param \DetailCommande $idDc
-     */
-    public function setIdDc($idDc)
-    {
-        $this->idDc = $idDc;
-    }
-
-    /**
-     * @return \User
-     */
-    public function getIdClient()
-    {
-        return $this->idClient;
-    }
-
-    /**
-     * @param \User $idClient
-     */
-    public function setIdClient($idClient)
-    {
-        $this->idClient = $idClient;
-    }
 
 
 }

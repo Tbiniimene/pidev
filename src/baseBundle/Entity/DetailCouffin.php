@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -39,54 +39,6 @@ class DetailCouffin
      * })
      */
     private $idProduit;
-
-    /**
-     * @return int
-     */
-    public function getIdDc()
-    {
-        return $this->idDc;
-    }
-
-    /**
-     * @param int $idDc
-     */
-    public function setIdDc($idDc)
-    {
-        $this->idDc = $idDc;
-    }
-
-    /**
-     * @return int
-     */
-    public function getQte()
-    {
-        return $this->qte;
-    }
-
-    /**
-     * @param int $qte
-     */
-    public function setQte($qte)
-    {
-        $this->qte = $qte;
-    }
-
-    /**
-     * @return \Produits
-     */
-    public function getIdProduit()
-    {
-        return $this->idProduit;
-    }
-
-    /**
-     * @param \Produits $idProduit
-     */
-    public function setIdProduit($idProduit)
-    {
-        $this->idProduit = $idProduit;
-    }
 
 
 }

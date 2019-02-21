@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -62,118 +62,6 @@ class Evenement
      * @ORM\Column(name="nb_stand", type="integer", nullable=false)
      */
     private $nbStand;
-
-    /**
-     * @return int
-     */
-    public function getIdEvenement()
-    {
-        return $this->idEvenement;
-    }
-
-    /**
-     * @param int $idEvenement
-     */
-    public function setIdEvenement($idEvenement)
-    {
-        $this->idEvenement = $idEvenement;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateDeb()
-    {
-        return $this->dateDeb;
-    }
-
-    /**
-     * @param \DateTime $dateDeb
-     */
-    public function setDateDeb($dateDeb)
-    {
-        $this->dateDeb = $dateDeb;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateFin()
-    {
-        return $this->dateFin;
-    }
-
-    /**
-     * @param \DateTime $dateFin
-     */
-    public function setDateFin($dateFin)
-    {
-        $this->dateFin = $dateFin;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    /**
-     * @param string $nom
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAddresse()
-    {
-        return $this->addresse;
-    }
-
-    /**
-     * @param string $addresse
-     */
-    public function setAddresse($addresse)
-    {
-        $this->addresse = $addresse;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param string $description
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * @return int
-     */
-    public function getNbStand()
-    {
-        return $this->nbStand;
-    }
-
-    /**
-     * @param int $nbStand
-     */
-    public function setNbStand($nbStand)
-    {
-        $this->nbStand = $nbStand;
-    }
 
 
 }

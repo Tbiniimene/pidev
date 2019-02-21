@@ -2,13 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: ASUS
- * Date: 19/02/2019
- * Time: 00:24
+ * Date: 21/02/2019
+ * Time: 02:51
  */
 
 namespace baseBundle\Entity;
-use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+
 
 /**
  * @ORM\Entity
@@ -17,9 +18,17 @@ use FOS\UserBundle\Model\User as BaseUser;
 class User extends BaseUser
 {
 
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+
+    /**
+     * @ORM\Column(name="cin", type="integer", nullable=false)
      */
     protected $cin;
 
@@ -58,22 +67,6 @@ class User extends BaseUser
     /**
      * @return string
      */
-    public function getUsernameCanonical()
-    {
-        return $this->usernameCanonical;
-    }
-
-    /**
-     * @param string $usernameCanonical
-     */
-    public function setUsernameCanonical($usernameCanonical)
-    {
-        $this->usernameCanonical = $usernameCanonical;
-    }
-
-    /**
-     * @return string
-     */
     public function getEmail()
     {
         return $this->email;
@@ -85,38 +78,6 @@ class User extends BaseUser
     public function setEmail($email)
     {
         $this->email = $email;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEmailCanonical()
-    {
-        return $this->emailCanonical;
-    }
-
-    /**
-     * @param string $emailCanonical
-     */
-    public function setEmailCanonical($emailCanonical)
-    {
-        $this->emailCanonical = $emailCanonical;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isEnabled()
-    {
-        return $this->enabled;
-    }
-
-    /**
-     * @param bool $enabled
-     */
-    public function setEnabled($enabled)
-    {
-        $this->enabled = $enabled;
     }
 
     /**
@@ -134,32 +95,6 @@ class User extends BaseUser
     {
         $this->password = $password;
     }
-
-    /**
-     * @return string
-     */
-    public function getPlainPassword()
-    {
-        return $this->plainPassword;
-    }
-
-    /**
-     * @param string $plainPassword
-     */
-    public function setPlainPassword($plainPassword)
-    {
-        $this->plainPassword = $plainPassword;
-    }
-
-    /**
-     * @return \DateTime|null
-     */
-    public function getLastLogin()
-    {
-        return $this->lastLogin;
-    }
-
-    
 
 
 }

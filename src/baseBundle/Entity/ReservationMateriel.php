@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -57,106 +57,10 @@ class ReservationMateriel
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_client", referencedColumnName="cin")
+     *   @ORM\JoinColumn(name="id_client", referencedColumnName="id")
      * })
      */
     private $idClient;
-
-    /**
-     * @return int
-     */
-    public function getIdRes()
-    {
-        return $this->idRes;
-    }
-
-    /**
-     * @param int $idRes
-     */
-    public function setIdRes($idRes)
-    {
-        $this->idRes = $idRes;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateDebut()
-    {
-        return $this->dateDebut;
-    }
-
-    /**
-     * @param \DateTime $dateDebut
-     */
-    public function setDateDebut($dateDebut)
-    {
-        $this->dateDebut = $dateDebut;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDateFin()
-    {
-        return $this->dateFin;
-    }
-
-    /**
-     * @param \DateTime $dateFin
-     */
-    public function setDateFin($dateFin)
-    {
-        $this->dateFin = $dateFin;
-    }
-
-    /**
-     * @return float
-     */
-    public function getPrix()
-    {
-        return $this->prix;
-    }
-
-    /**
-     * @param float $prix
-     */
-    public function setPrix($prix)
-    {
-        $this->prix = $prix;
-    }
-
-    /**
-     * @return \DetailReservationMateriel
-     */
-    public function getIdDrm()
-    {
-        return $this->idDrm;
-    }
-
-    /**
-     * @param \DetailReservationMateriel $idDrm
-     */
-    public function setIdDrm($idDrm)
-    {
-        $this->idDrm = $idDrm;
-    }
-
-    /**
-     * @return \User
-     */
-    public function getIdClient()
-    {
-        return $this->idClient;
-    }
-
-    /**
-     * @param \User $idClient
-     */
-    public function setIdClient($idClient)
-    {
-        $this->idClient = $idClient;
-    }
 
 
 }

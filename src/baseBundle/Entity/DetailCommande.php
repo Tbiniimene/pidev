@@ -1,6 +1,6 @@
 <?php
 
-namespace baseBundle\Entity;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -24,97 +24,27 @@ class DetailCommande
     /**
      * @var integer
      *
-     * @ORM\Column(name="qte", type="integer", nullable=false)
-     */
-    private $qte;
-
-    /**
-     * @var \Produits
-     *
+     * @ORM\Column(name="id_p", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="Produits")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_p", referencedColumnName="id_produit")
-     * })
      */
     private $idP;
 
     /**
-     * @var \Materiels
+     * @var integer
      *
+     * @ORM\Column(name="id_m", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="Materiels")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_m", referencedColumnName="id_matriel")
-     * })
      */
     private $idM;
 
     /**
-     * @return int
+     * @var integer
+     *
+     * @ORM\Column(name="qte", type="integer", nullable=false)
      */
-    public function getIdDc()
-    {
-        return $this->idDc;
-    }
-
-    /**
-     * @param int $idDc
-     */
-    public function setIdDc($idDc)
-    {
-        $this->idDc = $idDc;
-    }
-
-    /**
-     * @return int
-     */
-    public function getQte()
-    {
-        return $this->qte;
-    }
-
-    /**
-     * @param int $qte
-     */
-    public function setQte($qte)
-    {
-        $this->qte = $qte;
-    }
-
-    /**
-     * @return \Produits
-     */
-    public function getIdP()
-    {
-        return $this->idP;
-    }
-
-    /**
-     * @param \Produits $idP
-     */
-    public function setIdP($idP)
-    {
-        $this->idP = $idP;
-    }
-
-    /**
-     * @return \Materiels
-     */
-    public function getIdM()
-    {
-        return $this->idM;
-    }
-
-    /**
-     * @param \Materiels $idM
-     */
-    public function setIdM($idM)
-    {
-        $this->idM = $idM;
-    }
+    private $qte;
 
 
 }
