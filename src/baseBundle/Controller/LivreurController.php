@@ -74,16 +74,8 @@ class LivreurController extends Controller
     {
 
 
-        $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
-        return $this->render('@base/livraison/modifierLivreur.html.twig', array(
-            'livreurs' => $livreurs
-        ));
-
-    }
-
-    public function updateLivreurAction()
-    {
-        if (isset($_POST["idLiv"]) && isset($_POST["nomLiv"]) && isset($_POST["prenomLiv"]) && isset($_POST["etatLiv"]) && isset($_POST["telLiv"]) && isset($_POST["localisationLiv"])) {
+        if (isset($_POST["idLiv"]) && isset($_POST["nomLiv"]) && isset($_POST["prenomLiv"]) && isset($_POST["etatLiv"]) && isset($_POST["telLiv"]) && isset($_POST["localisationLiv"]))
+        {
             $em = $this->getDoctrine()->getManager();
             $id=$_POST['idLiv'];
             $livreur = $em->getRepository(Livreur::class)->find($id);
@@ -101,13 +93,15 @@ class LivreurController extends Controller
 
             $em->persist($livreur);
             $em->flush();
-            return $this->redirectToRoute("admin_modifierLivreur");
 
         }
-        return $this->redirectToRoute("admin_listeLivreur");
+
+        $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
+        return $this->render('@base/livraison/modifierLivreur.html.twig', array(
+            'livreurs' => $livreurs
+        ));
+
 
     }
-
-
 
 }

@@ -118,7 +118,4 @@ admin_modifierLivreur:
     path:     /admin/modifierLivreur
     defaults: { _controller: baseBundle:Livreur:modifierLivreur}
 
-admin_updateLivreur:
-    path:     /admin/updateLivreur
-    defaults: { _controller: baseBundle:Livreur:updateLivreur}
 
