@@ -2,6 +2,7 @@
 
 namespace baseBundle\Controller;
 
+use baseBundle\Entity\Evenement;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
@@ -63,7 +64,10 @@ class DefaultController extends Controller
 
     public function eventAction()
     {
-        return $this->render('@base/Default/event.html.twig');
+        $aa = $this->getDoctrine()->getRepository(Evenement::class)->findAll();
+        return $this->render('@base/Default/event.html.twig', array(
+            'aa' => $aa
+        ));
     }
 
     public function loginAction()

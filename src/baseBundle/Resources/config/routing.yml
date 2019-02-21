@@ -97,3 +97,19 @@ admin_supprimerLivreur:
 admin_deleteLivreur:
     path:     /admin/deleteLivreur/{id}
     defaults: { _controller: baseBundle:Livreur:deleteLivreur}
+
+show_event:
+    path:     /admin/show_event
+    defaults: { _controller: baseBundle:Event:show }
+
+add_event:
+    path:     /admin/add_event
+    defaults: { _controller: baseBundle:Event:add }
+
+delete_event:
+    path:     /admin/delete/{id}
+    defaults: { _controller: baseBundle:Event:delete }
+
+change_event:
+    path:     /admin/change/{id}
+    defaults: { _controller: baseBundle:Event:change }

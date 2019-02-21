@@ -10,159 +10,49 @@
                 <div class="col">
 
                     <!-- Event -->
-                    <div class="event">
-                        <div class="row row-lg-eq-height">
-                            <div class="col-lg-6 single_portfolio_item design home-design">
-                                <!-- Portfolio Thumbnail -->
-                                <div class="portfolio-thumbnail bg-img" style="background-image: url({{ asset('img/bg-img/e1.jpg') }});"></div>
-                                <!-- Portfolio Hover Text -->
-                                <div class="portfolio-hover-overlay">
-                                    <a href="{{ asset('img/bg-img/16.jpg') }}" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 1">
-                                        <div class="port-hover-text">
-                                            <h3>Event 1 </h3>
-                                            <h5>15 May</h5>
-                                        </div>
-                                    </a>
+                    {%  for e in aa %}
+                        <div class="event">
+                            <div class="row row-lg-eq-height">
+                                <div class="col-lg-6 single_portfolio_item design home-design">
+                                    <!-- Portfolio Thumbnail -->
+                                    <div class="portfolio-thumbnail bg-img" style="background-image: url({{ asset(e.img) }});"></div>
+                                    <!-- Portfolio Hover Text -->
+                                    <div class="portfolio-hover-overlay">
+                                        <a href="{{ asset(e.img) }}" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 1">
+                                            <div class="port-hover-text">
+                                                <h3>Event 1 </h3>
+                                                <h5>15 May</h5>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 event_col">
-                                <div class="event_content">
-                                    <div><h5>Marketing Sollutions in 2018</h5></div>
-                                    <div class="event_location">@ Miami Auditorium</div>
-                                    <div class="event_text">
-                                        <p>Donec quis metus ac arcu luctus accumsan. Nunc in justo tincidunt, sodales nunc id, finibus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce nec ante vitae lacus aliquet vulputate. Donec scelerisque accu msan molestie. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                                    </div>
-                                    <div class="event_speakers">
-                                        <!-- Event Speaker -->
-                                        <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-                                            <div><div class="event_speaker_image"><img src="{{ asset('img/core-img/b1.png') }}" alt=""></div></div>
-                                            <div class="event_speaker_content">
-                                                <div class="event_speaker_name">Michael Smith</div>
-                                                <div class="event_speaker_title">Marketing Specialist</div>
+                                <div class="col-lg-6 event_col">
+                                    <div class="event_content">
+                                        <div><br><h5>{{ e.nom }}</h5></div>
+                                        <div class="event_location">{{ e.addresse }}</div>
+                                        <div class="event_text">
+                                            <p>{{ e.description }}</p>
+                                        </div>
+                                        <div class="event_speakers">
+                                            <!-- Event Speaker -->
+                                            <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
+                                                <div><div class="event_speaker_image"><img src="{{ asset('img/core-img/time.png') }}" alt=""></div></div>
+                                                <div class="event_speaker_content">
+                                                    <div class="event_speaker_name">Start Date : {{ e.dateDeb|date('Y-m-d') }}</div>
+                                                    <div class="event_speaker_title">End Date : {{ e.dateFin|date('Y-m-d') }}</div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <!-- Event Speaker -->
-                                        <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-                                            <div><div class="event_speaker_image"><img src="images/event_speaker_2.jpg" alt=""></div></div>
-                                            <div class="event_speaker_content">
-                                                <div class="event_speaker_name">Jessica Williams</div>
-                                                <div class="event_speaker_title">Marketing Specialist</div>
-                                            </div>
+                                        <div class="event_buttons">
+                                            <button type="submit" class="btn alazea-btn mt-30">Sign to Event</button>
+                                            <button type="submit" class="btn alazea-btn mt-30">Rent Stand</button>
                                         </div>
-                                    </div>
-                                    <div class="event_buttons">
-                                        <button type="submit" class="btn alazea-btn mt-30">Sign to Event</button>
-                                        <button type="submit" class="btn alazea-btn mt-30">Rent Stand</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div><br></div>
-
-
-                    <!-- Event -->
-                    <div class="event">
-                        <div class="row row-lg-eq-height">
-                            <div class="col-lg-6 single_portfolio_item design home-design">
-                                <!-- Portfolio Thumbnail -->
-                                <div class="portfolio-thumbnail bg-img" style="background-image: url({{ asset('img/bg-img/e2.jpg') }});"></div>
-                                <!-- Portfolio Hover Text -->
-                                <div class="portfolio-hover-overlay">
-                                    <a href="{{ asset('img/bg-img/16.jpg') }}" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 1">
-                                        <div class="port-hover-text">
-                                            <h3>Event 2 </h3>
-                                            <h5>16 Jul</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 event_col">
-                                <div class="event_content">
-                                    <div class="event_title">Blockchain technology</div>
-                                    <div class="event_location">@ Miami Auditorium</div>
-                                    <div class="event_text">
-                                        <p>Donec quis metus ac arcu luctus accumsan. Nunc in justo tincidunt, sodales nunc id, finibus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce nec ante vitae lacus aliquet vulputate. Donec scelerisque accu msan molestie. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                                    </div>
-                                    <div class="event_speakers">
-                                        <!-- Event Speaker -->
-                                        <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-                                            <div><div class="event_speaker_image"><img src="images/event_speaker_1.jpg" alt=""></div></div>
-                                            <div class="event_speaker_content">
-                                                <div class="event_speaker_name">Michael Smith</div>
-                                                <div class="event_speaker_title">Marketing Specialist</div>
-                                            </div>
-                                        </div>
-                                        <!-- Event Speaker -->
-                                        <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-                                            <div><div class="event_speaker_image"><img src="images/event_speaker_2.jpg" alt=""></div></div>
-                                            <div class="event_speaker_content">
-                                                <div class="event_speaker_name">Jessica Williams</div>
-                                                <div class="event_speaker_title">Marketing Specialist</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="event_buttons">
-                                        <button type="submit" class="btn alazea-btn mt-30">Sign to Event</button>
-                                        <button type="submit" class="btn alazea-btn mt-30">Rent Stand</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div><br></div>
-
-
-                    <!-- Event -->
-                    <div class="event">
-                        <div class="row row-lg-eq-height">
-                            <div class="col-lg-6 single_portfolio_item design home-design">
-                                <!-- Portfolio Thumbnail -->
-                                <div class="portfolio-thumbnail bg-img" style="background-image: url({{ asset('img/bg-img/e3.jpg') }});"></div>
-                                <!-- Portfolio Hover Text -->
-                                <div class="portfolio-hover-overlay">
-                                    <a href="{{ asset('img/bg-img/16.jpg') }}" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 1">
-                                        <div class="port-hover-text">
-                                            <h3>Event 3 </h3>
-                                            <h5>15 Oct</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 event_col">
-                                <div class="event_content">
-                                    <div class="event_title">Internet of things</div>
-                                    <div class="event_location">@ Miami Auditorium</div>
-                                    <div class="event_text">
-                                        <p>Donec quis metus ac arcu luctus accumsan. Nunc in justo tincidunt, sodales nunc id, finibus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce nec ante vitae lacus aliquet vulputate. Donec scelerisque accu msan molestie. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                                    </div>
-                                    <div class="event_speakers">
-                                        <!-- Event Speaker -->
-                                        <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-                                            <div><div class="event_speaker_image"><img src="images/event_speaker_1.jpg" alt=""></div></div>
-                                            <div class="event_speaker_content">
-                                                <div class="event_speaker_name">Michael Smith</div>
-                                                <div class="event_speaker_title">Marketing Specialist</div>
-                                            </div>
-                                        </div>
-                                        <!-- Event Speaker -->
-                                        <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-                                            <div><div class="event_speaker_image"><img src="images/event_speaker_2.jpg" alt=""></div></div>
-                                            <div class="event_speaker_content">
-                                                <div class="event_speaker_name">Jessica Williams</div>
-                                                <div class="event_speaker_title">Marketing Specialist</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="event_buttons">
-                                        <button type="submit" class="btn alazea-btn mt-30">Sign to Event</button>
-                                        <button type="submit" class="btn alazea-btn mt-30">Rent Stand</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                        <div><br></div>
+                    {% endfor %}
                 </div>
             </div>
             <div><br></div>
@@ -175,22 +65,7 @@
                             <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
                         </ul>
                     </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Call to action -->
-
-    <div class="cta">
-        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/cta_1.jpg" data-speed="0.8"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="cta_content text-center">
-                        <div class="cta_title">Get your tickets now!</div>
-                        <div class="button cta_button"><a href="#">Find out more</a></div>
-                    </div>
+                    <br>
                 </div>
             </div>
         </div>
