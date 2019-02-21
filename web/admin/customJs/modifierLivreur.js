@@ -25,27 +25,9 @@ $(document).ready(function ()
         showSupp();
     });
 
-    $("#btnSubmitModif").on("click",function()
-    {
-
-    });
-
-
-
     $("#modifLiv").on("click",function(){
 
-        var nom = $(".bg-warning").find("td:eq(0)").text();
-        var prenom = $(".bg-warning").find("td:eq(1)").text();
-        var etat = $(".bg-warning").find("td:eq(2)").text();
-        var tel = $(".bg-warning").find("td:eq(3)").text();
-        var localisation = $(".bg-warning").find("td:eq(4)").text();
-
-        $("#nomLiv").attr("placeholder",nom);
-        $("#prenomLiv").attr("placeholder",prenom);
-       // $("#etatLiv").attr("placeholder",etat);
-        $("#telLiv").attr("placeholder",tel);
-        $("#localisationLiv").attr("placeholder",localisation);
-
+      sendToModal();
     });
 
 });
@@ -66,14 +48,31 @@ function showSupp()
 }
 function sendToModal()
 {
+    var nom = $(".bg-warning").find("td:eq(0)").text();
+    var prenom = $(".bg-warning").find("td:eq(1)").text();
+    var etat = $(".bg-warning").find("td:eq(2)").text();
+    var tel = $(".bg-warning").find("td:eq(3)").text();
+    var localisation = $(".bg-warning").find("td:eq(4)").text();
+
+    $("#nomLiv").attr("placeholder",nom);
+    $("#nomLiv").val(nom);
+    $("#prenomLiv").attr("placeholder",prenom);
+    $("#prenomLiv").val(prenom);
+    $("#etatLiv").val(etat);
+    $("#telLiv").attr("placeholder",tel);
+    $("#telLiv").val(tel);
+    $("#localisationLiv").attr("placeholder",localisation);
+    $("#localisationLiv").val(localisation);
+    $("#idLiv").val(currLiv);
 
 }
 function submitModif()
 {
+   // let hr="/pidev/web/app_dev.php/admin/updateLivreur/"+currLiv;
 
-     let hr="{{ path('admin_updateLivreur',{'id':"+currLiv+"}) }}";
-      $("#modifForm").attr("href",hr);
-      alert($("#modifForm").attr("href"));
+    // let hr="{{ path('admin_updateLivreur',{'id':"+currLiv+"}) }}";
+
+     // $("#modifForm").attr("action",hr);
 
 
 }

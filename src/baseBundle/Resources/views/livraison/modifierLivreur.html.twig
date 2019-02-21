@@ -77,26 +77,26 @@
                             <h4 class="modal-title">Modifier Livreur</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
-                        <form method="post" name="modifForm" id="modifForm" action="">
+                        <form method="post" name="modifForm" id="modifForm" action="{{ path('admin_updateLivreur') }}">
 
                         <!-- Modal body -->
                         <div class="modal-body">
                                 <div class="form-group">
-
                                 <label>Nouveau Nom: </label>
-                                <input type="text" id="nomLiv" class="form-control"/>
+                                <input type="text" name="nomLiv" id="nomLiv" class="form-control"/>
                                     <label>Nouveau Prenom : </label>
-                                <input type="text" id="prenomLiv" class="form-control" />
+                                <input type="text" name="prenomLiv" id="prenomLiv" class="form-control" />
                                     <label>Nouveau Etat : </label>
-                                    <select class="form-control" id="etatLiv">
-                                        <option>disponible</option>
-                                        <option>non disponible</option>
+                                    <select class="form-control" name="etatLiv" id="etatLiv">
+                                        <option value="disponible">disponible</option>
+                                        <option value="non disponible">non disponible</option>
 
                                     </select>
                                     <label>Nouveau numero de Téléphone : </label>
-                                <input type="number" id="telLiv" class="form-control"/>
+                                <input type="number" name="telLiv" id="telLiv" class="form-control"/>
                                     <label>Nouvelle Localisation: </label>
-                                <textarea type="text" id="localisationLiv" class="form-control" ></textarea>
+                                <textarea type="text" name="localisationLiv" id="localisationLiv" class="form-control" ></textarea>
+                                    <input type="hidden" name="idLiv" id="idLiv" value="" />
                                 </div>
                         </div>
 
