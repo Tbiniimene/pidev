@@ -5,6 +5,7 @@ $(document).ready(function()
 var livsDays=[];
 function dayOfWeekName(id,dd)
 {
+
     let res="Available every : ";
     let dates=dd.toString().split("-");
 
@@ -24,7 +25,9 @@ function dayOfWeekName(id,dd)
     }
     livsDays[id]=dates;
     res=res.slice(0, -1);
+
     return res;
+
 }
 function showModal(row)
 {
@@ -34,11 +37,13 @@ function showModal(row)
         $(this).attr("checked",false);
     });
 
-   for(let i=0;i<livsDays[id].length;i++)
-   {
-       $("#chk"+livsDays[id][i]).attr("checked",true);
-   }
-
+    if(livsDays[id]!=null)
+    {
+       for(let i=0;i<livsDays[id].length;i++)
+       {
+           $("#chk"+livsDays[id][i]).attr("checked",true);
+       }
+    }
    $("#idLiv").val(id);
 
     $("#ajtDspModal").modal("show");
