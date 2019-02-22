@@ -122,6 +122,12 @@ admin_ajouterDispo:
     path:     /admin/ajouterDispo
     defaults: { _controller: baseBundle:Livreur:ajouterDispo}
 
+admin_suppDispo:
+    path:     /admin/suppDispo
+    defaults: { _controller: baseBundle:Livreur:suppDispo}
+
+
+
 
 
 

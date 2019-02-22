@@ -152,4 +152,28 @@ class LivreurController extends Controller
         ));
 
     }
+    public function suppDispoAction()
+    {
+        if(isset($_POST['idLiv']))
+        {
+            $id=$_POST['idLiv'];
+            $em = $this->getDoctrine()->getManager();
+            $dispLiv = $em->getRepository(Disponibilite::class)->findOneBy ( ['idLivreur' => $id]);
+            $em->remove($dispLiv);
+            $em->flush();
+
+
+            return $this->redirectToRoute('admin_ajouterDispo');
+
+
+        }
+
+        $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
+        $dispos = $this->getDoctrine()->getRepository	(Disponibilite::class)->findAll();
+
+        return $this->render('@base/livraison/suppDispo.html.twig', array(
+            'livreurs' => $livreurs,'dispos'=>$dispos
+        ));
+
+    }
 }
