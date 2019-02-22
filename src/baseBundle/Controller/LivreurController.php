@@ -111,15 +111,36 @@ class LivreurController extends Controller
         {
             $em = $this->getDoctrine()->getManager();
 
+
+
             $disp=new Disponibilite();
             $dates=$_POST['selectedDays'];
             $id=$_POST['idLiv'];
-            $disp->setDateDispo($dates);
-            //$em->gerReference(Livreur::class,$id)
-            $disp->setIdLivreur($em->getReference(Livreur::class,$id));
 
-            $em->persist($disp);
+            $dispLiv = $em->getRepository(Disponibilite::class)->findOneBy ( ['idLivreur' => $id]);
+
+            if($dispLiv==null)
+            {
+
+                $disp->setDateDispo($dates);
+                //$em->gerReference(Livreur::class,$id)
+                $disp->setIdLivreur($em->getReference(Livreur::class,$id));
+
+                $em->persist($disp);
+            }
+            else
+            {
+                $dispLiv->setDateDispo($dates);
+               // $dispLiv->setIdLivreur($em->getReference(Livreur::class,$id));
+
+                $em->persist($dispLiv);
+
+
+            }
+
             $em->flush();
+
+
 
         }
 

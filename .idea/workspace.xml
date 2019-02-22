@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce32911-3594-439b-aebf-c370ceacaf14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +62,7 @@
           <entry key="json" value="5" />
           <entry key="php" value="118" />
           <entry key="twig" value="77" />
-          <entry key="yml" value="24" />
+          <entry key="yml" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -72,14 +73,14 @@
           <entry key="JavaScript" value="9" />
           <entry key="PHP" value="118" />
           <entry key="Twig" value="77" />
-          <entry key="YAML" value="24" />
+          <entry key="YAML" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="2480" />
+          <entry key="js" value="2540" />
           <entry key="json" value="26" />
-          <entry key="php" value="1513" />
+          <entry key="php" value="1668" />
           <entry key="twig" value="4107" />
           <entry key="txt" value="236" />
           <entry key="yml" value="511" />
@@ -88,8 +89,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="26" />
-          <entry key="JavaScript" value="2480" />
-          <entry key="PHP" value="1513" />
+          <entry key="JavaScript" value="2540" />
+          <entry key="PHP" value="1668" />
           <entry key="PLAIN_TEXT" value="236" />
           <entry key="Twig" value="4107" />
           <entry key="YAML" value="511" />
@@ -155,14 +156,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
+            <state relative-caret-position="215">
+              <caret line="119" column="75" selection-start-line="119" selection-start-column="75" selection-end-line="119" selection-end-column="75" />
               <folding>
                 <element signature="e#41#77#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="122" column="60" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -194,11 +204,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="402">
+              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -313,10 +323,10 @@
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Commande.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" />
-        <option value="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig" />
         <option value="$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" />
+        <option value="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" />
       </list>
     </option>
   </component>
@@ -448,6 +458,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -536,12 +554,12 @@
       <workItem from="1550680272070" duration="22221000" />
       <workItem from="1550715874114" duration="114000" />
       <workItem from="1550778119580" duration="17371000" />
-      <workItem from="1550825289328" duration="2474000" />
+      <workItem from="1550825289328" duration="5740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102112000" />
+    <option name="totallyTimeSpent" value="105378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -822,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="122" column="60" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -892,13 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -920,13 +924,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="122" column="60" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
+        <state relative-caret-position="215">
+          <caret line="119" column="75" selection-start-line="119" selection-start-column="75" selection-end-line="119" selection-end-column="75" />
           <folding>
             <element signature="e#41#77#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
         </state>
       </provider>
     </entry>
