@@ -118,4 +118,10 @@ admin_modifierLivreur:
     path:     /admin/modifierLivreur
     defaults: { _controller: baseBundle:Livreur:modifierLivreur}
 
+admin_ajouterDispo:
+    path:     /admin/ajouterDispo
+    defaults: { _controller: baseBundle:Livreur:ajouterDispo}
+
+
+
 

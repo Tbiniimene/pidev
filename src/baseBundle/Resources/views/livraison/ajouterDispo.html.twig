@@ -1,0 +1,145 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Disponibilité des livreurs{% endblock %}
+{% block body %}
+    <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin/customJs/ajouterDispo.js') }}"></script>
+
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{ path('admin_index') }}">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Ajouter Disponibilité</li>
+            </ol>
+
+            <!-- Page Content -->
+            <h1>Disponibilité des livreurs</h1>
+            <hr>
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Liste des Livreurs
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Etat</th>
+                        <th>Téléphone</th>
+                        <th>Localisation</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Etat</th>
+                        <th>Téléphone</th>
+                        <th>Localisation</th>
+                    </tr>
+                    </tfoot>
+                    {% for v in livreurs %}
+                    <tbody>
+                    <tr data-toggle="collapse" data-target="#disp{{ v.IdLivreur }}"  data="{{ v.IdLivreur }}" class="clickable" ondblclick="showModal(this)">
+                            <td>{{ v.nom }}</td>
+                            <td>{{ v.prenom }}</td>
+                            <td>{{ v.etat }}</td>
+                            <td>{{ v.tel }}</td>
+                            <td>{{ v.localisation }}</td>
+
+                        </tr>
+                    </tbody>
+
+                        {% for d in dispos %}
+                        {% if d.IdLivreur.IdLivreur==v.IdLivreur %}
+                            <tbody id="disp{{ v.IdLivreur }}" class="collapse">
+                                <tr>
+                                    <td colspan="5" >
+                                      <center><script>
+                                              document.write("<p>" + dayOfWeekName('{{ v.IdLivreur }}','{{ d.DateDispo }}') + "</p>");
+                                          </script>
+                                      </center>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+            <div class="modal fade" id="ajtDspModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Modifier Livreur</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <form method="post" name="ajtDspForm" id="ajtDspForm" action="#">
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Choisir les jours de travail : </label><br/>
+                                    <input type="checkbox" id="chk1" name="chk1" value="1"/>
+                                    <label>Monday </label><br/>
+
+                                    <input type="checkbox" id="chk2" name="chk2" value="2"/>
+                                    <label>Tuesday </label><br/>
+
+                                    <input type="checkbox" id="chk3" name="chk3" value="3"/>
+                                    <label>Wednesday </label><br/>
+                                    <input type="checkbox" id="chk4" name="chk4" value="4"/>
+                                    <label>Thursday </label><br/>
+                                    <input type="checkbox" id="chk5" name="chk5" value="5"/>
+                                    <label>Friday </label><br/>
+                                    <input type="checkbox" id="chk6" name="chk6" value="6"/>
+                                    <label>Saturday </label><br/>
+                                    <input type="checkbox" id="chk0" name="chk0" value="0"/>
+                                    <label>Sunday </label><br/>
+                                            <input type="hidden" name="selectedDays" id="selectedDays" value="" />
+                                    <input type="hidden" name="idLiv" id="idLiv" value="" />
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <input type="submit" class="btn btn-primary" id="btnSubmitModif" onclick="submitAjtDisp()" value="Submit" /> <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+{% endblock %}

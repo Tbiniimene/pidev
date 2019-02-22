@@ -2,6 +2,7 @@
 
 namespace baseBundle\Controller;
 
+use baseBundle\Entity\Disponibilite;
 use baseBundle\Entity\Livreur;
 use baseBundle\Form\LivreurType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -103,5 +104,31 @@ class LivreurController extends Controller
 
 
     }
+    public function ajouterDispoAction()
+    {
 
+        if(isset($_POST['selectedDays']) && isset($_POST['idLiv']))
+        {
+            $em = $this->getDoctrine()->getManager();
+
+            $disp=new Disponibilite();
+            $dates=$_POST['selectedDays'];
+            $id=$_POST['idLiv'];
+            $disp->setDateDispo($dates);
+            //$em->gerReference(Livreur::class,$id)
+            $disp->setIdLivreur($em->getReference(Livreur::class,$id));
+
+            $em->persist($disp);
+            $em->flush();
+
+        }
+
+        $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
+        $dispos = $this->getDoctrine()->getRepository	(Disponibilite::class)->findAll();
+
+        return $this->render('@base/livraison/ajouterDispo.html.twig', array(
+            'livreurs' => $livreurs,'dispos'=>$dispos
+        ));
+
+    }
 }

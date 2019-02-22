@@ -1,100 +1,110 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ASUS
- * Date: 21/02/2019
- * Time: 02:51
- */
 
 namespace baseBundle\Entity;
-use FOS\UserBundle\Model\User as BaseUser;
+
 use Doctrine\ORM\Mapping as ORM;
 
-
 /**
+ * User
+ *
+ * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_8D93D64992FC23A8", columns={"username_canonical"}), @ORM\UniqueConstraint(name="UNIQ_8D93D649A0D96FBF", columns={"email_canonical"}), @ORM\UniqueConstraint(name="UNIQ_8D93D649C05FB297", columns={"confirmation_token"})})
  * @ORM\Entity
- * @ORM\Table(name="`user`")
  */
-class User extends BaseUser
+class User
 {
-
-
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    protected $id;
-
+    private $id;
 
     /**
+     * @var integer
+     *
      * @ORM\Column(name="cin", type="integer", nullable=false)
      */
-    protected $cin;
+    private $cin;
 
     /**
-     * @return mixed
+     * @var string
+     *
+     * @ORM\Column(name="username", type="string", length=180, nullable=false)
      */
-    public function getCin()
-    {
-        return $this->cin;
-    }
+    private $username;
 
     /**
-     * @param mixed $cin
+     * @var string
+     *
+     * @ORM\Column(name="username_canonical", type="string", length=180, nullable=false)
      */
-    public function setCin($cin)
-    {
-        $this->cin = $cin;
-    }
+    private $usernameCanonical;
 
     /**
-     * @return string
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=180, nullable=false)
      */
-    public function getUsername()
-    {
-        return $this->username;
-    }
+    private $email;
 
     /**
-     * @param string $username
+     * @var string
+     *
+     * @ORM\Column(name="email_canonical", type="string", length=180, nullable=false)
      */
-    public function setUsername($username)
-    {
-        $this->username = $username;
-    }
+    private $emailCanonical;
 
     /**
-     * @return string
+     * @var boolean
+     *
+     * @ORM\Column(name="enabled", type="boolean", nullable=false)
      */
-    public function getEmail()
-    {
-        return $this->email;
-    }
+    private $enabled;
 
     /**
-     * @param string $email
+     * @var string
+     *
+     * @ORM\Column(name="salt", type="string", length=255, nullable=true)
      */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
+    private $salt;
 
     /**
-     * @return string
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
      */
-    public function getPassword()
-    {
-        return $this->password;
-    }
+    private $password;
 
     /**
-     * @param string $password
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_login", type="datetime", nullable=true)
      */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-    }
+    private $lastLogin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="confirmation_token", type="string", length=180, nullable=true)
+     */
+    private $confirmationToken;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="password_requested_at", type="datetime", nullable=true)
+     */
+    private $passwordRequestedAt;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="roles", type="array", nullable=false)
+     */
+    private $roles;
 
 
 }
+

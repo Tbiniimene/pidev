@@ -17,28 +17,9 @@ class Disponibilite
      *
      * @ORM\Column(name="id_dispo", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idDispo;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_dispo", type="date", nullable=false)
-     */
-    private $dateDispo;
-
-    /**
-     * @var \Livreur
-     *
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="Livreur")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_livreur", referencedColumnName="id_livreur")
-     * })
-     */
-    private $idLivreur;
 
     /**
      * @return int
@@ -57,7 +38,7 @@ class Disponibilite
     }
 
     /**
-     * @return \DateTime
+     * @return string
      */
     public function getDateDispo()
     {
@@ -65,7 +46,7 @@ class Disponibilite
     }
 
     /**
-     * @param \DateTime $dateDispo
+     * @param string $dateDispo
      */
     public function setDateDispo($dateDispo)
     {
@@ -87,6 +68,23 @@ class Disponibilite
     {
         $this->idLivreur = $idLivreur;
     }
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date_dispo", type="string", length=255, nullable=false)
+     */
+    private $dateDispo;
+
+    /**
+     * @var \Livreur
+     *
+     * @ORM\ManyToOne(targetEntity="Livreur")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_livreur", referencedColumnName="id_livreur")
+     * })
+     */
+    private $idLivreur;
 
 
 }

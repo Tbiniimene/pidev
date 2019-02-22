@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Livreur
  *
- * @ORM\Table(name="livreur", indexes={@ORM\Index(name="id_dispo", columns={"id_dispo"})})
+ * @ORM\Table(name="livreur")
  * @ORM\Entity
  */
 class Livreur
@@ -55,16 +55,6 @@ class Livreur
      * @ORM\Column(name="localisation", type="text", length=65535, nullable=false)
      */
     private $localisation;
-
-    /**
-     * @var \Disponibilite
-     *
-     * @ORM\ManyToOne(targetEntity="Disponibilite")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_dispo", referencedColumnName="id_dispo")
-     * })
-     */
-    private $idDispo;
 
     /**
      * @return int
@@ -160,22 +150,6 @@ class Livreur
     public function setLocalisation($localisation)
     {
         $this->localisation = $localisation;
-    }
-
-    /**
-     * @return \Disponibilite
-     */
-    public function getIdDispo()
-    {
-        return $this->idDispo;
-    }
-
-    /**
-     * @param \Disponibilite $idDispo
-     */
-    public function setIdDispo($idDispo)
-    {
-        $this->idDispo = $idDispo;
     }
 
 

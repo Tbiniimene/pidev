@@ -41,28 +41,27 @@ class Evenement
      * @ORM\Column(name="nom", type="string", length=30, nullable=false)
      */
     private $nom;
+
     /**
      * @var string
      *
-     * @ORM\Column(name="img", type="string", length=30, nullable=false)
+     * @ORM\Column(name="addresse", type="string", length=30, nullable=false)
      */
-    private $img;
+    private $addresse;
 
     /**
-     * @return string
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", length=65535, nullable=false)
      */
-    public function getImg()
-    {
-        return $this->img;
-    }
+    private $description;
 
     /**
-     * @param string $img
+     * @var integer
+     *
+     * @ORM\Column(name="nb_stand", type="integer", nullable=false)
      */
-    public function setImg($img)
-    {
-        $this->img = $img;
-    }
+    private $nbStand;
 
     /**
      * @return int
@@ -175,27 +174,6 @@ class Evenement
     {
         $this->nbStand = $nbStand;
     }
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="addresse", type="string", length=30, nullable=false)
-     */
-    private $addresse;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="text", length=65535, nullable=false)
-     */
-    private $description;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="nb_stand", type="integer", nullable=false)
-     */
-    private $nbStand;
 
 
 }
