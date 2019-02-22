@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce32911-3594-439b-aebf-c370ceacaf14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/parameters.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,44 +146,104 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1170950836">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="php" value="3" />
+          <entry key="yml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PHP" value="3" />
+          <entry key="YAML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="26" />
+          <entry key="txt" value="11" />
+          <entry key="yml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="26" />
+          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="YAML" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="154" selection-start-line="154" selection-end-line="154" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
-              <folding>
-                <element signature="e#41#77#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/modifierLivreur.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="147">
               <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="126">
               <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1239">
+              <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="777">
+              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="54" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1869">
+              <caret line="110" selection-start-line="110" selection-end-line="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -188,7 +251,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="840">
               <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
             </state>
           </provider>
@@ -249,6 +312,8 @@
       <command text="s doctrine:schema:update --force" />
       <command text="s doctrine:generate:entities " />
       <command text=" php bin/console doctrine:mapping:import &quot;baseBundle\Entity&quot; annotation --path=src/baseBundle/Entity" />
+      <command text="s doctrine:database:create" />
+      <command text="s doctrine:schema:create" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -256,12 +321,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/charts.html.twig" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/index.html.twig" />
@@ -283,11 +346,8 @@
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/ReservationMateriel.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Produits.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantsEvenement.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Materiels.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Livraison.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" />
-        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailReservationMateriel.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailMateriel.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/DetailCouffin.php" />
@@ -312,6 +372,10 @@
         <option value="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" />
         <option value="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" />
       </list>
     </option>
   </component>
@@ -374,11 +438,11 @@
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="y" value="37" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -495,6 +559,19 @@
             <path>
               <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
               <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="clientBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="clientBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pidev" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -528,7 +605,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/xampp/htdocs/pidev/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig&#10;layout.&#9;FILE&#9;file://E:/xampp/htdocs/pidev/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig&#10;FOSUSerBundle&#9;FILE&#9;file://E:/xampp/htdocs/pidev/vendor/friendsofsymfony/user-bundle/FOSUserBundle.php&#10;fos&#9;null&#9;null&#10;autoload.php&#9;FILE&#9;file://E:/xampp/htdocs/pidev/vendor/autoload.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../piformations" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
@@ -578,17 +655,18 @@
       <workItem from="1550680272070" duration="22221000" />
       <workItem from="1550715874114" duration="114000" />
       <workItem from="1550778119580" duration="17371000" />
+      <workItem from="1550827632519" duration="971000" />
+      <workItem from="1550841859467" duration="3371000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99638000" />
+    <option name="totallyTimeSpent" value="103980000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="30" width="1552" height="840" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28590605" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19369973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -601,7 +679,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="10" visible="true" weight="0.24680851" />
+      <window_info active="true" anchor="bottom" id="Command Line Tools Console" order="10" visible="true" weight="0.3493635" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.22978723" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -617,7 +695,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Repository/hotelRepository.php" />
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Repository/livreurRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -723,28 +800,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Materiels.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
@@ -905,13 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="119" column="7" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Disponibilite.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -926,13 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Commande.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -942,7 +984,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
+        <state relative-caret-position="2499">
           <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
           <folding>
             <element signature="e#41#77#0#PHP" expanded="true" />
@@ -950,24 +992,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/modifierLivreur.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="147">
           <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="126">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1869">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1239">
+          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="54" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
         </state>
       </provider>
     </entry>

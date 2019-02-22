@@ -7,17 +7,17 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Formation
  *
- * @ORM\Table(name="formation", indexes={@ORM\Index(name="id_formateur", columns={"id_formateur"})})
+ * @ORM\Table(name="formation")
  * @ORM\Entity
  */
 class Formation
 {
     /**
-     * @var integer
+     * @var int
      *
-     * @ORM\Column(name="id_formation", type="integer", nullable=false)
+     * @ORM\Column(name="id_formation", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $idFormation;
 
@@ -34,6 +34,13 @@ class Formation
      * @ORM\Column(name="nom", type="string", length=30, nullable=false)
      */
     private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=500, nullable=false)
+     */
+    private $description;
 
     /**
      * @var float
@@ -57,14 +64,176 @@ class Formation
     private $dateFin;
 
     /**
-     * @var \Formateur
+     * @var integer
      *
-     * @ORM\ManyToOne(targetEntity="Formateur")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_formateur", referencedColumnName="id_formateur")
-     * })
+     * @ORM\Column(name="nbmax", type="integer", nullable=false)
      */
-    private $idFormateur;
+
+    private $nbmax;
+    /**
+     * @ORM\ManyToOne(targetEntity="Formateur")
+     * @ORM\JoinColumn(name="formateur_id",referencedColumnName="id_formateur")
+     *
+     */
+    private $Formateur;
+
+    /**
+     * @return int
+     */
+    public function getNbmax()
+    {
+        return $this->nbmax;
+    }
+
+    /**
+     * @param int $nbmax
+     */
+    public function setNbmax($nbmax)
+    {
+        $this->nbmax = $nbmax;
+    }
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->idFormation;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdFormation()
+    {
+        return $this->idFormation;
+    }
+
+
+
+    /**
+     * @param int $idFormation
+     */
+    public function setIdFormation($idFormation)
+    {
+        $this->idFormation = $idFormation;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param string $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * @param float $prix
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateDeb()
+    {
+        return $this->dateDeb;
+    }
+
+    /**
+     * @param \DateTime $dateDeb
+     */
+    public function setDateDeb($dateDeb)
+    {
+        $this->dateDeb = $dateDeb;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateFin()
+    {
+        return $this->dateFin;
+    }
+
+    /**
+     * @param \DateTime $dateFin
+     */
+    public function setDateFin($dateFin)
+    {
+        $this->dateFin = $dateFin;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFormateur()
+    {
+        return $this->Formateur;
+    }
+
+    /**
+     * @param mixed $Formateur
+     */
+    public function setFormateur($Formateur)
+    {
+        $this->Formateur = $Formateur;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
 
 
 }

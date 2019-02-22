@@ -42,17 +42,93 @@ class ParticipantFormation
      */
     private $tel;
 
+
     /**
-     * @var \Formation
-     *
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
      * @ORM\OneToOne(targetEntity="Formation")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_formation", referencedColumnName="id_formation")
-     * })
+     * @ORM\JoinColumn(name="id_formation",referencedColumnName="id_formation")
+     *
      */
-    private $idFormation;
+    private $PFormation;
+
+    /**
+     * @return int
+     */
+    public function getCin()
+    {
+        return $this->cin;
+    }
+
+    /**
+     * @param int $cin
+     */
+    public function setCin($cin)
+    {
+        $this->cin = $cin;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param string $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param string $prenom
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTel()
+    {
+        return $this->tel;
+    }
+
+    /**
+     * @param int $tel
+     */
+    public function setTel($tel)
+    {
+        $this->tel = $tel;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFormation()
+    {
+        return $this->Formation;
+    }
+
+    /**
+     * @param mixed $Formation
+     */
+    public function setFormation($Formation)
+    {
+        $this->Formation = $Formation;
+    }
 
 
 }
