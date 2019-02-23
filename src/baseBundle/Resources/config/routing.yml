@@ -45,6 +45,9 @@ base_blog_details:
 base_event:
     path:     /base/event
     defaults: { _controller: baseBundle:Default:event}
+base_forming:
+    path:     /base/forming
+    defaults: { _controller: baseBundle:Default:forming}
 
 base_login:
     path:     /base/login

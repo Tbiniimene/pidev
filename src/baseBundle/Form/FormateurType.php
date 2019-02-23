@@ -37,7 +37,7 @@ class FormateurType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'formationbundle_formateur';
+        return 'basebundle_formateur';
     }
 
 
