@@ -10,8 +10,9 @@
                 <div class="col">
 
                     <!-- Event -->
-                    <form method="post" action="#" name="f" id="f">
                         {%  for e in aa %}
+                            <form method="post" name="f" id="f" action="{{ path('rent_stand',{'idEvent':e.IdEvenement}) }}">
+
                             <div class="event">
                                 <div class="row row-lg-eq-height">
                                     <div class="col-lg-6 single_portfolio_item design home-design">
@@ -42,10 +43,13 @@
                                                     <div class="event_speaker_content">
                                                         <div class="event_speaker_name">  Start Date : {{ e.dateDeb|date('Y-m-d') }}</div>
                                                         <div class="event_speaker_title">  End Date : {{ e.dateFin|date('Y-m-d') }}</div>
+
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="event_buttons">
+
+                                              <!--  <input type="hidden" name="idEvent" id="idEvent" value="{{ e.IdEvenement }}"/>-->
                                                 <button type="submit" class="btn alazea-btn mt-30">Rent Event</button>
                                             </div>
                                         </div>
@@ -53,8 +57,8 @@
                                 </div>
                             </div>
                             <div><br></div>
+                            </form>
                         {% endfor %}
-                    </form>
                 </div>
             </div>
             <div><br></div>

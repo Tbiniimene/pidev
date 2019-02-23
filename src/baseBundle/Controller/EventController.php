@@ -3,6 +3,7 @@
 namespace baseBundle\Controller;
 
 use baseBundle\Entity\Evenement;
+use baseBundle\Entity\ParticipantsEvenement;
 use baseBundle\Entity\Stand;
 use baseBundle\Form\EventType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -88,6 +89,52 @@ class EventController extends Controller
         return $this->render('@base/event/stand.html.twig', array(
             'aa' => $aa
         ));
+    }
+    public function rentStandAction($idEvent)
+    {
+
+
+        $pe=new ParticipantsEvenement();
+        //5-validation du formulaire
+        if (isset($_POST['cin']) && isset($_POST['Nom']) && isset($_POST['Prenom']) && isset($_POST['Tel']) && isset($_POST['idStand']) ) {
+            $cin=$_POST['cin'];
+            $nom=$_POST['Nom'];
+            $prenom=$_POST['Prenom'];
+            $tel=$_POST['Tel'];
+            $em = $this->getDoctrine()->getManager();
+            $pe->setIdEvenement($em->getReference(Evenement::class,$idEvent));
+            $pe->setCinParticipant($cin);
+            $pe->setNom($nom);
+            $pe->setPrenom($prenom);
+            $pe->setTel($tel);
+
+                $idStand=$_POST['idStand'];
+
+                    $pe->setIdStand($em->getReference(Stand::class,$idStand));
+                    $stand = $em->getRepository(Stand::class)->find($idStand);
+                    $stand->setStatutStand('0');
+                    $em->persist($stand);
+
+
+
+
+
+            $em->persist($pe);
+            $em->flush();
+
+            return $this->redirectToRoute('base_event');
+        }
+        $stands = $this->getDoctrine()->getRepository(Stand::class)->findBy(['idEvent' => $idEvent,'statutStand'=>'1']);
+
+        //$stands = $this->getDoctrine()->getRepository(Stand::class)->findAll();
+
+        return $this->render('@base/event/rent.html.twig', array(
+            'idEvent' => $idEvent,'stands'=>$stands
+        ));
+
+
+
+
     }
 
     public function rentAction(Request $request)
