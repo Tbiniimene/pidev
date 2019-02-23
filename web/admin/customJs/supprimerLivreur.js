@@ -25,7 +25,6 @@ $(document).ready(function ()
         let hr="/pidev/web/app_dev.php/admin/deleteLivreur/"+getAllIds();
         $(this).attr("href",hr);
 
-        alert(getAllIds());
 
     });
 

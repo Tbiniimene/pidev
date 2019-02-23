@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce32911-3594-439b-aebf-c370ceacaf14" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/parameters.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" afterDir="false" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +48,8 @@
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.actions">
@@ -60,11 +66,11 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="8" />
+          <entry key="js" value="9" />
           <entry key="json" value="5" />
           <entry key="php" value="118" />
           <entry key="twig" value="77" />
-          <entry key="yml" value="24" />
+          <entry key="yml" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -72,17 +78,17 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="8" />
+          <entry key="JavaScript" value="9" />
           <entry key="PHP" value="118" />
           <entry key="Twig" value="77" />
-          <entry key="YAML" value="24" />
+          <entry key="YAML" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="2480" />
+          <entry key="js" value="2540" />
           <entry key="json" value="26" />
-          <entry key="php" value="1513" />
+          <entry key="php" value="1668" />
           <entry key="twig" value="4107" />
           <entry key="txt" value="236" />
           <entry key="yml" value="511" />
@@ -91,8 +97,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="26" />
-          <entry key="JavaScript" value="2480" />
-          <entry key="PHP" value="1513" />
+          <entry key="JavaScript" value="2540" />
+          <entry key="PHP" value="1668" />
           <entry key="PLAIN_TEXT" value="236" />
           <entry key="Twig" value="4107" />
           <entry key="YAML" value="511" />
@@ -188,8 +194,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/modifierLivreur.html.twig">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="147">
               <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="11" selection-end-column="12" />
+=======
+            <state relative-caret-position="2618">
+              <caret line="154" selection-start-line="154" selection-end-line="154" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
             </state>
           </provider>
         </entry>
@@ -197,13 +208,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="126">
               <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+=======
+            <state relative-caret-position="215">
+              <caret line="119" column="75" selection-start-line="119" selection-start-column="75" selection-end-line="119" selection-end-column="75" />
+              <folding>
+                <element signature="e#41#77#0#PHP" expanded="true" />
+              </folding>
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Formation.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1239">
@@ -217,12 +237,41 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="777">
               <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="54" selection-end-column="17" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="122" column="60" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/modifierLivreur.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-825">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php">
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig">
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
@@ -248,11 +297,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="840">
               <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+=======
+            <state relative-caret-position="402">
+              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
             </state>
           </provider>
         </entry>
@@ -319,9 +373,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
+=======
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -334,7 +391,6 @@
         <option value="$PROJECT_DIR$/src/baseBundle/Form/LivreurType.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/listeLivreur.html.twig" />
         <option value="$PROJECT_DIR$/src/baseBundle/Controller/AdminController.php" />
-        <option value="$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/supprimerLivreur.html.twig" />
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/admin/livreur.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
@@ -369,13 +425,18 @@
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Evenement.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Commande.php" />
+        <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig" />
+        <option value="$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js" />
         <option value="$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php" />
         <option value="$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formateur.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/Formation.php" />
         <option value="$PROJECT_DIR$/src/baseBundle/Entity/ParticipantFormation.php" />
+=======
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
       </list>
     </option>
   </component>
@@ -440,7 +501,11 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
+<<<<<<< HEAD
     <option name="y" value="37" />
+=======
+    <option name="y" value="-10" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
     <option name="width" value="1940" />
     <option name="height" value="1050" />
   </component>
@@ -499,27 +564,6 @@
               <item name="pidev" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pidev" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pidev" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pidev" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -541,6 +585,7 @@
             <path>
               <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
               <item name="pidev" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="baseBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
@@ -572,6 +617,8 @@
             <path>
               <item name="pidev" type="b2602c69:ProjectViewProjectNode" />
               <item name="pidev" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -655,18 +702,30 @@
       <workItem from="1550680272070" duration="22221000" />
       <workItem from="1550715874114" duration="114000" />
       <workItem from="1550778119580" duration="17371000" />
+<<<<<<< HEAD
       <workItem from="1550827632519" duration="971000" />
       <workItem from="1550841859467" duration="3371000" />
+=======
+      <workItem from="1550825289328" duration="5740000" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="103980000" />
+=======
+    <option name="totallyTimeSpent" value="105378000" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="30" width="1552" height="840" extended-state="0" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19369973" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28993288" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -919,13 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="122" column="60" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/admin/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -954,10 +1006,17 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="48" column="17" selection-start-line="48" selection-end-line="49" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="119" column="7" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
         </state>
       </provider>
     </entry>
@@ -976,14 +1035,32 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Commande.php">
+<<<<<<< HEAD
+=======
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="137" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php">
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Entity/Livreur.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/ajouterDispo.html.twig">
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/views/livraison/modifierLivreur.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2499">
           <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
           <folding>
@@ -1052,6 +1129,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+=======
+        <state relative-caret-position="-825">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/customJs/supprimerLivreur.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="122" column="60" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseBundle/Controller/LivreurController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="119" column="75" selection-start-line="119" selection-start-column="75" selection-end-line="119" selection-end-column="75" />
+          <folding>
+            <element signature="e#41#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin/customJs/ajouterDispo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+>>>>>>> 0fad88995ea23c1c250e994a97d5ae4638eb20ad
         </state>
       </provider>
     </entry>

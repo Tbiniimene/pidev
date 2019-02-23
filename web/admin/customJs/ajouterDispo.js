@@ -24,6 +24,7 @@ function dayOfWeekName(id,dd)
         res += weekday[dates[i]]+", ";
     }
     livsDays[id]=dates;
+    while(res.slice(-1)==" " || res.slice(-1)==",")
     res=res.slice(0, -1);
 
     return res;
