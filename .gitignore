@@ -17,3 +17,5 @@
 .idea/
 .idea/workspace.xml
 parameters.yml
+app\config\parameters.yml
+app/config/parameters.yml

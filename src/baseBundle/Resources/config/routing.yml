@@ -117,6 +117,18 @@ change_event:
     path:     /admin/change/{id}
     defaults: { _controller: baseBundle:Event:change }
 
+show_stand:
+    path:     /admin/stand
+    defaults: { _controller: baseBundle:Event:stand }
+
+rent_stand:
+    path:     /base/rent
+    defaults: { _controller: baseBundle:Event:rent }
+
+test:
+    path:     /test/{id}
+    defaults: { _controller: baseBundle:Event:test }
+
 admin_modifierLivreur:
     path:     /admin/modifierLivreur
     defaults: { _controller: baseBundle:Livreur:modifierLivreur}
