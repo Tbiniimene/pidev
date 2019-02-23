@@ -29,9 +29,9 @@ class ParticipantsEvenement
     private $nom;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="prenom", type="integer", nullable=false)
+     * @ORM\Column(name="prenom", type="string", nullable=false)
      */
     private $prenom;
 
@@ -41,6 +41,102 @@ class ParticipantsEvenement
      * @ORM\Column(name="tel", type="integer", nullable=false)
      */
     private $tel;
+
+    /**
+     * @return int
+     */
+    public function getCinParticipant()
+    {
+        return $this->cinParticipant;
+    }
+
+    /**
+     * @param int $cinParticipant
+     */
+    public function setCinParticipant($cinParticipant)
+    {
+        $this->cinParticipant = $cinParticipant;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param string $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param string $prenom
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTel()
+    {
+        return $this->tel;
+    }
+
+    /**
+     * @param int $tel
+     */
+    public function setTel($tel)
+    {
+        $this->tel = $tel;
+    }
+
+    /**
+     * @return \Evenement
+     */
+    public function getIdEvenement()
+    {
+        return $this->idEvenement;
+    }
+
+    /**
+     * @param \Evenement $idEvenement
+     */
+    public function setIdEvenement($idEvenement)
+    {
+        $this->idEvenement = $idEvenement;
+    }
+
+    /**
+     * @return \Stand
+     */
+    public function getIdStand()
+    {
+        return $this->idStand;
+    }
+
+    /**
+     * @param \Stand $idStand
+     */
+    public function setIdStand($idStand)
+    {
+        $this->idStand = $idStand;
+    }
 
     /**
      * @var \Evenement

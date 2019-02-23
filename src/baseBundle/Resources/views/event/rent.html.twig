@@ -7,26 +7,38 @@
     <div class="row justify-content-between">
     <div class="col-12 col-lg-12">
         <div class="section-heading">
-                <table class="table table-borderedless" id="dataTable" width="100%" cellspacing="0">
-                    {{ form_start(form) }}
+            <form method="post" name="f" id="f" action="{{ path('rent_stand',{'idEvent':idEvent}) }}">
+
+            <table class="table table-borderedless" id="dataTable" width="100%" cellspacing="0">
+
                     <tr>
-                        <td>Name of Stand: </td>
-                        <td>{{ form_widget(form.nomStand) }}</td>
+                        <td>CIN</td><td><input type="number" name="cin" id="cin" class="form-control"/> </td>
                     </tr>
                     <tr>
-                        <td>Mail : </td>
-                        <td>{{ form_widget(form.mail) }}</td>
+                        <td>Nom</td><td><input type="text" name="Nom" id="Nom" class="form-control"/> </td>
                     </tr>
                     <tr>
-                        <td>Discription : </td>
-                        <td>{{ form_widget(form.description) }}</td>
+                        <td>Prenom</td><td><input type="text" name="Prenom" id="Prenom" class="form-control"/> </td>
                     </tr>
                     <tr>
-                        <td>Stand price is 60 TND </td>
-                        <td><button class="btn btn-primary" type="submit">Add Event</button></td>
+                        <td>Tel</td><td><input type="number" name="Tel" id="Tel" class="form-control"/> </td>
                     </tr>
-                <br>
-                {{ form_end(form) }}
+                <tr>
+                    <td>Stands</td>
+                    <td>
+                <select name="idStand">
+                    {% for s in stands %}
+                    <option value="{{ s.IdStand }}">{{ s.Description }}</option>
+                    {% endfor %}
+                </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                    </td>
+                </tr>
                 </table>
+            </form>
         </div></div></div></div></section>
 {% endblock %}

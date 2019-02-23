@@ -64,7 +64,9 @@ class DefaultController extends Controller
 
     public function eventAction()
     {
+
         $aa = $this->getDoctrine()->getRepository(Evenement::class)->findAll();
+
         return $this->render('@base/Default/event.html.twig', array(
             'aa' => $aa
         ));

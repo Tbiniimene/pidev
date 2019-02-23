@@ -122,8 +122,8 @@ show_stand:
     defaults: { _controller: baseBundle:Event:stand }
 
 rent_stand:
-    path:     /base/rent
-    defaults: { _controller: baseBundle:Event:rent }
+    path:     /base/rentStand/{idEvent}
+    defaults: { _controller: baseBundle:Event:rentStand }
 
 test:
     path:     /test/{id}
