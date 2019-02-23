@@ -160,6 +160,5 @@ class ParticipantsEvenement
      */
     private $idStand;
 
-
 }
 

@@ -115,6 +115,14 @@ class EventController extends Controller
         ));
     }
 
+    public function parAction()
+    {
+        $aa = $this->getDoctrine()->getRepository(ParticipantsEvenement::class)->findAll();
+        return $this->render('@base/event/par.html.twig', array(
+            'aa' => $aa
+        ));
+    }
+
     public function rentStandAction($idEvent)
     {
         $pe=new ParticipantsEvenement();
@@ -150,9 +158,6 @@ class EventController extends Controller
         return $this->render('@base/event/rent.html.twig', array(
             'idEvent' => $idEvent,'stands'=>$stands
         ));
-
-
-
-
+        
     }
 }

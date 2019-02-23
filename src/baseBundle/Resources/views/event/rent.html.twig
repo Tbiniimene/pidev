@@ -5,7 +5,7 @@
     <section class="about-us-area">
     <div class="container">
     <div class="row justify-content-between">
-    <div class="col-12 col-lg-12">
+    <div class="col-12 col-lg-7">
         <div class="section-heading">
             <form method="post" name="f" id="f" action="{{ path('rent_stand',{'idEvent':idEvent}) }}">
 
@@ -15,16 +15,16 @@
                         <td>CIN</td><td><input type="number" name="cin" id="cin" class="form-control"/> </td>
                     </tr>
                     <tr>
-                        <td>Nom</td><td><input type="text" name="Nom" id="Nom" class="form-control"/> </td>
+                        <td>Name</td><td><input type="text" name="Nom" id="Nom" class="form-control"/> </td>
                     </tr>
                     <tr>
-                        <td>Prenom</td><td><input type="text" name="Prenom" id="Prenom" class="form-control"/> </td>
+                        <td>Last Name</td><td><input type="text" name="Prenom" id="Prenom" class="form-control"/> </td>
                     </tr>
                     <tr>
-                        <td>Tel</td><td><input type="number" name="Tel" id="Tel" class="form-control"/> </td>
+                        <td>Phone Number</td><td><input type="number" name="Tel" id="Tel" class="form-control"/> </td>
                     </tr>
                 <tr>
-                    <td>Stands</td>
+                    <td>Stand Size</td>
                     <td>
                 <select name="idStand">
                     {% for s in stands %}
@@ -33,12 +33,14 @@
                 </select>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                    <input type="submit" value="Submit" class="btn btn-primary" />
-                    </td>
-                </tr>
                 </table>
+                <center><button class="btn btn-success" type="submit">Confirm Renting</button></center>
             </form>
-        </div></div></div></div></section>
+        </div>
+    </div>
+        <div class="col-12 col-lg-5">
+            <img src="{{ asset('img/bg-img/rent.jpg')}}" alt="">
+        </div>
+    </div></div>
+    </section>
 {% endblock %}

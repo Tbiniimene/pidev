@@ -105,5 +105,9 @@ class Stand
         $this->description = $description;
     }
 
+    public function __toString()
+    {
+        return (string) $this->getIdStand();
+    }
 }
 

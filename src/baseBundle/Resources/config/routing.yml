@@ -129,9 +129,9 @@ rent_stand:
     path:     /base/rentStand/{idEvent}
     defaults: { _controller: baseBundle:Event:rentStand }
 
-test:
-    path:     /test/{id}
-    defaults: { _controller: baseBundle:Event:test }
+show_par:
+    path:     /admin/par
+    defaults: { _controller: baseBundle:Event:par }
 
 admin_modifierLivreur:
     path:     /admin/modifierLivreur
