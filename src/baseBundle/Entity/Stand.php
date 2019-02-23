@@ -105,6 +105,5 @@ class Stand
         $this->description = $description;
     }
 
-
 }
 

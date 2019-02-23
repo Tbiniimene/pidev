@@ -81,7 +81,7 @@ class Evenement
     /**
      * @var integer
      *
-     * @ORM\Column(name="nb_stand", type="integer", nullable=false)
+     * @ORM\Column(name="nb_stand", type="integer", nullable=true)
      */
     private $nbStand;
 
@@ -197,4 +197,8 @@ class Evenement
         $this->nbStand = $nbStand;
     }
 
+    public function __toString()
+    {
+        return (string) $this->getIdEvenement();
+    }
 }

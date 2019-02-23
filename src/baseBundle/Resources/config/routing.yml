@@ -118,6 +118,10 @@ show_stand:
     path:     /admin/stand
     defaults: { _controller: baseBundle:Event:stand }
 
+add_stand:
+    path:     /admin/add_stand
+    defaults: { _controller: baseBundle:Event:standaj }
+
 rent_stand:
     path:     /base/rentStand/{idEvent}
     defaults: { _controller: baseBundle:Event:rentStand }

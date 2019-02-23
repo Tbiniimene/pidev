@@ -12,21 +12,23 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th> Id </th>
-                        <th> Name </th>
-                        <th> Mail </th>
+                        <th> Stand Id </th>
+                        <th> Event Id </th>
+                        <th> Stat </th>
                         <th> Description </th>
-                        <th> Event Name </th>
                     </tr>
                     </thead>
                     <tbody>
                     {%  for e in aa %}
                         <tr>
                             <td> {{ e.idStand }} </td>
-                            <td> {{ e.nomStand }} </td>
-                            <td> {{ e.mail }} </td>
+                            <td> {{ e.idEvent }} </td>
+                             {% if (e.statutStand ==0)%}
+                            <td class="text-danger">unavailable</td>
+                            {% else %}
+                            <td class="text-success">available
+                            {% endif %}
                             <td> {{ e.description }} </td>
-                            <td> {{ e.event }} </td>
                         </tr>
                     {% endfor %}
                     </tbody>

@@ -6,6 +6,7 @@ use baseBundle\Entity\Evenement;
 use baseBundle\Entity\ParticipantsEvenement;
 use baseBundle\Entity\Stand;
 use baseBundle\Form\EventType;
+use baseBundle\Form\StandType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -90,10 +91,32 @@ class EventController extends Controller
             'aa' => $aa
         ));
     }
+
+    public function standajAction(Request $request)
+    {
+        //1-préparation d'un objet vide
+        $stand = new Stand();
+        //2-création du formulaire
+        $form = $this->createForm(StandType::class, $stand);
+        //4-recuperation des donnees
+        $form = $form->handleRequest($request);
+        //5-validation du formulaire
+        if ($form->isValid()) {
+            //6-creation de l'entity manager
+            $em = $this->getDoctrine()->getManager();
+            //7-persister les donnes dans L'ORM (doctrine)
+            $em->persist($stand);
+            //8-sauvgarde des donnes dans la base des donnes
+            $em->flush();
+            return $this->redirectToRoute('add_stand');
+        }
+        return $this->render('@base/event/standaj.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+
     public function rentStandAction($idEvent)
     {
-
-
         $pe=new ParticipantsEvenement();
         //5-validation du formulaire
         if (isset($_POST['cin']) && isset($_POST['Nom']) && isset($_POST['Prenom']) && isset($_POST['Tel']) && isset($_POST['idStand']) ) {
@@ -115,10 +138,6 @@ class EventController extends Controller
                     $stand->setStatutStand('0');
                     $em->persist($stand);
 
-
-
-
-
             $em->persist($pe);
             $em->flush();
 
@@ -136,31 +155,4 @@ class EventController extends Controller
 
 
     }
-
-    public function rentAction(Request $request)
-    {
-        //1-préparation d'un objet vide
-        $event = new Stand();
-
-        //2-création du formulaire
-        $form = $this->createForm(stand::class, $event);
-
-        //4-recuperation des donnees
-        $form = $form->handleRequest($request);
-
-        //5-validation du formulaire
-        if ($form->isValid()) {
-            //6-creation de l'entity manager
-            $em = $this->getDoctrine()->getManager();
-            //7-persister les donnes dans L'ORM (doctrine)
-            $em->persist($event);
-            //8-sauvgarde des donnes dans la base des donnes
-            $em->flush();
-            return $this->redirectToRoute('base_event');
-        }
-        return $this->render('@base/event/rent.html.twig', array(
-            'form' => $form->createView()
-        ));
-    }
-
 }
