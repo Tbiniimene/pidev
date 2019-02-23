@@ -1,7 +1,7 @@
 <?php
 
 namespace baseBundle\Controller;
-
+use baseBundle\Entity\Formation;
 use baseBundle\Entity\Evenement;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -69,6 +69,15 @@ class DefaultController extends Controller
             'aa' => $aa
         ));
     }
+
+    public function formingAction()
+    {
+        $formations=$this->getDoctrine()
+            ->getRepository(Formation::class)
+            ->findAll();
+        return $this->render('@base/Default/forming.html.twig',array('f'=>$formations));
+    }
+
 
     public function loginAction()
     {

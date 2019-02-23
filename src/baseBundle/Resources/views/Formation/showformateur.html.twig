@@ -7,7 +7,7 @@
         <div class="card mb-3">
             <div class="card-header">
                 <i class="fas fa-table"></i>
-                Events List
+                Trainers
             </div>
             <div class="card-body">
                 <div class="table-responsive table-hover">
@@ -20,6 +20,7 @@
                             <th>Last name</th>
                             <th>Type</th>
                             <th>Phone</th>
+                            <th>State</th>
                             <th>Edit</th>
                             <th>Delete</th>
 
@@ -43,9 +44,14 @@
                                 <td>{{ formateurs.prenom}}</td>
                                 <td>{{ formateurs.type }}</td>
                                 <td> {{ formateurs.tel }}</td>
-                                <td> <a href="{{ path('modif_formateur',{'id':formateurs.idFormateur}) }}" class="btn btn-warning"/> Change </td>
+                                <td> {{ formateurs.etat }}</td>
+                                <td>
+                                    <a href="{{ path('modif_formateur',{'id':formateurs.idFormateur}) }}" class="btn btn-warning"/> Change
+                                </td>
 
-                                <td> <a href="{{ path('supp_formateur',{'id':formateurs.idFormateur}) }}" class="btn btn-warning"/> Delete </td>
+                                <td>
+                                    <a href="{{ path('supp_formateur',{'id':formateurs.idFormateur}) }}" class="btn btn-warning"/> Delete
+                                </td>
 
                             </tr>
                         {% endfor %}
