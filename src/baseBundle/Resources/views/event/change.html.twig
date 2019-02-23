@@ -2,14 +2,14 @@
 {% block title %}Admin - Event{% endblock %}
 {% block body %}
     <!-- Page Content -->
-    <div class="card mb-3">
+    <div class="container-fluid">
         <div class="card-header">
             <i class="fas fa-table"></i>
             Events List
         </div>
         <div class="card-body">
             <div class="table-responsive table-hover">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-borderless" id="dataTable" width="100%" cellspacing="0">
                     {{ form_start(form) }}
                     <tr>
                         <td>Name : </td>
@@ -34,6 +34,10 @@
                     <tr>
                         <td>Number of stands : </td>
                         <td>{{ form_widget(form.nbStand) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Event Image : </td>
+                        <td>{{ form_widget(form.img) }}</td>
                     </tr>
                 </table>
                 <br>

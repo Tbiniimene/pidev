@@ -10,49 +10,51 @@
                 <div class="col">
 
                     <!-- Event -->
-                    {%  for e in aa %}
-                        <div class="event">
-                            <div class="row row-lg-eq-height">
-                                <div class="col-lg-6 single_portfolio_item design home-design">
-                                    <!-- Portfolio Thumbnail -->
-                                    <div class="portfolio-thumbnail bg-img" style="background-image: url({{ asset(e.img) }});"></div>
-                                    <!-- Portfolio Hover Text -->
-                                    <div class="portfolio-hover-overlay">
-                                        <a href="{{ asset(e.img) }}" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 1">
-                                            <div class="port-hover-text">
-                                                <h3>Event 1 </h3>
-                                                <h5>15 May</h5>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 event_col">
-                                    <div class="event_content">
-                                        <div><br><h5>{{ e.nom }}</h5></div>
-                                        <div class="event_location">{{ e.addresse }}</div>
-                                        <div class="event_text">
-                                            <p>{{ e.description }}</p>
+                    <form method="post" action="#" name="f" id="f">
+                        {%  for e in aa %}
+                            <div class="event">
+                                <div class="row row-lg-eq-height">
+                                    <div class="col-lg-6 single_portfolio_item design home-design">
+                                        <!-- Portfolio Thumbnail -->
+                                        <div class="portfolio-thumbnail bg-img" style="background-image: url('{{asset(e.img) }}');"></div>
+                                        <!-- Portfolio Hover Text -->
+                                        <div class="portfolio-hover-overlay">
+                                            <a href="{{ asset(e.img) }}" class="portfolio-img d-flex align-items-center justify-content-center" title="{{ e.nom }}">
+                                                <div class="port-hover-text">
+                                                    <h3>{{ e.nom }}</h3>
+                                                    <h5>{{ e.dateDeb|date('Y-m-d') }}</h5>
+                                                    <h5>{{ e.dateFin|date('Y-m-d') }}</h5>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <div class="event_speakers">
-                                            <!-- Event Speaker -->
-                                            <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-                                                <div><div class="event_speaker_image"><img src="{{ asset('img/core-img/time.png') }}" alt=""></div></div>
-                                                <div class="event_speaker_content">
-                                                    <div class="event_speaker_name">Start Date : {{ e.dateDeb|date('Y-m-d') }}</div>
-                                                    <div class="event_speaker_title">End Date : {{ e.dateFin|date('Y-m-d') }}</div>
+                                    </div>
+                                    <div class="col-lg-6 event_col">
+                                        <div class="event_content">
+                                            <div><br><h3>{{ e.nom }}</h3></div>
+                                            <div class="event_location"><h5>@ {{ e.addresse }}</h5></div>
+                                            <div class="event_text">
+                                                <p>{{ e.description }}</p>
+                                            </div>
+                                            <div class="event_speakers">
+                                                <!-- Event time -->
+                                                <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
+                                                    <div><div class="event_speaker_image"><img src="{{ asset('img/core-img/tt.png') }}" alt=""></div></div>
+                                                    <div class="event_speaker_content">
+                                                        <div class="event_speaker_name">  Start Date : {{ e.dateDeb|date('Y-m-d') }}</div>
+                                                        <div class="event_speaker_title">  End Date : {{ e.dateFin|date('Y-m-d') }}</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="event_buttons">
-                                            <button type="submit" class="btn alazea-btn mt-30">Sign to Event</button>
-                                            <button type="submit" class="btn alazea-btn mt-30">Rent Stand</button>
+                                            <div class="event_buttons">
+                                                <button type="submit" class="btn alazea-btn mt-30">Rent Event</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div><br></div>
-                    {% endfor %}
+                            <div><br></div>
+                        {% endfor %}
+                    </form>
                 </div>
             </div>
             <div><br></div>
