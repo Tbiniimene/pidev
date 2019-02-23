@@ -1,0 +1,32 @@
+{% extends '@base/default/base.html.twig' %}
+{% block tt %} <h2>EVENT</h2>{% endblock %}
+{% block aa %}Rent{% endblock %}
+{% block body %}
+    <section class="about-us-area">
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="col-12 col-lg-12">
+        <div class="section-heading">
+                <table class="table table-borderedless" id="dataTable" width="100%" cellspacing="0">
+                    {{ form_start(form) }}
+                    <tr>
+                        <td>Name of Stand: </td>
+                        <td>{{ form_widget(form.nomStand) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Mail : </td>
+                        <td>{{ form_widget(form.mail) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Discription : </td>
+                        <td>{{ form_widget(form.description) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Stand price is 60 TND </td>
+                        <td><button class="btn btn-primary" type="submit">Add Event</button></td>
+                    </tr>
+                <br>
+                {{ form_end(form) }}
+                </table>
+        </div></div></div></div></section>
+{% endblock %}

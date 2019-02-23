@@ -3,6 +3,7 @@
 namespace baseBundle\Controller;
 
 use baseBundle\Entity\Evenement;
+use baseBundle\Entity\Stand;
 use baseBundle\Form\EventType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -69,11 +70,50 @@ class EventController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
             $em = $this->getDoctrine()->getManager();
+            $dest='Uploads/Event/'.$event->getNom().'.jpg';
+            $img=$event->getImg();
+            $event->setImg($dest);
+            copy($img,$dest);
+            unlink($img);
             $em->persist($event);
             $em->flush();
             return $this->redirectToRoute("show_event");
         }
         return $this->render('@base/event/change.html.twig', array("form" => $form->createView()));
+    }
+
+    public function standAction()
+    {
+        $aa = $this->getDoctrine()->getRepository(Stand::class)->findAll();
+        return $this->render('@base/event/stand.html.twig', array(
+            'aa' => $aa
+        ));
+    }
+
+    public function rentAction(Request $request)
+    {
+        //1-préparation d'un objet vide
+        $event = new Stand();
+
+        //2-création du formulaire
+        $form = $this->createForm(stand::class, $event);
+
+        //4-recuperation des donnees
+        $form = $form->handleRequest($request);
+
+        //5-validation du formulaire
+        if ($form->isValid()) {
+            //6-creation de l'entity manager
+            $em = $this->getDoctrine()->getManager();
+            //7-persister les donnes dans L'ORM (doctrine)
+            $em->persist($event);
+            //8-sauvgarde des donnes dans la base des donnes
+            $em->flush();
+            return $this->redirectToRoute('base_event');
+        }
+        return $this->render('@base/event/rent.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 
 }

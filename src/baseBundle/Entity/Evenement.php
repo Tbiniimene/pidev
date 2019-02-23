@@ -41,9 +41,31 @@ class Evenement
      * @ORM\Column(name="nom", type="string", length=30, nullable=false)
      */
     private $nom;
-
     /**
      * @var string
+     *
+     * @ORM\Column(name="img", type="string", length=255, nullable=false)
+     */
+    private $img;
+
+    /**
+     * @return string
+     */
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    /**
+     * @param string $img
+     */
+    public function setImg($img)
+    {
+        $this->img = $img;
+    }
+
+    /**
+     * @var text
      *
      * @ORM\Column(name="addresse", type="string", length=30, nullable=false)
      */
@@ -175,6 +197,4 @@ class Evenement
         $this->nbStand = $nbStand;
     }
 
-
 }
-

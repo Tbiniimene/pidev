@@ -139,21 +139,18 @@
             <div id="ev" class="collapse">
                 <a class="dropdown-item" href="{{ path('show_event') }}">Show Event</a>
                 <a class="dropdown-item" href="{{ path('add_event') }}">Add Event</a>
-                <a class="dropdown-item" href="#">Change Event</a>
+                <a class="dropdown-item" href="{{ path('show_stand') }}">Show Stand</a>
             </div>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#ev">
+            <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#for">
                 <span>Forming sessions</span> <i class="fas fa-fw fa-caret-down"></i></a>
-            <div id="ev" class="collapse">
+            <div id="for" class="collapse">
                 <a class="dropdown-item" href="{{ path('formateur_afficherformateur') }}">View Trainers</a>
                 <a class="dropdown-item" href="{{ path('formation_ajoutformateur') }}">Add Trainer</a>
                 <a class="dropdown-item" href="{{ path('afficherformation') }}">View Forming sessions</a>
                 <a class="dropdown-item" href="{{ path('ajoutformation') }}">Add Forming sessions</a>
-                ajoutformation
-
-                <a class="dropdown-item" href="#">Change Event</a>
             </div>
         </li>
         <li class="nav-item">

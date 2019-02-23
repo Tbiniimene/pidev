@@ -17,7 +17,7 @@ class EventType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('img',FileType::class)
+            ->add('img',FileType::class,array('data_class' => null))
             ->add('nom')
             ->add('dateDeb')
             ->add('dateFin')
