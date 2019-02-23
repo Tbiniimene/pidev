@@ -127,7 +127,7 @@
                         <span>Disponibilité</span> <i class="fas fa-fw fa-caret-down"></i></a>
                     <div id="disp" class="collapse">
                         <a class="dropdown-item" href="{{ path('admin_ajouterDispo') }}">Ajouter </a>
-                        <a class="dropdown-item" href="#">Supprimer </a>
+                        <a class="dropdown-item" href="{{ path('admin_suppDispo') }}">Supprimer </a>
                     </div>
                     </li>
                 </ul>
@@ -143,6 +143,15 @@
             </div>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#ev">
+                <span>Forming sessions</span> <i class="fas fa-fw fa-caret-down"></i></a>
+            <div id="ev" class="collapse">
+                <a class="dropdown-item" href="{{ path('formateur_afficherformateur') }}">Show Trainers</a>
+                <a class="dropdown-item" href="{{ path('formation_ajoutformateur') }}">Add Trainer</a>
+                <a class="dropdown-item" href="#">Change Event</a>
+            </div>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ path('admin_charts') }}">
                 <i class="fas fa-fw fa-chart-area"></i>

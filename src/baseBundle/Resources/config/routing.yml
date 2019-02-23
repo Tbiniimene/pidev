@@ -122,6 +122,20 @@ admin_ajouterDispo:
     path:     /admin/ajouterDispo
     defaults: { _controller: baseBundle:Livreur:ajouterDispo}
 
+admin_suppDispo:
+    path:     /admin/suppDispo
+    defaults: { _controller: baseBundle:Livreur:suppDispo}
+
+formateur_afficherformateur:
+    path:     /afficher
+    defaults: { _controller: baseBundle:Formation:view }
+formation_ajoutformateur:
+        path:     /ajout
+        defaults: { _controller: baseBundle:Formation:create }
+supp_formateur:
+    path: /supprimer/{id}
+    defaults: { _controller: baseBundle:Formation:supprimer }
+
 
 
 

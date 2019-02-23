@@ -57,7 +57,15 @@
                         <tr class="clickable-row" data="{{ v.idLivreur }}">
                             <td>{{ v.nom }}</td>
                             <td>{{ v.prenom }}</td>
-                            <td>{{ v.etat }}</td>
+
+                           {% if v.etat=="disponible" %}
+                               <td class="text-success"> <b>{{ v.etat }}</b></td>
+
+                           {% else %}
+                               <td class="text-danger"><b>{{ v.etat }}</b></td>
+
+                           {% endif %}
+
                             <td>{{ v.tel }}</td>
                             <td>{{ v.localisation }}</td>
 

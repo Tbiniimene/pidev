@@ -59,3 +59,28 @@ function submitAjtDisp()
     res=res.slice(0, -1);
     $("#selectedDays").val(res);
 }
+function setBg(row)
+{
+
+    if($(row).hasClass("bg-primary"))
+    {
+
+        $(this).removeClass("bg-primary");
+        $(this).css('color','black');
+    }
+    else
+    {
+
+        $('.bg-primary').each(function(i,obj)
+        {
+
+            $(this).removeClass("bg-primary");
+            $(this).css('color','black');
+        });
+
+        $(row).addClass("bg-primary");
+        $(row).css('color','white');
+
+    }
+
+}
