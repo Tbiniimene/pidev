@@ -56,13 +56,18 @@ function sendToModal()
 
     $("#nomLiv").attr("placeholder",nom);
     $("#nomLiv").val(nom);
+
     $("#prenomLiv").attr("placeholder",prenom);
     $("#prenomLiv").val(prenom);
+
     $("#etatLiv").val(etat);
+
     $("#telLiv").attr("placeholder",tel);
     $("#telLiv").val(tel);
+
     $("#localisationLiv").attr("placeholder",localisation);
     $("#localisationLiv").val(localisation);
+
     $("#idLiv").val(currLiv);
 
 }
