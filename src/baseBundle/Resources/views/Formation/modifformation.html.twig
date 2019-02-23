@@ -1,0 +1,58 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block dashbord %}<h9>Edit forming session</h9>{% endblock %}
+{% block body %}
+    <!-- Page Content -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Add New Forming session
+        </div>
+        <div class="card-body">
+            <div class="table-responsive table-hover">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    {{ form_start(form) }}
+                    <tr>
+                        <td>Title : </td>
+                        <td>{{ form_widget(form.nom) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Type : </td>
+                        <td>{{ form_widget(form.type) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Price : </td>
+                        <td>{{ form_widget(form.prix) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Start Date : </td>
+                        <td>{{ form_widget(form.dateDeb) }}</td>
+                    </tr>
+                    <tr>
+                        <td>End Date : </td>
+                        <td>{{ form_widget(form.dateFin) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Description : </td>
+                        <td>{{ form_widget(form.description) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Title : </td>
+                        <td>{{ form_widget(form.nbmax) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Trainer: </td>
+                        <td>{{ form_widget(form.Formateur) }}</td>
+                    </tr>
+
+                </table>
+                <br>
+                {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

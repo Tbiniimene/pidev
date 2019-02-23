@@ -1,0 +1,69 @@
+
+
+    {% extends '@base/admin/base.html.twig' %}
+    {% block title %}Admin - Forming sessions{% endblock %}
+    {% block body %}
+        <!-- Page Content -->
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fas fa-table"></i>
+                Events List
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-hover">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+
+                            <th> </th>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Price</th>
+                            <th>Debut date</th>
+                            <th>End date</th>
+                            <th>Description</th>
+                            <th>Number of participants</th>
+                            <th>Trainer</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+
+                        </tr>
+                        </thead>
+
+
+
+                        <tbody>
+
+                        {%  for formations in f %}
+
+                            <tr>
+                                <td>
+							<span class="custom-checkbox">
+								<input type="checkbox" id="checkbox1" name="options[]" value="1">
+								<label for="checkbox1"></label>
+							</span>
+                                </td>
+                                <td> {{ formations.nom }} </td>
+                                <td> {{ formations.type }} </td>
+
+                                <td> {{ formations.prix }} </td>
+                                <td> {{ formations.dateDeb|date("m/d/Y") }} </td>
+                                <td> {{ formations.dateFin|date("m/d/Y") }} </td>
+                                <td> {{ formations.description }}</td>
+                                <td> {{ formations.nbmax }}</td>
+                                <td> {{ formations.formateur.nom }} </td>
+
+                                <td> <a href="{{ path('modif_formation',{'id':formations.idformation}) }}" class="btn btn-warning"/> Edit </td>
+
+                                <td> <a href="{{ path('supp_formation',{'id':formations.idformation}) }}" class="btn btn-warning"/> Delete </td>
+
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+

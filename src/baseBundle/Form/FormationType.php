@@ -25,9 +25,9 @@ class FormationType extends AbstractType
         ))->add('nom')->add('prix')
             ->add('dateDeb')->add('dateFin')->add('Formateur')
             ->add('Formateur',EntityType::class,array(
-                'class'=>'FormationBundle:Formateur',
+                'class'=>'baseBundle:Formateur',
                 'choice_label'=>'nom',
-                'multiple'=>false))->add('description')
+                'multiple'=>false))->add('description')->add('nbmax')
             ->add('save',SubmitType::class);
     }/**
      * {@inheritdoc}
@@ -35,7 +35,7 @@ class FormationType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'FormationBundle\Entity\Formation'
+            'data_class' => 'baseBundle\Entity\Formation'
         ));
     }
 

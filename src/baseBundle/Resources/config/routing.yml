@@ -138,6 +138,18 @@ supp_formateur:
 modif_formateur:
     path: /modifier/{id}
     defaults: { _controller: baseBundle:Formation:modifier }
+afficherformation:
+    path:     /afficherf
+    defaults: { _controller: baseBundle:Formation:afficherFormation }
+ajoutformation:
+    path:     /ajoutf
+    defaults: { _controller: baseBundle:Formation:createf }
+supp_formation:
+    path: /supprimerf/{id}
+    defaults: { _controller: baseBundle:Formation:supprimerf }
+modif_formation:
+    path: /modifierf/{id}
+    defaults: { _controller: baseBundle:Formation:modifierf }
 
 
 
