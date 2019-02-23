@@ -26,21 +26,58 @@
                 <tr>
                     <td>Stand Size</td>
                     <td>
-                <select name="idStand">
-                    {% for s in stands %}
-                    <option value="{{ s.IdStand }}">{{ s.Description }}</option>
-                    {% endfor %}
-                </select>
+                        {% for s in stands %}
+                <input type="radio"  id="des" name="idStand" value="{{ s.IdStand }}"/>{{ s.Description }}<br>
+                        {% endfor %}
                     </td>
                 </tr>
                 </table>
-                <center><button class="btn btn-success" type="submit">Confirm Renting</button></center>
-            </form>
         </div>
     </div>
         <div class="col-12 col-lg-5">
-            <img src="{{ asset('img/bg-img/rent.jpg')}}" alt="">
-        </div>
-    </div></div>
+            <div id="zone"><img src="{{ asset('img/bg-img/rent.jpg')}}" alt=""></div><br>
+            <div>
+
+            </div>
+            <div><button class="btn btn-success" type="submit">Confirm Renting</button></div><br>
+            </form>
+        </div></div></div>
     </section>
+
+
+
+    <script src="{{ asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
+    <script>
+        $(document).ready(function(){
+            //alert("Script working properly");
+            $("#a").click(function(){
+                $("#t").hide();
+            });
+            $("#b").click(function(){
+                $("#t").show();
+            });
+            $("#c").click(function(){
+                $("#t").toggle();
+            });
+            $("#d").click(function(){
+                $("#t tbody td").empty();
+            });
+            $("#e").click(function(){
+                $("#t").remove();
+            });
+
+            $('#des').click(function() {
+                $('#a').show('img/bg-img/rent.jpg');
+                $('#zone').html('<img id="a" src="{{asset('img/bg-img/stand.jpg')}}">');
+                $(this).html("logo affiché").css('color','green');
+                $("#m").click(function(){
+                    $("#m").height(100);
+                    $("#m").width(100);
+                    $("#m").slideUp(1500);
+                    $("#m").slideDown(1000);
+                });
+            });
+
+        });
+    </script>
 {% endblock %}

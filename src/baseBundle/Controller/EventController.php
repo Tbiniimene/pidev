@@ -158,6 +158,11 @@ class EventController extends Controller
         return $this->render('@base/event/rent.html.twig', array(
             'idEvent' => $idEvent,'stands'=>$stands
         ));
-        
+
+    }
+
+    public function testAction()
+    {
+        return $this->render('@base/event/test.html.twig');
     }
 }

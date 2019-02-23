@@ -170,6 +170,10 @@ modif_formation:
     path: /modifierf/{id}
     defaults: { _controller: baseBundle:Formation:modifierf }
 
+test:
+    path: /test
+    defaults: { _controller: baseBundle:Event:test }
+
 
 
 
