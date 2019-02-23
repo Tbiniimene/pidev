@@ -135,6 +135,9 @@ formation_ajoutformateur:
 supp_formateur:
     path: /supprimer/{id}
     defaults: { _controller: baseBundle:Formation:supprimer }
+modif_formateur:
+    path: /modifier/{id}
+    defaults: { _controller: baseBundle:Formation:modifier }
 
 
 

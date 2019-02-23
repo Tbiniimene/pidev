@@ -20,8 +20,8 @@
                             <th>Last name</th>
                             <th>Type</th>
                             <th>Phone</th>
-                            <th>Actions</th>
-
+                            <th>Edit</th>
+                            <th>Delete</th>
 
                         </tr>
                         </thead>
@@ -43,6 +43,7 @@
                                 <td>{{ formateurs.prenom}}</td>
                                 <td>{{ formateurs.type }}</td>
                                 <td> {{ formateurs.tel }}</td>
+                                <td> <a href="{{ path('modif_formateur',{'id':formateurs.idFormateur}) }}" class="btn btn-warning"/> Change </td>
 
                                 <td> <a href="{{ path('supp_formateur',{'id':formateurs.idFormateur}) }}" class="btn btn-warning"/> Delete </td>
 
