@@ -1,7 +1,22 @@
 {% extends '@base/admin/base.html.twig' %}
 {% block title %}Admin - Liste des livreurs{% endblock %}
 {% block body %}
+    <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+            $("table tbody > tr").each(function()
+            {
 
+                let td=($(this).find("td:eq(4)").text());
+                if(td.indexOf(" :")!=-1)
+                {
+                    td=td.slice(0,td.indexOf(" :"));
+                    $(this).find("td:eq(4)").text(td);
+                }
+
+            })
+        });
+    </script>
 <div id="content-wrapper">
 
         <div class="container-fluid">
@@ -48,7 +63,13 @@
                         <tr>
                             <td>{{ v.nom }}</td>
                             <td>{{ v.prenom }}</td>
-                            <td>{{ v.etat }}</td>
+                            {% if v.etat=="disponible" %}
+                                <td class="text-success"><b>{{ v.etat }}</b></td>
+
+                            {% else %}
+                                <td class="text-danger"><b>{{ v.etat }}</b></td>
+
+                            {% endif %}
                             <td>{{ v.tel }}</td>
                             <td>{{ v.localisation }}</td>
 

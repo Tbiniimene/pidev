@@ -81,7 +81,7 @@ class Disponibilite
      *
      * @ORM\ManyToOne(targetEntity="Livreur")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_livreur", referencedColumnName="id_livreur")
+     *   @ORM\JoinColumn(name="id_livreur", referencedColumnName="id_livreur",onDelete="CASCADE")
      * })
      */
     private $idLivreur;

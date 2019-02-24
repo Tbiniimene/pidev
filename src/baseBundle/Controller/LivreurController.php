@@ -176,4 +176,11 @@ class LivreurController extends Controller
         ));
 
     }
+    public function mapAction()
+    {
+
+        return $this->render('@base/livraison/map.html.twig'
+        );
+
+    }
 }

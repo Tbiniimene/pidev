@@ -1,9 +1,15 @@
 {% extends '@base/admin/base.html.twig' %}
 {% block title %}Admin - Modifier des livreurs{% endblock %}
 {% block body %}
+    <link href="{{ asset('admin/customCss/mapCss.css') }}" rel="stylesheet"/>
+
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/customJs/modifierLivreur.js') }}"></script>
+    <script>
+        $(document).ready(function(){
 
+        });
+    </script>
 
     <style>
         .clickable-row{
@@ -103,14 +109,20 @@
                                     <label>Nouveau numero de Téléphone : </label>
                                 <input type="number" name="telLiv" id="telLiv" class="form-control"/>
                                     <label>Nouvelle Localisation: </label>
-                                <textarea type="text" name="localisationLiv" id="localisationLiv" class="form-control" ></textarea>
+
+                                    <div id="map-container-google-16" class="z-depth-1-half map-container-9" style="height: 400px">
+                                        <iframe id="mapFrame" src="{{ path('admin_map') }}"
+                                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </div>
                                     <input type="hidden" name="idLiv" id="idLiv" value="" />
+                                    <input type="hidden" name="localisationLiv" id="localisationLiv" value="" />
+
                                 </div>
                         </div>
 
                         <!-- Modal footer -->
                         <div class="modal-footer">
-                           <input type="submit" class="btn btn-success" id="btnSubmitModif" onclick="submitModif()" value="Submit" /> <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                           <input type="submit" class="btn btn-success" id="btnSubmitModif" onclick="setLatLng()"  value="Submit" /> <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                         </form>
 
