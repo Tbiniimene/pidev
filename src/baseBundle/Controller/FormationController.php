@@ -66,6 +66,7 @@ class FormationController extends Controller
         $form=$form->handleRequest($request);
         if($form->isValid()){
             $em=$this->getDoctrine()->getManager();
+
         //controlle sur le saisie de l'addresse
 
             $dest='Uploads/Event/'.$formations->getNom().'.jpg';

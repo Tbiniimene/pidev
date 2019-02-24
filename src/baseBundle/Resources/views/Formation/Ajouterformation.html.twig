@@ -2,8 +2,32 @@
 {% block dashbord %}<h9>Add forming session</h9>{% endblock %}
 {% block body %}
 <!-- Page Content -->
+    <script src="js/jquery-2.2.4.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+
+
+            $("#formationbundle_formation_dateDeb_day").on("change",function(){
+                let currVal=$(this).val();
+                setAvailableDates(currVal);
+            });
+            function setAvailableDates(min)
+            {
+                $("#formationbundle_formation_dateFin_day > option").each(function(){
+                    if($(this).val()<=min)
+                        $(this).attr('disabled','disabled');
+                    else {
+                        $(this).attr('disabled','false');
+
+                    }
+                });
+
+            }
+        });
+    </script>
 <div class="card mb-3">
     <div class="card-header">
+
         <i class="fas fa-table"></i>
        Add New Forming session
     </div>
@@ -25,16 +49,12 @@
                 </tr>
                 <tr>
                     <td>Start Date : </td>
-                    <td>{{ form_widget(form.dateDeb) }}</td>
+                    <td>{{ form_widget(form.dateDeb ) }}</td>
                 </tr>
-
-
                 <tr>
                     <td>End Date : </td>
-                    <td>{{ form_widget(form.dateFin) }}</td>
+                    <td>{{ form_widget(form.dateFin, {'attr': {'disabled': 'disabled'}}) }}</td>
                 </tr>
-
-
 
                 <tr>
                     <td>Description : </td>
