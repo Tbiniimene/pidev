@@ -35,13 +35,10 @@
         </div>
     </div>
         <div class="col-12 col-lg-5">
-            <div id="zone"><img src="{{ asset('img/bg-img/rent.jpg')}}" alt=""></div><br>
-            <div>
-
-            </div>
-            <div><button class="btn btn-success" type="submit">Confirm Renting</button></div><br>
-            </form>
-        </div></div></div>
+            <div id="zone"><img src="{{ asset('img/bg-img/rent.jpg')}}" alt=""></div>
+            <div></div></div>
+    </div><br><div><center><button class="btn btn-success" type="submit">Confirm Renting</button></center></div><br></div>
+        </form>
     </section>
 
 
@@ -49,33 +46,9 @@
     <script src="{{ asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
     <script>
         $(document).ready(function(){
-            //alert("Script working properly");
-            $("#a").click(function(){
-                $("#t").hide();
-            });
-            $("#b").click(function(){
-                $("#t").show();
-            });
-            $("#c").click(function(){
-                $("#t").toggle();
-            });
-            $("#d").click(function(){
-                $("#t tbody td").empty();
-            });
-            $("#e").click(function(){
-                $("#t").remove();
-            });
-
             $('#des').click(function() {
                 $('#a').show('img/bg-img/rent.jpg');
                 $('#zone').html('<img id="a" src="{{asset('img/bg-img/stand.jpg')}}">');
-                $(this).html("logo affiché").css('color','green');
-                $("#m").click(function(){
-                    $("#m").height(100);
-                    $("#m").width(100);
-                    $("#m").slideUp(1500);
-                    $("#m").slideDown(1000);
-                });
             });
 
         });

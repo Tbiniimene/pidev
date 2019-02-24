@@ -21,6 +21,7 @@ class EventType extends AbstractType
             ->add('nom')
             ->add('dateDeb')
             ->add('dateFin')
+            ->add('nbStand')
             ->add('addresse')
             ->add('description');
 

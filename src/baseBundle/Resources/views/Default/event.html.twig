@@ -48,7 +48,12 @@
                                             <div class="event_buttons">
 
                                               <!--  <input type="hidden" name="idEvent" id="idEvent" value="{{ e.IdEvenement }}"/>-->
-                                                <button type="submit" class="btn alazea-btn mt-50">Rent a Stand</button>
+
+                                                {%  if e.nbStand == '0' %}
+                                                    <label>no stand to rent</label>
+                                                {%  else %}
+                                                    <button type="submit" class="btn alazea-btn mt-50" >Rent a Stand</button>
+                                                {%  endif %}
                                             </div>
                                         </div>
                                     </div>

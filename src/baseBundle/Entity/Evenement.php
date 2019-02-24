@@ -201,4 +201,8 @@ class Evenement
     {
         return (string) $this->getIdEvenement();
     }
+    public function __toInt()
+    {
+        return (int) $this->getNbStand();
+    }
 }
