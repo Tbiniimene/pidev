@@ -104,30 +104,33 @@ function sendDataTrans(id)
     let addRed=true;
     if(livsDays[id]!=null)
     {
-
-
-    for(let i=0;i<7;i++)
-    {
         $("#delTrans").removeAttr("disabled");
 
-        for(let j=0;j<livsDays[id].length;j++)
+        livsDays[id][0]=7;
+
+            for(let i=1;i<=7;i++)
         {
-            if(i==livsDays[id][j])
+
+            for(let j=0;j<livsDays[id].length;j++)
             {
-                console.log("true");
-                $("#transTr").append("<td class='squareGreen'></td>");
-                addRed=false;
+                if(i==livsDays[id][j])
+                {
+                    console.log(i);
+
+                    console.log(livsDays[id][j]);
+                    $("#transTr").append("<td class='squareGreen'></td>");
+                    addRed=false;
+                }
+
             }
 
-        }
+            if(addRed)
+            {
+                 $("#transTr").append("<td class='squareRed'></td>");
 
-        if(addRed)
-        {
-             $("#transTr").append("<td class='squareRed'></td>");
-
+            }
+            addRed=true;
         }
-        addRed=true;
-    }
     }
     else
     {
