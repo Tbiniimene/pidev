@@ -126,7 +126,6 @@ class EventController extends Controller
     public function rentStandAction($idEvent)
     {
         $pe=new ParticipantsEvenement();
-        $e1=new Evenement();
         //5-validation du formulaire
         if (isset($_POST['cin']) && isset($_POST['Nom']) && isset($_POST['Prenom']) && isset($_POST['Tel']) && isset($_POST['idStand']) ) {
             $cin=$_POST['cin'];
@@ -146,10 +145,8 @@ class EventController extends Controller
                     $stand = $em->getRepository(Stand::class)->find($idStand);
                     $stand->setStatutStand('0');
                     $em->persist($stand);
-
-            $e1->getNbStand();
-            $s = (int)$e1-'1';
-            $e1->setNbStand($s);
+            $e1 = new Evenement();
+            $e1->setNbStand('3');
             $em->persist($pe);
             $em->flush();
 
