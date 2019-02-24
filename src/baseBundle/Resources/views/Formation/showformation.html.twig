@@ -22,6 +22,8 @@
                             <th>Debut date</th>
                             <th>End date</th>
                             <th>Description</th>
+                            <th>addresse</th>
+                            <th>image</th>
                             <th>Number of participants</th>
                             <th>Trainer</th>
                             <th>Edit</th>
@@ -50,6 +52,8 @@
                                 <td> {{ formations.dateDeb|date("m/d/Y") }} </td>
                                 <td> {{ formations.dateFin|date("m/d/Y") }} </td>
                                 <td> {{ formations.description }}</td>
+                                <td> {{ formations.addresse }}</td>
+                                <td> <img src="{{ asset(formations.img) }}" style="width: 50px;height:50px" /></td>
                                 <td> {{ formations.nbmax }}</td>
                                 <td> {{ formations.formateur.nom }} </td>
 

@@ -1,7 +1,7 @@
 <?php
 
 namespace baseBundle\Form;
-
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -27,7 +27,7 @@ class FormationType extends AbstractType
             ->add('Formateur',EntityType::class,array(
                 'class'=>'baseBundle:Formateur',
                 'choice_label'=>'nom',
-                'multiple'=>false))->add('description')->add('nbmax')
+                'multiple'=>false))->add('description')->add('addresse')->add('img',FileType::class,array('data_class' => null))->add('nbmax')
             ->add('save',SubmitType::class);
     }/**
      * {@inheritdoc}

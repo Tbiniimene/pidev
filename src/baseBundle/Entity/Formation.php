@@ -62,7 +62,18 @@ class Formation
      * @ORM\Column(name="date_fin", type="date", nullable=false)
      */
     private $dateFin;
-
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="img", type="string", length=255, nullable=false)
+     */
+    private $img;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="addresse", type="string", length=30, nullable=false)
+     */
+    private $addresse;
     /**
      * @var integer
      *
@@ -76,6 +87,40 @@ class Formation
      *
      */
     private $Formateur;
+
+    /**
+     * @return string
+     */
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    /**
+     * @param string $img
+     */
+    public function setImg($img)
+    {
+        $this->img = $img;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddresse()
+    {
+        return $this->addresse;
+    }
+
+    /**
+     * @param string $addresse
+     */
+    public function setAddresse($addresse)
+    {
+        $this->addresse = $addresse;
+    }
+
+
 
     /**
      * @return int
