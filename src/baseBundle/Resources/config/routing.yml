@@ -145,6 +145,10 @@ admin_suppDispo:
     path:     /admin/suppDispo
     defaults: { _controller: baseBundle:Livreur:suppDispo}
 
+admin_map:
+    path:     /admin/map
+    defaults: { _controller: baseBundle:Livreur:map}
+
 formateur_afficherformateur:
     path:     /afficher
     defaults: { _controller: baseBundle:Formation:view }

@@ -70,14 +70,26 @@ function sendToModal()
 
     $("#idLiv").val(currLiv);
 
+    setMapLatLng(localisation);
 }
-function submitModif()
+function setMapLatLng(local)
 {
-   // let hr="/pidev/web/app_dev.php/admin/updateLivreur/"+currLiv;
+    let tit=local.slice(0,local.indexOf(" :"));
+    local=local.slice(local.lastIndexOf(" ")+1,local.length);
 
-    // let hr="{{ path('admin_updateLivreur',{'id':"+currLiv+"}) }}";
+    let lat=local.slice(0,local.indexOf("-"));
+    let lng=local.slice(local.indexOf("-")+1,local.length);
+    let iframe = document.getElementById("mapFrame");
+    iframe.contentWindow.setDefaultMarkerPos(tit,lat,lng);
 
-     // $("#modifForm").attr("action",hr);
+}
+function setLatLng()
+{
+    var iframe = document.getElementById("mapFrame");
+    var lat = iframe.contentWindow.document.getElementById("mapLat").value;
+    var lng = iframe.contentWindow.document.getElementById("mapLng").value;
+    var tit=iframe.contentWindow.document.getElementById("mapTit").value;
 
+    $("#localisationLiv").val(tit+" : "+lat+"-"+lng);
 
 }

@@ -3,7 +3,21 @@
 {% block body %}
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/customJs/supprimerLivreur.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+            $("table tbody > tr").each(function()
+            {
 
+                let td=($(this).find("td:eq(4)").text());
+                if(td.indexOf(" :")!=-1)
+                {
+                    td=td.slice(0,td.indexOf(" :"));
+                    $(this).find("td:eq(4)").text(td);
+                }
+
+            })
+        });
+    </script>
 
     <style>
         .clickable-row{
