@@ -94,6 +94,11 @@ class FormationController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted()){
             $em= $this->getDoctrine()->getManager();
+            $dest='Uploads/Event/'.$formations->getNom().'.jpg';
+            $img=$formations->getImg();
+            $formations->setImg($dest);
+            copy($img,$dest);
+            unlink($img);
             $em->persist($formations);
             $em->flush();
             return $this->redirectToRoute("afficherformation");
