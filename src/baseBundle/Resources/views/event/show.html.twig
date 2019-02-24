@@ -18,6 +18,7 @@
                         <th> End Date </th>
                         <th> Address </th>
                         <th> Description </th>
+                        <th> Stand Number </th>
                         <th> Image </th>
                         <th> Delete </th>
                         <th> Change </th>
@@ -32,6 +33,7 @@
                             <td> {{ e.dateFin|date('Y-m-d') }} </td>
                             <td> {{ e.addresse }} </td>
                             <td> {{ e.description }} </td>
+                            <td> {{ e.nbStand }} </td>
                             <td> <img src="{{ asset(e.img) }}" style="width: 50px;height:50px" /></td>
                             <td> <a href="{{ path('delete_event',{'id':e.idEvenement}) }}" class="btn btn-danger"/> Delete </td>
                             <td> <a href="{{ path('change_event',{'id':e.idEvenement}) }}" class="btn btn-warning"/> Change </td>
