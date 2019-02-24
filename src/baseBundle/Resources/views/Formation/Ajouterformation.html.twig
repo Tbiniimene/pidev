@@ -2,26 +2,75 @@
 {% block dashbord %}<h9>Add forming session</h9>{% endblock %}
 {% block body %}
 <!-- Page Content -->
-    <script src="js/jquery-2.2.4.min.js"> </script>
+    <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
     <script>
         $(document).ready(function(){
+            //disabling el date fin , until el date debut gets changed
+            init();
 
-
+            // checking if the day fel date deb has changed
             $("#formationbundle_formation_dateDeb_day").on("change",function(){
                 let currVal=$(this).val();
-                setAvailableDates(currVal);
+                $("#formationbundle_formation_dateFin_day").removeAttr("disabled");
+
+            //passing the current day value mta3 el date deb to be set as minimum fel date fin
+                //the "day" is used to tel the function setAvailableDate that we're working on the days options
+                setAvailableDates("day",currVal);
             });
-            function setAvailableDates(min)
+
+            $("#formationbundle_formation_dateDeb_month").on("change",function(){
+                let currVal=$(this).val();
+                $("#formationbundle_formation_dateFin_month").removeAttr("disabled");
+
+            //here we're telling the function that we're working on months
+                setAvailableDates("month",currVal);
+            });
+
+            $("#formationbundle_formation_dateDeb_year").on("change",function(){
+                let currVal=$(this).val();
+                $("#formationbundle_formation_dateFin_year").removeAttr("disabled");
+
+                //here we're telling the function that we're working on years
+                setAvailableDates("year",currVal);
+            });
+            function setAvailableDates(obj,min)
             {
-                $("#formationbundle_formation_dateFin_day > option").each(function(){
-                    if($(this).val()<=min)
+                //setting default id
+                let day="#formationbundle_formation_dateFin_day";
+                let month="#formationbundle_formation_dateFin_month";
+                let year="#formationbundle_formation_dateFin_year";
+
+                //checking the obj to know in wich option select we gonna work
+                if(obj=="day")
+                    obj=day;
+                else if(obj=="month")
+                    obj=month;
+                else
+                    obj=year;
+
+
+                $(obj+" > option").each(function(){
+                    let curr=parseInt($(this).val());
+                    min=parseInt(min);
+                    if(curr<min)
+                    {
                         $(this).attr('disabled','disabled');
-                    else {
-                        $(this).attr('disabled','false');
 
                     }
+                    else {
+                        $(this).removeAttr('disabled');
+
+                    }
+                    $(obj).val(min);
                 });
 
+            }
+            function init()
+            {
+                //disabling the selects
+                $("#formationbundle_formation_dateFin_day").attr("disabled","disabled");
+                $("#formationbundle_formation_dateFin_month").attr("disabled","disabled");
+                $("#formationbundle_formation_dateFin_year").attr("disabled","disabled");
             }
         });
     </script>
@@ -53,7 +102,7 @@
                 </tr>
                 <tr>
                     <td>End Date : </td>
-                    <td>{{ form_widget(form.dateFin, {'attr': {'disabled': 'disabled'}}) }}</td>
+                    <td>{{ form_widget(form.dateFin) }}</td>
                 </tr>
 
                 <tr>
