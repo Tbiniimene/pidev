@@ -37,10 +37,9 @@
         <div class="col-12 col-lg-5">
             <div id="zone"><img src="{{ asset('img/bg-img/rent.jpg')}}" alt=""></div>
             <div></div></div>
-    </div><br><div><center><button class="btn btn-success" type="submit">Confirm Renting</button></center></div><br></div>
+    </div><br><div><center><button class="btn btn-success w-50" type="submit">Confirm Renting</button></center></div><br></div>
         </form>
     </section>
-
 
 
     <script src="{{ asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
@@ -50,7 +49,6 @@
                 $('#a').show('img/bg-img/rent.jpg');
                 $('#zone').html('<img id="a" src="{{asset('img/bg-img/stand.jpg')}}">');
             });
-
         });
     </script>
 {% endblock %}

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * CommandeJardinier
  *
- * @ORM\Table(name="commande_jardinier", indexes={@ORM\Index(name="id_dm", columns={"id_dm"}), @ORM\Index(name="id_client", columns={"id_client"})})
+ * @ORM\Table(name="commande_jardinier", indexes={ @ORM\Index(name="id_client", columns={"id_client"})})
  * @ORM\Entity
  */
 class CommandeJardinier
@@ -56,15 +56,7 @@ class CommandeJardinier
      */
     private $validationJardinier;
 
-    /**
-     * @var \DetailMateriel
-     *
-     * @ORM\ManyToOne(targetEntity="DetailMateriel")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_dm", referencedColumnName="id_dm")
-     * })
-     */
-    private $idDm;
+
 
     /**
      * @var \User
