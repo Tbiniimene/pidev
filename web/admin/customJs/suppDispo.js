@@ -106,20 +106,22 @@ function sendDataTrans(id)
     {
         $("#delTrans").removeAttr("disabled");
 
-        livsDays[id][0]=7;
+        if( livsDays[id][0]==0) {
+
+            livsDays[id][0]=7;
+        }
 
             for(let i=1;i<=7;i++)
         {
 
             for(let j=0;j<livsDays[id].length;j++)
             {
+
                 if(i==livsDays[id][j])
                 {
-                    console.log(i);
-
-                    console.log(livsDays[id][j]);
                     $("#transTr").append("<td class='squareGreen'></td>");
                     addRed=false;
+                    break;
                 }
 
             }

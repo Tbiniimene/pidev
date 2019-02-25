@@ -105,6 +105,214 @@ class User
      */
     private $roles;
 
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCin()
+    {
+        return $this->cin;
+    }
+
+    /**
+     * @param int $cin
+     */
+    public function setCin($cin)
+    {
+        $this->cin = $cin;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param string $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUsernameCanonical()
+    {
+        return $this->usernameCanonical;
+    }
+
+    /**
+     * @param string $usernameCanonical
+     */
+    public function setUsernameCanonical($usernameCanonical)
+    {
+        $this->usernameCanonical = $usernameCanonical;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmailCanonical()
+    {
+        return $this->emailCanonical;
+    }
+
+    /**
+     * @param string $emailCanonical
+     */
+    public function setEmailCanonical($emailCanonical)
+    {
+        $this->emailCanonical = $emailCanonical;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * @param bool $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
+
+    /**
+     * @param string $salt
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getLastLogin()
+    {
+        return $this->lastLogin;
+    }
+
+    /**
+     * @param \DateTime $lastLogin
+     */
+    public function setLastLogin($lastLogin)
+    {
+        $this->lastLogin = $lastLogin;
+    }
+
+    /**
+     * @return string
+     */
+    public function getConfirmationToken()
+    {
+        return $this->confirmationToken;
+    }
+
+    /**
+     * @param string $confirmationToken
+     */
+    public function setConfirmationToken($confirmationToken)
+    {
+        $this->confirmationToken = $confirmationToken;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getPasswordRequestedAt()
+    {
+        return $this->passwordRequestedAt;
+    }
+
+    /**
+     * @param \DateTime $passwordRequestedAt
+     */
+    public function setPasswordRequestedAt($passwordRequestedAt)
+    {
+        $this->passwordRequestedAt = $passwordRequestedAt;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRoles()
+    {
+        return $this->roles;
+    }
+
+    /**
+     * @param array $roles
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+    }
+
 
 }
 

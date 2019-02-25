@@ -1,0 +1,96 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Add delivery{% endblock %}
+{% block body %}
+
+<div id="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{ path('admin_index') }}">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Add Delivery</li>
+            </ol>
+
+            <!-- Page Content -->
+            <h1>Add a Delivery</h1>
+            <hr>
+            <div>
+                <br>
+                <div  class="row">
+                    <div class="col-6" >
+                        <table class="table table-hover table-dark">
+                            <thead>
+                            <th>Client</th>
+                            <th>Command date</th>
+                            <th>Price</th>
+                            </thead>
+                            <tbody>
+                            {% for com in commands %}
+
+                            <tr>
+                                <td>{{ com.IdClient.Username }}</td>
+                                <td>{{ com.DateCmd|date('Y-m-d') }}</td>
+                                <td>{{ com.Prix }}</td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="form-group col-5 text-center">
+                        <button class="btn btn-secondary btn-block" type="button" style="color:white;" data-toggle="collapse" data-target="#demo3">
+                            Booking
+                        </button>
+                        <div id="demo3" class="collapse">
+                            <table class="table table-hover">
+                                <thead>
+                                <th>Choose</th>
+
+                                <th>Client</th>
+                                <th>Date debut</th>
+                                <th>Date fin</th>
+                                <th>Prix</th>
+                                </thead>
+                                <tbody>
+                                {% for res in reservations %}
+                                <tr>
+                                    <td><input type="checkbox" id="ch1" class="form-control" /></td>
+                                    <td>{{ res.IdClient.Username }}</td>
+                                    <td>{{ res.DateDebut|date('Y-m-d') }}</td>
+                                    <td>{{ res.DateFin|date('Y-m-d') }}</td>
+                                    <td>{{ res.Prix }}</td>
+
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                            <br>
+                            <input type="button"  id="btnVoirArts" class="btn btn-light" value="basculer l'affichage" disabled/>
+
+                        </div>
+
+                    </div>
+
+                    <input type="submit" style="margin:auto;margin-top:3%" id="btnSuppCata" class="btn btn-warning btn-md col-2" value="Add" />
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+{% endblock %}

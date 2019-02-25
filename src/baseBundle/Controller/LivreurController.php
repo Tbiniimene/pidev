@@ -2,8 +2,10 @@
 
 namespace baseBundle\Controller;
 
+use baseBundle\Entity\Commande;
 use baseBundle\Entity\Disponibilite;
 use baseBundle\Entity\Livreur;
+use baseBundle\Entity\ReservationMateriel;
 use baseBundle\Form\LivreurType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -180,6 +182,16 @@ class LivreurController extends Controller
     {
 
         return $this->render('@base/livraison/map.html.twig'
+        );
+
+    }
+    public function ajouterLivAction()
+    {
+
+        $commands=$this->getDoctrine()->getRepository	(Commande::class)->findAll();
+        $reservations=$this->getDoctrine()->getRepository	(ReservationMateriel::class)->findAll();
+
+        return $this->render('@base/livraison/ajouterLivraison.html.twig',array('commands'=>$commands,'reservations'=>$reservations)
         );
 
     }

@@ -17,7 +17,7 @@ class Livraison
      *
      * @ORM\Column(name="id_livraison", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $idLivraison;
 

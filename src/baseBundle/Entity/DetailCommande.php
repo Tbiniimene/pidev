@@ -24,8 +24,7 @@ class DetailCommande
     /**
      * @var integer
      *
-     * @ORM\Column(name="id_p", type="integer", nullable=false)
-     * @ORM\Id
+     * @ORM\Column(name="id_p", type="integer", nullable=true)
      * @ORM\GeneratedValue(strategy="NONE")
      */
     private $idP;
@@ -33,8 +32,7 @@ class DetailCommande
     /**
      * @var integer
      *
-     * @ORM\Column(name="id_m", type="integer", nullable=false)
-     * @ORM\Id
+     * @ORM\Column(name="id_m", type="integer", nullable=true)
      * @ORM\GeneratedValue(strategy="NONE")
      */
     private $idM;

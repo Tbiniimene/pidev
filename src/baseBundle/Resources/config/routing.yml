@@ -84,6 +84,7 @@ admin_register:
 admin_tables:
     path:     /admin/tables
     defaults: { _controller: baseBundle:Admin:tables}
+#----------------------  LIVRAISON   ----------------------
 
 admin_livreur:
     path:     /admin/livreur
@@ -100,6 +101,29 @@ admin_supprimerLivreur:
 admin_deleteLivreur:
     path:     /admin/deleteLivreur/{id}
     defaults: { _controller: baseBundle:Livreur:deleteLivreur}
+
+admin_modifierLivreur:
+    path:     /admin/modifierLivreur
+    defaults: { _controller: baseBundle:Livreur:modifierLivreur}
+
+admin_ajouterDispo:
+    path:     /admin/ajouterDispo
+    defaults: { _controller: baseBundle:Livreur:ajouterDispo}
+
+admin_suppDispo:
+    path:     /admin/suppDispo
+    defaults: { _controller: baseBundle:Livreur:suppDispo}
+
+admin_map:
+    path:     /admin/map
+    defaults: { _controller: baseBundle:Livreur:map}
+
+admin_ajouterLivraison:
+    path:     /admin/ajouterLiv
+    defaults: { _controller: baseBundle:Livreur:ajouterLiv}
+
+
+#----------------------------------------------------------
 
 show_event:
     path:     /admin/show_event
@@ -132,22 +156,6 @@ rent_stand:
 show_par:
     path:     /admin/par
     defaults: { _controller: baseBundle:Event:par }
-
-admin_modifierLivreur:
-    path:     /admin/modifierLivreur
-    defaults: { _controller: baseBundle:Livreur:modifierLivreur}
-
-admin_ajouterDispo:
-    path:     /admin/ajouterDispo
-    defaults: { _controller: baseBundle:Livreur:ajouterDispo}
-
-admin_suppDispo:
-    path:     /admin/suppDispo
-    defaults: { _controller: baseBundle:Livreur:suppDispo}
-
-admin_map:
-    path:     /admin/map
-    defaults: { _controller: baseBundle:Livreur:map}
 
 formateur_afficherformateur:
     path:     /afficher
