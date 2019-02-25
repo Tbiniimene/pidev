@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * ReservationMateriel
  *
- * @ORM\Table(name="reservation_materiel", indexes={@ORM\Index(name="id_drm", columns={"id_drm"}), @ORM\Index(name="id_client", columns={"id_client"})})
+ * @ORM\Table(name="reservation_materiel", indexes={ @ORM\Index(name="id_client", columns={"id_client"})})
  * @ORM\Entity
  */
 class ReservationMateriel
@@ -42,15 +42,7 @@ class ReservationMateriel
      */
     private $prix;
 
-    /**
-     * @var \DetailReservationMateriel
-     *
-     * @ORM\ManyToOne(targetEntity="DetailReservationMateriel")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_drm", referencedColumnName="id_drm")
-     * })
-     */
-    private $idDrm;
+
 
     /**
      * @var \User
