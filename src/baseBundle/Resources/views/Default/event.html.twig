@@ -6,17 +6,14 @@
 {% block tt %} <h2>Event</h2>{% endblock %}
 {% block aa %}Events{% endblock %}
 {% block body %}
-
     <!-- Events -->
     <div class="events">
+        {%  for e in aa %}
         <div class="container">
             <div class="row">
                 <div class="col">
-
                     <!-- Event -->
-                        {%  for e in aa %}
                             <form method="post" name="f" id="f" action="{{ path('rent_stand',{'idEvent':e.IdEvenement}) }}">
-
                             <div class="event">
                                 <div class="row row-lg-eq-height">
                                     <div class="col-lg-6 single_portfolio_item design home-design">
@@ -45,7 +42,6 @@
                                                     <div class="event_speaker_content">
                                                         <div class="event_speaker_name">  Start Date : {{ e.dateDeb|date('Y-m-d') }}</div>
                                                         <div class="event_speaker_title">  End Date : {{ e.dateFin|date('Y-m-d') }}</div>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -78,9 +74,9 @@
                             </div>
                             <div><br></div>
                             </form>
-                        {% endfor %}
                 </div>
             </div>
+            {% endfor %}
             <div><br></div>
             <div class="row">
                 <div class="col-12">

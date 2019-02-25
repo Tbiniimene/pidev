@@ -41,7 +41,6 @@ class Livraison
     /**
      * @var \Commande
      *
-     * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      * @ORM\OneToOne(targetEntity="Commande")
      * @ORM\JoinColumns({
@@ -53,7 +52,6 @@ class Livraison
     /**
      * @var \ReservationMateriel
      *
-     * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      * @ORM\OneToOne(targetEntity="ReservationMateriel")
      * @ORM\JoinColumns({

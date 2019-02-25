@@ -22,9 +22,11 @@ class StandType extends AbstractType
                 array('class'=>'baseBundle:Evenement',
                     'choice_label'=>'nom',
                     'multiple'=>false))
-            ->add('statutStand')
+            ->add('statutStand',ChoiceType::class,array('choices'=>array('Unavailable'=>'0','Available'=>'1')) )
             ->add('description',ChoiceType::class,array('choices'=>array(
-                '200 x 100mm'=>'200 x 100mm','200 x 150mm'=>'200 x 150mm','200 x 200mm'=>'200 x 200mm','300 x 100mm'=>'300 x 100mm','300 x 150mm'=>'300 x 150mm','300 x 200mm'=>'300 x 200mm')) );
+                'Size = 3.0 x 2.0m  --  Price = 100 TND'=>'Size = 3.0 x 2.0m  --  Price = 100 TND','Size = 3.0 x 2.5m  --  Price = 110 TND'=>'Size = 3.0 x 2.5m  --  Price = 110 TND'
+            ,'Size = 3.0 x 3.0m  --  Price = 120 TND'=>'Size = 3.0 x 3.0m  --  Price = 120 TND','Size = 4.0 x 2.0m  --  Price = 150 TND'=>'Size = 4.0 x 2.0m  --  Price = 150 TND'
+            ,'Size = 4.0 x 2.5m  --  Price = 160 TND'=>'Size = 4.0 x 2.5m  --  Price = 160 TND','Size = 4.0 x 3.0m  --  Price = 170 TND'=>'Size = 4.0 x 3.0m  --  Price = 170 TND')) );
 
     }/**
  * {@inheritdoc}
