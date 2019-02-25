@@ -1,0 +1,64 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Categorie{% endblock %}
+{% block body %}
+
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+
+                <li class="breadcrumb-item active">Catégorie</li>
+            </ol>
+
+            <!-- DataTables Example -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                   Catégorie list </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for categorie in categories %}
+                                    <tr>
+                                        <td>{{ categorie.nom }}</td>
+                                        <td><a class="btn btn-primary m-1" title="Edit" href="{{ path("update_cat", {'id':categorie.id}) }}">
+                                                <i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-danger m-1" title="Delete" href="{{ path("delete_cat", {'id':categorie.id}) }}"
+                                                                                 onclick="return confirm('Are u sure?')"><i class="fa fa-trash"></i></a></td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}

@@ -186,6 +186,29 @@ test:
     path: /test
     defaults: { _controller: baseBundle:Event:test }
 
-
+add_matriels:
+    path:     /admin/add_matriels
+    defaults: { _controller: baseBundle:Materiels:add }
+delete_matriels:
+    path:     /admin/delete_matriels/{id}
+    defaults: { _controller: baseBundle:Materiels:deletemat }
+show_matriels:
+    path:     /admin/show_matriels
+    defaults: { _controller: baseBundle:Materiels:show }
+update_matriels:
+    path:     /admin/update_matriels/{id}
+    defaults: { _controller: baseBundle:Materiels:updatemat }
+add_cat:
+    path:     /admin/add_cat
+    defaults: { _controller: baseBundle:Categorie:addcat }
+show_cat:
+    path:     /admin/show_cat
+    defaults: { _controller: baseBundle:Categorie:showcat }
+update_cat:
+    path:     /admin/update_cat/{id}
+    defaults: { _controller: baseBundle:Categorie:updatecat }
+delete_cat:
+    path:     /admin/delete_cat/{id}
+    defaults: { _controller: baseBundle:Categorie:deletecat }
 
 

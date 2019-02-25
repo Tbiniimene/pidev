@@ -1,0 +1,46 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Blank{% endblock %}
+{% block body %}
+
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Catégorie </li>
+            </ol>
+
+            <!-- Page Content -->
+            <h2> Catégorie list </h2>
+            <hr>
+
+            {{ form_start(form) }}
+
+            <tr>
+                <td>Nom : </td>
+                <td>{{ form_widget(form.nom) }}</td>
+            </tr>
+
+
+
+            </table>
+            <br>
+             <button class="btn btn-primary" type="submit">Add cat</button>
+            {{ form_end(form) }}
+
+
+        </div>
+
+
+
+
+    </div>
+    <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}
