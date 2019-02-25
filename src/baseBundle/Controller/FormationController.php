@@ -108,4 +108,13 @@ class FormationController extends Controller
             array("form"=>$form->createView()));
     }
 
+
+    public function participerAction()
+    {
+        $formateurs=$this->getDoctrine()
+            ->getRepository(Formateur::class)
+            ->findAll();
+        return $this->render('@base/Formation/showformateur.html.twig',array('f'=>$formateurs));
+    }
+
 }

@@ -126,6 +126,7 @@ class EventController extends Controller
         $pe=new ParticipantsEvenement();
         //5-validation du formulaire
         if (isset($_POST['cin']) && isset($_POST['Nom']) && isset($_POST['Prenom']) && isset($_POST['Tel']) && isset($_POST['idStand']) ) {
+
             $cin=$_POST['cin'];
             $nom=$_POST['Nom'];
             $prenom=$_POST['Prenom'];

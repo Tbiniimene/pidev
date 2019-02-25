@@ -105,7 +105,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                 <!--<h6 class="dropdown-header">Login Screens:</h6>-->
-                <a class="dropdown-item" href="#" >Login</a>
+                <a class="dropdown-item" href="{{ path('admin_listeLivreur') }}" >Livreur</a>
                 <a class="dropdown-item" href="#">Register</a>
                 <a class="dropdown-item" href="#">Forgot Password</a>
                 <div class="dropdown-divider"></div>
@@ -116,59 +116,33 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#liv">
-                <span>Deliverymen</span> <i class="fas fa-fw fa-caret-down"></i></a>
+                <span>Livreur</span> <i class="fas fa-fw fa-caret-down"></i></a>
             <div id="liv" class="collapse">
-                <a class="dropdown-item" href="{{ path('admin_listeLivreur') }}" >Show the deliverymen</a>
-                <a class="dropdown-item" href="{{ path('admin_livreur') }}">Add delivery man</a>
-                <a class="dropdown-item" href="{{ path('admin_modifierLivreur') }}">Modify delivery man</a>
-                <a class="dropdown-item" href="{{ path('admin_supprimerLivreur') }}">Delete deliverymen</a>
+                <a class="dropdown-item" href="{{ path('admin_livreur') }}">Ajouter Livreur</a>
+                <a class="dropdown-item" href="{{ path('admin_modifierLivreur') }}">Modifier Livreur</a>
+                <a class="dropdown-item" href="{{ path('admin_supprimerLivreur') }}">Supprimer Livreur</a>
                 <ul class="nav-item">
                     <li>
                     <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#disp">
-                        <span>Disponibility</span> <i class="fas fa-fw fa-caret-down"></i></a>
+                        <span>Disponibilité</span> <i class="fas fa-fw fa-caret-down"></i></a>
                     <div id="disp" class="collapse">
-                        <a class="dropdown-item" href="{{ path('admin_ajouterDispo') }}">Manage disponibility </a>
-                        <a class="dropdown-item" href="{{ path('admin_suppDispo') }}">Delete disponibility</a>
+                        <a class="dropdown-item" href="#">Ajouter </a>
+                        <a class="dropdown-item" href="#">Supprimer </a>
                     </div>
                     </li>
                 </ul>
-
-                <div class="nav-item">
-                    <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#deliv">
-                        <span>Deliveries</span> <i class="fas fa-fw fa-caret-down"></i></a>
-                    <div id="deliv" class="collapse">
-                        <a class="dropdown-item" href="#">Show deliveries</a>
-                        <a class="dropdown-item" href="{{ path('admin_ajouterLivraison') }}">Add delivery</a>
-
-                    </div>
-                </div>
             </div>
-
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#ev">
                 <span>Event</span> <i class="fas fa-fw fa-caret-down"></i></a>
             <div id="ev" class="collapse">
-                <a class="dropdown-item" href="{{ path('show_event') }}">Show Events</a>
+                <a class="dropdown-item" href="{{ path('show_event') }}">Show Event</a>
                 <a class="dropdown-item" href="{{ path('add_event') }}">Add Event</a>
-                <a class="dropdown-item" href="{{ path('show_stand') }}">Show Stands</a>
-                <a class="dropdown-item" href="{{ path('add_stand') }}">Add Stand</a>
-                <a class="dropdown-item" href="{{ path('show_par') }}">Participation List</a>
+                <a class="dropdown-item" href="#">Change Event</a>
             </div>
         </li>
 
-
-        <li class="nav-item">
-            <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#for">
-                <span>Forming sessions</span> <i class="fas fa-fw fa-caret-down"></i></a>
-            <div id="for" class="collapse">
-                <a class="dropdown-item" href="{{ path('formateur_afficherformateur') }}">Manage Trainers</a>
-                <a class="dropdown-item" href="{{ path('formation_ajoutformateur') }}">Add Trainers</a>
-                <a class="dropdown-item" href="{{ path('afficherformation') }}">Manage Forming sessions</a>
-                <a class="dropdown-item" href="{{ path('ajoutformation') }}">Add Forming session</a>
-
-            </div>
-        </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ path('admin_charts') }}">
                 <i class="fas fa-fw fa-chart-area"></i>

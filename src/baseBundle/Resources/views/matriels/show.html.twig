@@ -1,0 +1,87 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - matériel{% endblock %}
+{% block body %}
+
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+
+                <li class="breadcrumb-item active"> Matériels</li>
+            </ol>
+
+            <!-- DataTables Example -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                Matériels list </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th> prix</th>
+                                <th> qte</th>
+                                <th> statut</th>
+                                <th >image</th>
+                                <th>Catégorie</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            {% for matriel in matriels %}
+                                <tr>
+                                    <td>{{ matriel.nom }}</td>
+                                    <td>{{ matriel.prix }}</td>
+
+                                    <td>{{ matriel.qte }}</td>
+                                    <td>{{ matriel.statut }}</td>
+                                    <td>
+
+                                        <center><img  style="width:150px;height: 100px"src="{{ asset('images/'~ matriel.nomImage) }} " ></center>
+
+
+                                    </td>
+
+                                    <td>{{ matriel.categorie.nom }}</td>
+
+                                    <td><a class="btn btn-primary m-1" title="Edit" href="
+                              {{ path("update_matriels", {'id':matriel.idMatriel}) }}"><i class="fa fa-edit"></i></a>
+
+                                        <a class="btn btn-danger m-1" title="Delete" href="{{ path("delete_matriels", {'id':matriel.idMatriel}) }}"
+                                                                         onclick="return confirm('Are u sure?')">
+                                            <i class="fa fa-trash"></i></a>
+
+
+                                       </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}
