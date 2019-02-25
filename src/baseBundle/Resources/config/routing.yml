@@ -157,34 +157,36 @@ show_par:
     path:     /admin/par
     defaults: { _controller: baseBundle:Event:par }
 
+test:
+    path: /test
+    defaults: { _controller: baseBundle:Event:test }
+#----------------------------------------------------------
 formateur_afficherformateur:
     path:     /afficher
     defaults: { _controller: baseBundle:Formation:view }
 formation_ajoutformateur:
-        path:     /ajout
+        path:     /base/ajout
         defaults: { _controller: baseBundle:Formation:create }
 supp_formateur:
-    path: /supprimer/{id}
+    path: /base/supprimer/{id}
     defaults: { _controller: baseBundle:Formation:supprimer }
 modif_formateur:
-    path: /modifier/{id}
+    path: /base/modifier/{id}
     defaults: { _controller: baseBundle:Formation:modifier }
 afficherformation:
-    path:     /afficherf
+    path:     /base/afficherf
     defaults: { _controller: baseBundle:Formation:afficherFormation }
 ajoutformation:
-    path:     /ajoutf
+    path:     /base/ajoutf
     defaults: { _controller: baseBundle:Formation:createf }
 supp_formation:
-    path: /supprimerf/{id}
+    path: /base/supprimerf/{id}
     defaults: { _controller: baseBundle:Formation:supprimerf }
 modif_formation:
-    path: /modifierf/{id}
+    path: /base/modifierf/{id}
     defaults: { _controller: baseBundle:Formation:modifierf }
 
-test:
-    path: /test
-    defaults: { _controller: baseBundle:Event:test }
+#----------------------------------------------------------
 
 add_matriels:
     path:     /admin/add_matriels
