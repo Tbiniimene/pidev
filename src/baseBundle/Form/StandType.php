@@ -24,9 +24,9 @@ class StandType extends AbstractType
                     'multiple'=>false))
             ->add('statutStand',ChoiceType::class,array('choices'=>array('Unavailable'=>'0','Available'=>'1')) )
             ->add('description',ChoiceType::class,array('choices'=>array(
-                'Size = 3.0 x 2.0m  --  Price = 100 TND'=>'Size = 3.0 x 2.0m  --  Price = 100 TND','Size = 3.0 x 2.5m  --  Price = 110 TND'=>'Size = 3.0 x 2.5m  --  Price = 110 TND'
-            ,'Size = 3.0 x 3.0m  --  Price = 120 TND'=>'Size = 3.0 x 3.0m  --  Price = 120 TND','Size = 4.0 x 2.0m  --  Price = 150 TND'=>'Size = 4.0 x 2.0m  --  Price = 150 TND'
-            ,'Size = 4.0 x 2.5m  --  Price = 160 TND'=>'Size = 4.0 x 2.5m  --  Price = 160 TND','Size = 4.0 x 3.0m  --  Price = 170 TND'=>'Size = 4.0 x 3.0m  --  Price = 170 TND')) );
+                'Size = 3.0 x 2.0m  and  Price = 100 TND'=>'Size = 3.0 x 2.0m  and  Price = 100 TND','Size = 3.0 x 2.5m  and  Price = 110 TND'=>'Size = 3.0 x 2.5m  and  Price = 110 TND'
+            ,'Size = 3.0 x 3.0m  and  Price = 120 TND'=>'Size = 3.0 x 3.0m  and  Price = 120 TND','Size = 4.0 x 2.0m  and  Price = 150 TND'=>'Size = 4.0 x 2.0m  and  Price = 150 TND'
+            ,'Size = 4.0 x 2.5m  and  Price = 160 TND'=>'Size = 4.0 x 2.5m  and  Price = 160 TND','Size = 4.0 x 3.0m  and  Price = 170 TND'=>'Size = 4.0 x 3.0m  and  Price = 170 TND')) );
 
     }/**
  * {@inheritdoc}

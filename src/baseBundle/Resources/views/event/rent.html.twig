@@ -32,7 +32,7 @@
                     <td style="display:flex ">
                         {% for s in stands %}
                 <div class="radio">
-                <label><input type="radio" class="des" style="width:0px; height:0px" name="idStand" value="{{ s.IdStand }}"><a class="page-link">{{ s.Description }}</a></label>
+                <label><input type="radio" class="des" style="width:0px; height:0px" name="idStand" value="{{ s.IdStand }}" id="{{ s.IdStand }}"><a onclick="lon(this)" class="page-link hah">{{ s.Description }}</a></label>
                 </div>
                         {% endfor %}
                     </td>
@@ -56,5 +56,9 @@
                 $('#zone').html('<img id="a" src="{{asset('img/bg-img/stand.jpg')}}">');
             });
         });
+        function lon (obj){
+            $(".hah").each(function(){  $(this).css("background","");});
+            $(obj).css('background','Aquamarine');
+            }
     </script>
 {% endblock %}
