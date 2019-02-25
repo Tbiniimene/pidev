@@ -5,8 +5,12 @@
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
     <script>
         $(document).ready(function(){
+
+
             //disabling el date fin , until el date debut gets changed
             init();
+            initdeb();
+
 
             // checking if the day fel date deb has changed
             $("#formationbundle_formation_dateDeb_day").on("change",function(){
@@ -14,7 +18,7 @@
                 $("#formationbundle_formation_dateFin_day").removeAttr("disabled");
 
             //passing the current day value mta3 el date deb to be set as minimum fel date fin
-                //the "day" is used to tel the function setAvailableDate that we're working on the days options
+                // the "day" is used to tell the function setAvailableDate that we're working on the days options
                 setAvailableDates("day",currVal);
             });
 
@@ -48,7 +52,6 @@
                 else
                     obj=year;
 
-
                 $(obj+" > option").each(function(){
                     let curr=parseInt($(this).val());
                     min=parseInt(min);
@@ -68,11 +71,23 @@
             }
             function init()
             {
+
                 //disabling the selects
                 $("#formationbundle_formation_dateFin_day").attr("disabled","disabled");
                 $("#formationbundle_formation_dateFin_month").attr("disabled","disabled");
                 $("#formationbundle_formation_dateFin_year").attr("disabled","disabled");
+
+
+
             }
+            function initdeb()
+            {
+                var currentDate = new Date();
+                $("#formationbundle_formation_dateDeb_day").val(currentDate.getDay());
+                $("#formationbundle_formation_dateDeb_month").val(currentDate.getMonth());
+                $("#formationbundle_formation_dateDeb_year").val(currentDate.getFullYear());
+
+                  }
         });
     </script>
 <div class="card mb-3">
