@@ -105,7 +105,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                 <!--<h6 class="dropdown-header">Login Screens:</h6>-->
-                <a class="dropdown-item" href="{{ path('admin_listeLivreur') }}" >Livreur</a>
+                <a class="dropdown-item" href="#" >Login</a>
                 <a class="dropdown-item" href="#">Register</a>
                 <a class="dropdown-item" href="#">Forgot Password</a>
                 <div class="dropdown-divider"></div>
@@ -116,22 +116,33 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#liv">
-                <span>Livreur</span> <i class="fas fa-fw fa-caret-down"></i></a>
+                <span>Deliverymen</span> <i class="fas fa-fw fa-caret-down"></i></a>
             <div id="liv" class="collapse">
-                <a class="dropdown-item" href="{{ path('admin_livreur') }}">Ajouter Livreur</a>
-                <a class="dropdown-item" href="{{ path('admin_modifierLivreur') }}">Modifier Livreur</a>
-                <a class="dropdown-item" href="{{ path('admin_supprimerLivreur') }}">Supprimer Livreur</a>
+                <a class="dropdown-item" href="{{ path('admin_listeLivreur') }}" >Show the deliverymen</a>
+                <a class="dropdown-item" href="{{ path('admin_livreur') }}">Add delivery man</a>
+                <a class="dropdown-item" href="{{ path('admin_modifierLivreur') }}">Modify delivery man</a>
+                <a class="dropdown-item" href="{{ path('admin_supprimerLivreur') }}">Delete deliverymen</a>
                 <ul class="nav-item">
                     <li>
                     <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#disp">
-                        <span>Disponibilité</span> <i class="fas fa-fw fa-caret-down"></i></a>
+                        <span>Disponibility</span> <i class="fas fa-fw fa-caret-down"></i></a>
                     <div id="disp" class="collapse">
-                        <a class="dropdown-item" href="{{ path('admin_ajouterDispo') }}">Ajouter </a>
-                        <a class="dropdown-item" href="{{ path('admin_suppDispo') }}">Supprimer </a>
+                        <a class="dropdown-item" href="{{ path('admin_ajouterDispo') }}">Manage disponibility </a>
+                        <a class="dropdown-item" href="{{ path('admin_suppDispo') }}">Delete disponibility</a>
                     </div>
                     </li>
                 </ul>
+
+                <div class="nav-item">
+                    <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#deliv">
+                        <span>Deliveries</span> <i class="fas fa-fw fa-caret-down"></i></a>
+                    <div id="deliv" class="collapse">
+                        <a class="dropdown-item" href="#">Show deliveries</a>
+
+                    </div>
+                </div>
             </div>
+
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#"  data-toggle="collapse"  data-target="#ev">
@@ -154,10 +165,7 @@
                 <a class="dropdown-item" href="{{ path('formation_ajoutformateur') }}">Add Trainers</a>
                 <a class="dropdown-item" href="{{ path('afficherformation') }}">View Forming sessions</a>
                 <a class="dropdown-item" href="{{ path('ajoutformation') }}">Add Forming sessions</a>
-<<<<<<< HEAD
 
-=======
->>>>>>> a4b19718f7fb962368cac52bd2c389f1eab379ac
             </div>
         </li>
         <li class="nav-item">
