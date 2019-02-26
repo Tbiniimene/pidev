@@ -1,0 +1,42 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Blank{% endblock %}
+{% block body %}
+
+    <html>
+    <head>
+
+    </head>
+    <body>
+    <center>
+        <h1 id="cc">modifier un produits</h1>
+        {{ form_start(form) }}
+        <table>
+
+            <tr>
+                <td>produit : </td>
+                <td>{{ form_widget(form.nom) }}</td>
+            </tr>
+            <tr>
+                <td>prix : </td>
+                <td>{{ form_widget(form.prix) }}</td>
+            </tr>
+            <tr>
+                <td>image : </td>
+                <td>{{ form_widget(form.image) }}</td>
+            </tr>
+            <tr>
+                <td>contiter : </td>
+                <td>{{ form_widget(form.qte) }}</td>
+            </tr>
+            <tr>
+                <td>owner : </td>
+                <td>{{ form_widget(form.owner) }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="modifier">
+        {{ form_end(form) }}
+    </center>
+    </body>
+    </html>
+
+{% endblock %}
