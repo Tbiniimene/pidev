@@ -8,15 +8,13 @@
 {% block body %}
 
     <!-- Events -->
-    {%  for formations in f %}
+            {%  for formations in f %}
     <div class="events">
         <div class="container">
             <div class="row">
                 <div class="col">
-
-                    <!-- Forming session -->
-
-                    <form method="post" name="f" id="f" action="{{ path('participer_formation',{'idFormation':formations.IdFormation}) }}">
+             <!-- Forming session -->
+                     <form method="post" name="f" id="f" action="{{ path('participer_formation',{'idFormation':formations.IdFormation}) }}">
                         <div class="event">
                             <div class="row row-lg-eq-height">
                                 <div class="col-lg-6 single_portfolio_item design home-design">
@@ -35,7 +33,7 @@
                                 </div>
                                 <div class="col-lg-6 event_col">
                                     <div class="event_content">
-                                        <div><br><h5>{{ formations.nom }}  </h5></div>
+                                        <div><br><h5>{{ formations.nom }}  <h3>{{ formations.idFormation}}  </h3> </h5></div>
                                         <div class="event_location"> </div>
                                         <div class="event_text">
                                             <p>{{ formations.description }}</p>
@@ -61,15 +59,11 @@
                                              <button type="submit" class="btn alazea-btn mt-30" >Subscribe</button>
                                             {%  endif %}
                                         </div>
-
-
                                     </div>
-
-
-
                                 </div>
                             </div>
-                        </div>
+                </div>
+
                         <div><br></div>
                     {% endfor %}
                 </div>

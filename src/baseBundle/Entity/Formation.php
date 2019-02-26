@@ -138,10 +138,7 @@ class Formation
         $this->nbmax = $nbmax;
     }
 
-
-
-
-    /**
+ /**
      *
      * Get id
      * @return int

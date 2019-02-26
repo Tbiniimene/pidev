@@ -122,20 +122,16 @@ class FormationController extends Controller
             $prenom=$_POST['Prenom'];
             $tel=$_POST['Tel'];
 
-
             $em = $this->getDoctrine()->getManager();
             $pe->setPFormation($em->getReference(Formation::class,$idFormation));
+
             $pe->setCin($cin);
             $pe->setNom($nom);
             $pe->setPrenom($prenom);
             $pe->setTel($tel);
 
-
-
-            $formation=$em->getRepository(Formation::class)->find($idFormation);
+             $formation=$em->getRepository(Formation::class)->find($idFormation);
             $formation->setnbmax($formation->getnbmax() - 1);
-
-
             $em->persist($formation);
             $em->persist($pe);
             $em->flush();
