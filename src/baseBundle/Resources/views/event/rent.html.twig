@@ -1,6 +1,10 @@
 {% extends '@base/default/base.html.twig' %}
-{% block tt %} <h2>EVENT</h2>{% endblock %}
-{% block aa %}Rent{% endblock %}
+{% block backgroundimg %}
+<div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url({{ asset('img/core-img/ii.jpg') }});">
+
+    {% endblock %}
+{% block tt %} <h2>Event</h2>{% endblock %}
+{% block aa %}Events{% endblock %}
 {% block body %}
     <section class="about-us-area">
     <div class="container">
@@ -24,10 +28,12 @@
                         <td>Phone Number</td><td><input type="number" name="Tel" id="Tel" class="form-control"/> </td>
                     </tr>
                 <tr>
-                    <td>Stand Size</td>
-                    <td>
+                    <td><br>Discription </td>
+                    <td style="display:flex ">
                         {% for s in stands %}
-                <input type="radio"  id="des" name="idStand" value="{{ s.IdStand }}"/>{{ s.Description }}<br>
+                <div class="radio">
+                <label><input type="radio" class="des" style="width:0px; height:0px" name="idStand" value="{{ s.IdStand }}" id="{{ s.IdStand }}"><a onclick="lon(this)" class="page-link hah">{{ s.Description }}</a></label>
+                </div>
                         {% endfor %}
                     </td>
                 </tr>
@@ -37,7 +43,7 @@
         <div class="col-12 col-lg-5">
             <div id="zone"><img src="{{ asset('img/bg-img/rent.jpg')}}" alt=""></div>
             <div></div></div>
-    </div><br><div><center><button class="btn btn-success w-50" type="submit">Confirm Renting</button></center></div><br></div>
+    </div><br><div><center><button class="btn btn-success w-25" type="submit">Confirm Renting</button></center></div><br></div>
         </form>
     </section>
 
@@ -45,10 +51,14 @@
     <script src="{{ asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
     <script>
         $(document).ready(function(){
-            $('#des').click(function() {
+            $('.des').click(function() {
                 $('#a').show('img/bg-img/rent.jpg');
                 $('#zone').html('<img id="a" src="{{asset('img/bg-img/stand.jpg')}}">');
             });
         });
+        function lon (obj){
+            $(".hah").each(function(){  $(this).css("background","");});
+            $(obj).css('background','Aquamarine');
+            }
     </script>
 {% endblock %}

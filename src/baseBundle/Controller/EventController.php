@@ -38,12 +38,10 @@ class EventController extends Controller
             $event->setDateDeb(new \DateTime());
             $event->setDateFin(new \DateTime());
 
-
             $dest='Uploads/Event/'.$event->getNom().'.jpg';
             $img=$event->getImg();
             $event->setImg($dest);
             copy($img,$dest);
-
 
             //7-persister les donnes dans L'ORM (doctrine)
             $em->persist($event);
@@ -128,25 +126,29 @@ class EventController extends Controller
         $pe=new ParticipantsEvenement();
         //5-validation du formulaire
         if (isset($_POST['cin']) && isset($_POST['Nom']) && isset($_POST['Prenom']) && isset($_POST['Tel']) && isset($_POST['idStand']) ) {
+
             $cin=$_POST['cin'];
             $nom=$_POST['Nom'];
             $prenom=$_POST['Prenom'];
             $tel=$_POST['Tel'];
+            $idStand=$_POST['idStand'];
+
             $em = $this->getDoctrine()->getManager();
             $pe->setIdEvenement($em->getReference(Evenement::class,$idEvent));
             $pe->setCinParticipant($cin);
             $pe->setNom($nom);
             $pe->setPrenom($prenom);
             $pe->setTel($tel);
+            $pe->setIdStand($em->getReference(Stand::class,$idStand));
 
-                $idStand=$_POST['idStand'];
+            $stand = $em->getRepository(Stand::class)->find($idStand);
+            $stand->setStatutStand('0');
 
-                    $pe->setIdStand($em->getReference(Stand::class,$idStand));
-                    $stand = $em->getRepository(Stand::class)->find($idStand);
-                    $stand->setStatutStand('0');
-                    $em->persist($stand);
-            $e1 = new Evenement();
-            $e1->setNbStand('3');
+            $event=$em->getRepository(Evenement::class)->find($idEvent);
+            $event->setnbStand($event->getnbStand() - 1);
+
+            $em->persist($stand);
+            $em->persist($event);
             $em->persist($pe);
             $em->flush();
 

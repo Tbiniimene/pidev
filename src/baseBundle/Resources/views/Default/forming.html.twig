@@ -38,13 +38,15 @@
                                             <p>{{ formations.description }}</p>
                                              <h5> Hosted by: {{ formations.formateur.nom }} @ {{ formations.addresse }} </h5>
                                         </div>
+
+
                                         <div class="event_speakers">
                                             <!-- Event Speaker -->
                                             <div class="event_speaker d-flex flex-row align-items-center justify-content-start">
                                                 <div><div class="event_speaker_image"><img src="{{ asset('img/core-img/time.png') }}" alt=""> </div></div> </div>
                                                 <div class="event_speaker_content">
                                                     <div class="event_speaker_name">Start Date : {{ formations.dateDeb|date('Y-m-d') }}</div>
-                                                    <div class="event_speaker_title">End Date : {{ formations.dateFin|date('Y-m-d') }}</div>
+                                                    <div class="event_speaker_name">End Date : {{ formations.dateFin|date('Y-m-d') }}</div>
                                                 </div>
                                             </div>
                                         </div>

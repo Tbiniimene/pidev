@@ -1,0 +1,55 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Event{% endblock %}
+{% block body %}
+    <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // $("#eventImg").on('change',function()
+            // {
+            //     console.log($(this).val());
+            // }) ;
+        });
+    </script>
+    <!-- Page Content -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+         Matriels List
+        </div>
+        <div class="card-body">
+            <div class="table-responsive table-hover">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    {{ form_start(form) }}
+
+                    <tr>
+                        <td>Nom : </td>
+                        <td>{{ form_widget(form.nom) }}</td>
+                    </tr>
+
+                    <td>image : </td>
+                    <td>{{ form_widget(form.file) }}</td>
+
+                    <tr>
+                        <td> prix: </td>
+                        <td>{{ form_widget(form.prix) }}</td>
+                    </tr>
+                    <tr>
+
+                        <td>qte : </td>
+                        <td>{{ form_widget(form.qte) }}</td>
+                    </tr>
+                    <tr>
+                        <td>statut : </td>
+                        <td>{{ form_widget(form.statut) }}</td>
+                    </tr>
+
+
+                </table>
+                <br>
+                <center>  <button class="btn btn-primary" type="submit">Add matriels</button></center>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -56,8 +56,6 @@ class CommandeJardinier
      */
     private $validationJardinier;
 
-
-
     /**
      * @var \User
      *

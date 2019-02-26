@@ -1,6 +1,103 @@
 {% extends '@base/admin/base.html.twig' %}
 {% block title %}Admin - Add delivery{% endblock %}
 {% block body %}
+    <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin/customJs/ajouterLiv.js') }}"></script>
+    <link href="{{ asset('admin/customCss/mapCss.css') }}" rel="stylesheet"/>
+    <script>
+        $(document).ready(function(){
+            var data;
+            var titLatLng;
+            var nom;
+            var prenom;
+            var tel;
+            var descrip;
+
+            {% for liv in livreurs %}
+                {% if liv.Etat=="disponible"%}
+                     data=getLatLng('{{ liv.localisation }}');
+                     nom="{{ liv.Nom }}";
+                     prenom="{{ liv.Prenom }}";
+                     tel="{{ liv.Tel }}";
+                     descrip="<h3>Delivery man description</h3>Name: <b>"+nom+"</b><br/>Last name: <b>"+prenom+"</b><br/>Phone number: <b>"+tel+"</b>";
+                    titLatLng={
+                        tit:data[0],
+                        lat:data[1],
+                        lng:data[2],
+                        desc:descrip
+                    };
+
+                    livsTab.push(titLatLng);
+                {% endif %}
+            locLivs.push(
+                            {
+                                id:{{ liv.IdLivreur}},
+                                loc:"{{ liv.Localisation }}"
+                            }
+                        );
+            {% endfor %}
+        });
+
+    </script>
+<style>
+    body
+    {
+        position:relative;
+        overflow: hidden;
+    }
+
+
+    .divTrans{
+        width:60%;
+        height:80%;
+        margin: 2% 0 0 100%;
+        background-color: #ffffff;
+        transition: transform 0.7s ease 0s, opacity 0.2s ease 0s;
+        -o-transition-property : transform;
+        -o-transition-duration: 2s;
+        -o-transition-timing-function:ease;
+        padding: 10px;
+        box-shadow: 5px 10px 18px #5f27cd;
+        position: absolute;
+        z-index: 10;
+        border-radius: 15px
+    }
+    #saveLoc{
+    }
+    .map-container-9 iframe {
+
+        height:80%;
+        border-radius: 7px
+
+    }
+
+</style>
+    <div id="trans" class="divTrans bg-dark">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <br/>
+                <h3 style="text-align:center;color:white" class="box-title">Available delivery men</h3>
+                <br>
+            </div>
+
+            <div class="box-body">
+
+                <div class="text-center">
+                    <button type="button" id="saveLoc" onclick="toggleTrans();setLatLng()" disabled="disabled" class="btn btn-info btn-md">Confirm Choice <i class="fas fa-map-marker-alt ml-1"></i></button>
+                   </div>
+                <br/><div id="map-container-google-16" class="z-depth-1-half map-container-9" style="height: 400px;" >
+
+                    <iframe id="mapFrame" src="{{ path('admin_map') }}"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
 
 <div id="content-wrapper">
 
@@ -17,20 +114,28 @@
             <!-- Page Content -->
             <h1>Add a Delivery</h1>
             <hr>
+            <form name="f" method="post" action="{{ path('admin_ajouterLivraison') }}">
+            <button type="button" onclick="toggleTrans();sendDataTrans()" id="chDel" class="btn btn-outline-info">Choose delivery man</button>
+            <input type="hidden" name="localisationLiv" id="localisationLiv"/>
+            <input type="hidden" name="totLiv" id="totLiv"/>
+
             <div>
                 <br>
                 <div  class="row">
                     <div class="col-6" >
-                        <table class="table table-hover table-dark">
+                        <table class="table table-hover table-secondary">
                             <thead>
-                            <th>Client</th>
-                            <th>Command date</th>
-                            <th>Price</th>
+                                <th>Choose</th>
+
+                                <th>Client</th>
+                                <th>Command date</th>
+                                <th>Price</th>
                             </thead>
                             <tbody>
                             {% for com in commands %}
 
                             <tr>
+                                <td><center><input type="radio" value="{{ com.IdCommandeP }}" onclick="calculTot(this,'com',{{ com.Prix }})" name="cr" class="form-control w-25" /></center></td>
                                 <td>{{ com.IdClient.Username }}</td>
                                 <td>{{ com.DateCmd|date('Y-m-d') }}</td>
                                 <td>{{ com.Prix }}</td>
@@ -56,7 +161,7 @@
                                 <tbody>
                                 {% for res in reservations %}
                                 <tr>
-                                    <td><input type="checkbox" id="ch1" class="form-control" /></td>
+                                    <td><center><input type="radio" value="{{ res.IdRes }}" onclick="calculTot(this,'res',{{ res.Prix }})" name="rr" class="form-control w-25" /></center></td>
                                     <td>{{ res.IdClient.Username }}</td>
                                     <td>{{ res.DateDebut|date('Y-m-d') }}</td>
                                     <td>{{ res.DateFin|date('Y-m-d') }}</td>
@@ -67,17 +172,18 @@
                                 </tbody>
                             </table>
                             <br>
-                            <input type="button"  id="btnVoirArts" class="btn btn-light" value="basculer l'affichage" disabled/>
 
                         </div>
 
                     </div>
 
-                    <input type="submit" style="margin:auto;margin-top:3%" id="btnSuppCata" class="btn btn-warning btn-md col-2" value="Add" />
+                    <input type="submit" style="margin:auto;margin-top:3%" id="btnAddDeliv" class="btn btn-info btn-md col-2" value="Add" />
                 </div>
             </div>
+            </form>
         </div>
         <!-- /.container-fluid -->
+
 
         <!-- Sticky Footer -->
         <footer class="sticky-footer">

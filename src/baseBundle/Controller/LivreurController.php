@@ -4,6 +4,7 @@ namespace baseBundle\Controller;
 
 use baseBundle\Entity\Commande;
 use baseBundle\Entity\Disponibilite;
+use baseBundle\Entity\Livraison;
 use baseBundle\Entity\Livreur;
 use baseBundle\Entity\ReservationMateriel;
 use baseBundle\Form\LivreurType;
@@ -187,11 +188,39 @@ class LivreurController extends Controller
     }
     public function ajouterLivAction()
     {
+        if(isset($_POST['localisationLiv']) && isset($_POST['totLiv']))
+        {
+            $em = $this->getDoctrine()->getManager();
+            $livraison=new Livraison();
+
+            $idLiv=$_POST['localisationLiv'];
+            $tot=$_POST['totLiv'];
+            if(isset($_POST['rr']))
+            {
+                $idRes=$_POST['rr'];
+                $livraison->setIdReservation($em->getReference(ReservationMateriel::class,$idRes));
+
+            }
+            if( isset($_POST['cr']))
+            {
+
+                $idCmd=$_POST['cr'];
+                $livraison->setIdCommande($em->getReference(Commande::class,$idCmd));
+
+            }
+
+            $livraison->setIdLivreur($em->getReference(Livreur::class,$idLiv));
+            $livraison->setPrix($tot);
+
+            $em->persist($livraison);
+            $em->flush();
+        }
 
         $commands=$this->getDoctrine()->getRepository	(Commande::class)->findAll();
         $reservations=$this->getDoctrine()->getRepository	(ReservationMateriel::class)->findAll();
+        $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
 
-        return $this->render('@base/livraison/ajouterLivraison.html.twig',array('commands'=>$commands,'reservations'=>$reservations)
+        return $this->render('@base/livraison/ajouterLivraison.html.twig',array('commands'=>$commands,'reservations'=>$reservations,'livreurs'=>$livreurs)
         );
 
     }
