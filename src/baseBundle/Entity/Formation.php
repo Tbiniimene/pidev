@@ -139,17 +139,11 @@ class Formation
     }
 
 
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->idFormation;
-    }
+
 
     /**
+     *
+     * Get id
      * @return int
      */
     public function getIdFormation()
