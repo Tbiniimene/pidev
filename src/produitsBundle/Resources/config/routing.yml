@@ -1,3 +1,12 @@
 produits_homepage:
     path:     /produits
     defaults: { _controller: produitsBundle:Default:index }
+Produits_shop:
+    path:     /shop
+    defaults: { _controller: produitsBundle:Produits:shop }
+detail_Produits:
+    path:     /detail/{id}
+    defaults: { _controller: produitsBundle:Produits:detail }
+detail_Couffin:
+    path:     /detail/{id}
+    defaults: { _controller: produitsBundle:Produits:detail }

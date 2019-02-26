@@ -4,7 +4,6 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Places Search Box</title>
-    <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
 
     <style>
         /* Always set the map height explicitly to define the size of the div
@@ -89,6 +88,10 @@
         #target {
             width: 345px;
         }
+        #pac-input{
+            border-radius: 5px
+
+        }
     </style>
 </head>
 <body>
@@ -110,9 +113,10 @@
     var map;
     var icon;
     function initAutocomplete() {
+
          map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -33.8688, lng: 151.2195},
-            zoom: 13,
+            center: {lat: 36.837, lng: 10.193},
+            zoom: 10,
             mapTypeId: 'roadmap'
         });
 
@@ -208,6 +212,49 @@
 
         passData(_tit,_lat,_lng);
     }
+    var lastInfo="";
+    function afficherMarkers(markers)
+    {
+
+        for(let i=0;i<markers.length;i++)
+        {
+            let latlng = new google.maps.LatLng(markers[i].lat, markers[i].lng);
+
+            let marker=new google.maps.Marker({
+                map: map,
+                icon: icon,
+                title: markers[i].tit,
+                draggable: true,
+
+            });
+
+            marker.addListener('click', function() {
+
+                passData( marker.getTitle(),marker.getPosition().lat().toFixed(3),marker.getPosition().lng().toFixed(3));
+                window.parent.setLatLngW();
+
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: markers[i].desc
+                });
+
+                if(lastInfo!="")
+                    lastInfo.close();
+
+                infowindow.open(map, marker);
+                lastInfo=infowindow;
+
+                map.setZoom(15);
+              //  smoothZoom(13, map.getZoom());
+                map.setCenter(marker.getPosition());
+            });
+
+
+            marker.setPosition(latlng);
+        }
+
+    }
+
     function passData(tit,lat,lng)
     {
         $("#mapTit").val(tit);
@@ -215,8 +262,22 @@
         $("#mapLng").val(lng);
 
     }
+    function smoothZoom ( max,cnt) {
+        if (cnt >= max) {
+            return;
+        }
+        else {
+            z = google.maps.event.addListener(map, 'zoom_changed', function(event){
+                google.maps.event.removeListener(z);
+                smoothZoom(map, max, cnt + 1);
+            });
+            setTimeout(function(){map.setZoom(cnt)}, 80);
+        }
+    }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbMjXMBHS0l1x4fBmoTzZrMkUWOduylq0&libraries=places&callback=initAutocomplete"
         async defer></script>
+<script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
+
 </body>
 </html>

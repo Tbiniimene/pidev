@@ -1,0 +1,42 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Blank{% endblock %}
+{% block body %}
+
+    <html>
+    <head>
+
+    </head>
+    <body>
+    <center>
+        <h1 id="cc">modifier un couffin</h1>
+        {{ form_start(form) }}
+        <table>
+
+            <tr>
+                <td>date deb : </td>
+                <td>{{ form_widget(form.dateDeb) }}</td>
+            </tr>
+            <tr>
+                <td>date fin : </td>
+                <td>{{ form_widget(form.dateFin) }}</td>
+            </tr>
+            <tr>
+                <td>prix : </td>
+                <td>{{ form_widget(form.prix) }}</td>
+            </tr>
+            <tr>
+                <td>type : </td>
+                <td>{{ form_widget(form.type) }}</td>
+            </tr>
+            <tr>
+                <td>qte : </td>
+                <td>{{ form_widget(form.qte) }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="modifier">
+        {{ form_end(form) }}
+    </center>
+    </body>
+    </html>
+
+{% endblock %}

@@ -60,6 +60,86 @@ class Livraison
      */
     private $idReservation;
 
+    /**
+     * @return int
+     */
+    public function getIdLivraison()
+    {
+        return $this->idLivraison;
+    }
+
+    /**
+     * @param int $idLivraison
+     */
+    public function setIdLivraison($idLivraison)
+    {
+        $this->idLivraison = $idLivraison;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * @param float $prix
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+    }
+
+    /**
+     * @return \Livreur
+     */
+    public function getIdLivreur()
+    {
+        return $this->idLivreur;
+    }
+
+    /**
+     * @param \Livreur $idLivreur
+     */
+    public function setIdLivreur($idLivreur)
+    {
+        $this->idLivreur = $idLivreur;
+    }
+
+    /**
+     * @return \Commande
+     */
+    public function getIdCommande()
+    {
+        return $this->idCommande;
+    }
+
+    /**
+     * @param \Commande $idCommande
+     */
+    public function setIdCommande($idCommande)
+    {
+        $this->idCommande = $idCommande;
+    }
+
+    /**
+     * @return \ReservationMateriel
+     */
+    public function getIdReservation()
+    {
+        return $this->idReservation;
+    }
+
+    /**
+     * @param \ReservationMateriel $idReservation
+     */
+    public function setIdReservation($idReservation)
+    {
+        $this->idReservation = $idReservation;
+    }
+
 
 }
 
