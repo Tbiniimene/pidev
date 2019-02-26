@@ -16,7 +16,7 @@
 
                     <!-- Forming session -->
 
-                    <form method="post" name="f" id="f" action="{{ path('participer_formation',{'id':formations.IdFormation}) }}">
+                    <form method="post" name="f" id="f" action="{{ path('participer_formation',{'IdFormation':formations.IdFormation}) }}">
                         <div class="event">
                             <div class="row row-lg-eq-height">
                                 <div class="col-lg-6 single_portfolio_item design home-design">
@@ -27,7 +27,7 @@
                                         <a href="{{ asset(formations.img) }}" class="portfolio-img d-flex align-items-center justify-content-center" title="{{ formations.nom }}">
                                             <div class="port-hover-text">
                                                 <h3>{{ formations.nom }}  </h3>
-                                                <h3>{{ formations.idFormation }}  </h3>
+
                                                 <h5>{{ formations.datedeb|date('Y-m-d') }}</h5>
                                            </div>
                                         </a>
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="col-lg-6 event_col">
                                     <div class="event_content">
-                                        <div><br><h5>{{ formations.nom }}</h5></div>
+                                        <div><br><h5>{{ formations.nom }}  <h3>{{ formations.IdFormation }}  </h3></h5></div>
                                         <div class="event_location"> </div>
                                         <div class="event_text">
                                             <p>{{ formations.description }}</p>

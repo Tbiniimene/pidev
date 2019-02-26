@@ -188,7 +188,7 @@ modif_formation:
 
 
 participer_formation:
-    path: /base/participer/{id}
+    path: /base/participer/{IdFormation}
     defaults: { _controller: baseBundle:Formation:participer }
 
 #----------------------------------------------------------

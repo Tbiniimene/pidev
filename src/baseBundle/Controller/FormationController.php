@@ -111,7 +111,7 @@ class FormationController extends Controller
 
 
 
-    public function participerAction($id)
+    public function participerAction($IdFormation)
     {
         $pe=new ParticipantFormation();
         //5-validation du formulaire
@@ -124,7 +124,7 @@ class FormationController extends Controller
 
 
             $em = $this->getDoctrine()->getManager();
-            $pe->setPFormation($em->getReference(Formation::class,$id));
+            $pe->setPFormation($em->getReference(Formation::class,$IdFormation));
             $pe->setCin($cin);
             $pe->setNom($nom);
             $pe->setPrenom($prenom);
@@ -132,7 +132,7 @@ class FormationController extends Controller
 
 
 
-            $formation=$em->getRepository(Formation::class)->find($id);
+            $formation=$em->getRepository(Formation::class)->find($IdFormation);
             $formation->setnbmax($formation->getnbmax() - 1);
 
 
@@ -145,7 +145,7 @@ class FormationController extends Controller
 
 
         return $this->render('@base/Formation/participer.html.twig', array(
-            'idformation' => $id
+            'idformation' => $IdFormation
         ));
 
     }
