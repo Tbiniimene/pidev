@@ -46,4 +46,135 @@
             </div>
         </div>
     </div>
+
+
+<script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
+<script>
+    $(document).ready(function(){
+
+        //disabling end date , until start date change
+        init();
+        initdeb();
+
+        // checking if the start date has changed
+        $("#formationbundle_formation_dateDeb_day").on("change",function(){
+            let currVal=$(this).val();
+        $("#formationbundle_formation_dateFin_day").removeAttr("disabled");
+
+            //passing the current day value mta3 el date deb to be set as minimum fel date fin
+            // the "day" is used to tell the function setAvailableDate that we're working on the days options
+            setAvailableDates("day",currVal);
+        });
+
+        $("#formationbundle_formation_dateDeb_month").on("change",function(){
+            let currVal=$(this).val();
+            $("#formationbundle_formation_dateFin_month").removeAttr("disabled");
+
+            //here we're telling the function that we're working on months
+            setAvailableDates("month",currVal);
+        });
+
+        $("#formationbundle_formation_dateDeb_year").on("change",function(){
+            let currVal=$(this).val();
+            $("#formationbundle_formation_dateFin_year").removeAttr("disabled");
+
+            //here we're telling the function that we're working on years
+            setAvailableDates("year",currVal);
+        });
+
+        function setAvailableDates(obj,min)
+        {
+            //setting default id
+            let day="#formationbundle_formation_dateFin_day";
+            let month="#formationbundle_formation_dateFin_month";
+            let year="#formationbundle_formation_dateFin_year";
+
+            //checking the obj to know in wich option select we gonna work
+            if(obj=="day")
+                obj=day;
+            else if(obj=="month")
+                obj=month;
+            else
+                obj=year;
+
+            $(obj+" > option").each(function(){
+                let curr=parseInt($(this).val());
+                min=parseInt(min);
+                if(curr<min)
+                {
+                    $(this).attr('disabled','disabled');
+
+                }
+                else {
+                    $(this).removeAttr('disabled');
+
+                }
+                //setting the min value as default
+                $(obj).val(min);
+            });
+
+        }
+        function init()
+        {
+
+            //disabling the selects
+            $("#formationbundle_formation_dateFin_day").attr("disabled","disabled");
+
+            $("#formationbundle_formation_dateFin_month").attr("disabled","disabled");
+            $("#formationbundle_formation_dateFin_year").attr("disabled","disabled");
+
+
+
+        }
+
+        function initdeb()
+        {
+            var currentDate = new Date();
+
+            $("#formationbundle_formation_dateDeb_day").val(currentDate.getDate());
+            $("#formationbundle_formation_dateDeb_day > option").each(function(){
+                let curr=parseInt($(this).val());
+                if(curr<currentDate.getDate())
+                {
+                    $(this).attr('disabled','disabled');
+
+                }
+                else {
+                    $(this).removeAttr('disabled');
+
+                }
+            });
+
+            $("#formationbundle_formation_dateDeb_month").val(currentDate.getMonth()+1);
+            $("#formationbundle_formation_dateDeb_month > option").each(function(){
+                let curr=parseInt($(this).val());
+                if(curr<(currentDate.getMonth()+1))
+                {
+                    $(this).attr('disabled','disabled');
+
+                }
+                else {
+                    $(this).removeAttr('disabled');
+
+                }
+            });
+
+            $("#formationbundle_formation_dateDeb_year").val(currentDate.getFullYear());
+            $("#formationbundle_formation_dateDeb_year > option").each(function(){
+                let curr=parseInt($(this).val());
+                if(curr<currentDate.getFullYear())
+                {
+                    $(this).attr('disabled','disabled');
+
+                }
+                else {
+                    $(this).removeAttr('disabled');
+
+                }
+            });
+
+        }
+    });
+</script>
+
 {% endblock %}
