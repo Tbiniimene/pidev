@@ -165,26 +165,31 @@ formateur_afficherformateur:
     path:     /afficher
     defaults: { _controller: baseBundle:Formation:view }
 formation_ajoutformateur:
-        path:     /base/ajout
+        path:     /admin/ajout
         defaults: { _controller: baseBundle:Formation:create }
 supp_formateur:
-    path: /base/supprimer/{id}
+    path: /admin/supprimer/{id}
     defaults: { _controller: baseBundle:Formation:supprimer }
 modif_formateur:
-    path: /base/modifier/{id}
+    path: /admin/modifier/{id}
     defaults: { _controller: baseBundle:Formation:modifier }
 afficherformation:
-    path:     /base/afficherf
+    path:     /admin/afficherf
     defaults: { _controller: baseBundle:Formation:afficherFormation }
 ajoutformation:
-    path:     /base/ajoutf
+    path:     /admin/ajoutf
     defaults: { _controller: baseBundle:Formation:createf }
 supp_formation:
-    path: /base/supprimerf/{id}
+    path: /admin/supprimerf/{id}
     defaults: { _controller: baseBundle:Formation:supprimerf }
 modif_formation:
-    path: /base/modifierf/{id}
+    path: /admin/modifierf/{id}
     defaults: { _controller: baseBundle:Formation:modifierf }
+
+
+participer_formation:
+    path: /base/participer/{id}
+    defaults: { _controller: baseBundle:Formation:participer }
 
 #----------------------------------------------------------
 

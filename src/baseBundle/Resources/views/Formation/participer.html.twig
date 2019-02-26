@@ -1,0 +1,46 @@
+{% extends '@base/default/base.html.twig' %}
+{% block backgroundimg %}
+<div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url({{ asset('img/core-img/ii.jpg') }});">
+
+    {% endblock %}
+{% block tt %} <h2>Forming session</h2>{% endblock %}
+{% block aa %}Forming{% endblock %}
+{% block body %}
+
+
+    <section class="about-us-area">
+    <div class="container">
+    <div class="row justify-content-between">
+    <div class="col-12 col-lg-7">
+        <div class="section-heading">
+            <form method="post" name="f" id="f" action="{{ path('participer_formation',{'idFormation':idFormation}) }}">
+
+            <table class="table table-borderedless" id="dataTable" width="100%" cellspacing="0">
+
+                    <tr>
+                        <td>CIN</td><td><input type="number" name="cin" id="cin" class="form-control"/> </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td><td><input type="text" name="Nom" id="Nom" class="form-control"/> </td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td><td><input type="text" name="Prenom" id="Prenom" class="form-control"/> </td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td><td><input type="number" name="Tel" id="Tel" class="form-control"/> </td>
+                    </tr>
+
+                </table>
+        </div>
+    </div>
+        <div class="col-12 col-lg-5">
+            <div id="zone"><img src="{{ asset('img/bg-img/rent.jpg')}}" alt=""></div>
+            <div></div></div>
+    </div><br><div><center><button class="btn btn-success w-25" type="submit">Confirm Renting</button></center></div><br></div>
+        </form>
+    </section>
+
+
+
+
+{% endblock %}

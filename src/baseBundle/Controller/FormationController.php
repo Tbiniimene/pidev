@@ -1,6 +1,7 @@
 <?php
 
 namespace baseBundle\Controller;
+use baseBundle\Entity\ParticipantFormation;
 use baseBundle\Entity\Formateur;
 use baseBundle\Entity\Formation;
 use baseBundle\Form\FormateurType;
@@ -109,12 +110,44 @@ class FormationController extends Controller
     }
 
 
-    public function participerAction()
+
+    public function participerAction($id)
     {
-        $formateurs=$this->getDoctrine()
-            ->getRepository(Formateur::class)
-            ->findAll();
-        return $this->render('@base/Formation/showformateur.html.twig',array('f'=>$formateurs));
+        $pe=new ParticipantFormation();
+        //5-validation du formulaire
+        if (isset($_POST['cin']) && isset($_POST['Nom']) && isset($_POST['Prenom']) && isset($_POST['Tel'])  ) {
+
+            $cin=$_POST['cin'];
+            $nom=$_POST['Nom'];
+            $prenom=$_POST['Prenom'];
+            $tel=$_POST['Tel'];
+
+
+            $em = $this->getDoctrine()->getManager();
+            $pe->setPFormation($em->getReference(Formation::class,$id));
+            $pe->setCin($cin);
+            $pe->setNom($nom);
+            $pe->setPrenom($prenom);
+            $pe->setTel($tel);
+
+
+
+            $formation=$em->getRepository(Formation::class)->find($id);
+            $formation->setnbmax($formation->getnbmax() - 1);
+
+
+            $em->persist($formation);
+            $em->persist($pe);
+            $em->flush();
+
+            return $this->redirectToRoute('base_forming');
+        }
+
+
+        return $this->render('@base/Formation/participer.html.twig', array(
+            'idformation' => $id
+        ));
+
     }
 
 }
