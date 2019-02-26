@@ -1,0 +1,76 @@
+{% extends '@base/default/base.html.twig' %}
+{% block tt %} <h2>Shop</h2>{% endblock %}
+{% block aa %}Shop{% endblock %}
+{% block body %}
+
+    <!-- ##### Shop Area Start ##### -->
+    <section class="shop-page section-padding-0-100">
+        <div class="container">
+
+            <div class="row">
+                <aside class="col-sm-5 border-right">
+                    <article class="gallery-wrap">
+                        <div class="img-big-wrap">
+                            <div>     <a href="{{ path("detail_Produits", {'id':Produits.idProduits}) }}">
+                                   <center><  <img  style="width:400px;height: 500px" src="{{ asset('images/'~ Produits.image) }}" alt=""></center>
+                                </a><</div>
+                        </div> <!-- slider-product.// -->
+
+                    </article> <!-- gallery-wrap .end// -->
+                </aside>
+                <aside class="col-sm-7">
+                    <article class="card-body p-5">
+                        <p class="price-detail-wrap"     >
+                            <a href="shop-details.html">
+
+                            </a>
+
+<div>	<span class="price h3 text-warning">
+
+
+                      <dt>   <span class="currency"> {{ Produits.nom }}</span></span></div></dt>
+
+                        <span class="price h3 text-warning">
+        	<span class="currency">  {{ Produits.prix }}</span>
+
+	<span class="currency">dt</span>
+	</span>
+
+
+            </p> <!-- price-detail-wrap .// -->
+
+
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <dl class="param param-inline">
+                                    <dt>Quantity: </dt>
+
+
+
+
+                                    <dd>
+                                        <select class="form-control form-control-sm" style="width:70px;">
+                                            <option> 1 </option>
+                                            <option> 2 </option>
+                                            <option> 3 </option>
+                                        </select>
+                                    </dd>
+                                </dl>  <!-- item-property .// -->
+                            </div> <!-- col.// -->
+                            <div class="col-sm-7">
+
+                            </div> <!-- col.// -->
+                        </div> <!-- row.// -->
+
+                        <hr>
+                        <a href="{{ path("Produits_shop", {'id':produits.idProduits}) }}"  class="btn btn-lg btn-primary text-uppercase"> rtourne  a page </a>
+                        <a href="Produits_shop" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+                    </article> <!-- card-body.// -->
+
+                </aside> <!-- col.// -->
+            </div>
+        </div>
+    </section>
+    <!-- ##### Shop Area End ##### -->
+{% endblock %}
