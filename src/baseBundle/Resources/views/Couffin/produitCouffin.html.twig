@@ -1,0 +1,48 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Blank{% endblock %}
+{% block body %}
+    <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
+    <script>
+
+
+    </script>
+
+    <html>
+    <head></head>
+    <body>
+    <center>
+        <h1>Liste des produits</h1>
+        <table border="1">
+            <tr>
+                <th>produit</th>
+                <th>image</th>
+                <th>owner</th>
+                <th>qte</th>
+                <th>prix</th>
+                <th>ajout</th>
+            </tr>
+
+
+
+            {% for e in Produits %}
+            <form name="f" method="post" action="{{ path('afficheProduitsCouffin',{'idCouffin':idcouffin}) }}" >
+
+            <tr>
+                <input type="hidden" name="idProd" value="{{ e.IdProduit  }}" />
+                <td> {{ e.nom}} </td>
+                <td> {{ e.image }} </td>
+                <td> {{ e.owner }} </td>
+                <td> <input name="qteProd" type="number" placeholder="{{ e.qte }}"/></td>
+                <td> {{ e.prix }} </td>
+                <td> > <input type="submit" value="Ajouter au couffin"></td>
+
+            </tr>
+            </form>
+
+
+            {% endfor %}
+
+        </table>
+    </center></body></html>
+
+{% endblock %}

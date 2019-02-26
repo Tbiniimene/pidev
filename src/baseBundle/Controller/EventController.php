@@ -156,8 +156,6 @@ class EventController extends Controller
         }
         $stands = $this->getDoctrine()->getRepository(Stand::class)->findBy(['idEvent' => $idEvent,'statutStand'=>'1']);
 
-        //$stands = $this->getDoctrine()->getRepository(Stand::class)->findAll();
-
         return $this->render('@base/event/rent.html.twig', array(
             'idEvent' => $idEvent,'stands'=>$stands
         ));

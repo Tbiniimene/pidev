@@ -1,0 +1,42 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Blank{% endblock %}
+{% block body %}
+
+    <html>
+    <head></head>
+    <body>
+    <center>
+        <h1>Liste des couffins</h1>
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>produit</th>
+                <th>date_deb</th>
+                <th>date_fin</th>
+                <th>qte</th>
+                <th>prix</th>
+                <th>type</th>
+                <th>delete</th>
+                <th>edit</th>
+                <th>ajouter de produit</th>
+            </tr>
+
+            {% for e in couffin %}
+            <tr>
+                <td> {{ e.idcouffin }} </td>
+                <td> {{ e.iddc }} </td>
+                <td> {{ e.dateDeb | date('Y-m-d')}} </td>
+                <td> {{ e.dateFin | date('Y-m-d')}} </td>
+                <td> {{ e.qte }} </td>
+                <td> {{ e.prix }} </td>
+                <td> {{ e.type }} </td>
+                <td> <a href="{{ path('delete_couffin', {'idcouffin':e.idCouffin}) }}"> delete </a></td>
+                <td> <a href="{{ path('edit_couffin', {'idcouffin':e.idCouffin}) }}"> edit </a></td>
+                <td> <a href="{{ path('afficheProduitsCouffin',{'idCouffin':e.idcouffin}) }}"> ajout prouduits </a> </td>
+                <td></td>
+                {% endfor %}
+
+        </table><a href="{{ path('ajout_couffin') }}"/> ajout
+    </center></body></html>
+
+{% endblock %}

@@ -117,17 +117,17 @@ class ParticipantFormation
     /**
      * @return mixed
      */
-    public function getFormation()
+    public function getPFormation()
     {
-        return $this->Formation;
+        return $this->PFormation;
     }
 
     /**
-     * @param mixed $Formation
+     * @param mixed $PFormation
      */
-    public function setFormation($Formation)
+    public function setPFormation($PFormation)
     {
-        $this->Formation = $Formation;
+        $this->PFormation = $PFormation;
     }
 
 
