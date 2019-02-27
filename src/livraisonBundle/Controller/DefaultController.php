@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('@livraison/Default/index.html.twig');
     }
+    public function loginAction()
+    {
+        return $this->render('@livraison/livreur/login.html.twig');
+    }
+
 }

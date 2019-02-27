@@ -114,6 +114,7 @@ function setLatLng()
        }
     });
 
+
     $("#btnAddDeliv").removeAttr("disabled");
 
 }
@@ -136,9 +137,11 @@ function calculTot(obj,name,price)
         else
             currResPrice=0;
     }
-
+    if($('input[type=radio]').length>0)
     $("#totLiv").val(currResPrice+currComPrice);
+
 }
+
 window.setLatLngW=function(){
     setLatLng();
     $("#saveLoc").removeAttr("disabled");
