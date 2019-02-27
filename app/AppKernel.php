@@ -24,7 +24,8 @@ class AppKernel extends Kernel
             new clientBundle\clientBundle(),
             new evenementBundle\evenementBundle(),
             new baseBundle\baseBundle(),
-            new FOS\UserBundle\FOSUserBundle()
+            new FOS\UserBundle\FOSUserBundle(),
+            new SBC\NotificationsBundle\NotificationsBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
