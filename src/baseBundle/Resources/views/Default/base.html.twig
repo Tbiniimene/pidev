@@ -102,12 +102,11 @@
                                         <li><a href="{{ path('base_homepage')}}">Home</a></li>
                                         <li><a href="{{ path('base_about')}}">About</a></li>
                                         <li><a href="{{ path('base_shop')}}">Shop</a>
-                                        <ul class="dropdown">
-                                            <li><a href="{{ path('base_shop')}}">Shop</a></li>
-                                            <li><a href="{{ path('base_shop_details')}}">Shop Details</a></li>
-                                            <li><a href="{{ path('base_cart')}}">Shopping Cart</a></li>
-                                            <li><a href="{{ path('base_checkout')}}">Checkout</a></li>
-                                        </ul>
+                                            <ul class="dropdown">
+                                                <li><a href="{{ path('base_shop')}}">Shop</a></li>
+                                                <li><a href="{{ path('base_cart')}}">Shopping Cart</a></li>
+                                                <li><a href="{{ path('base_checkout')}}">Checkout</a></li>
+                                            </ul>
                                         </li>
                                         <li><a href="{{ path('base_event')}}">Event</a></li>
                                         <li><a href="{{ path('base_forming')}}">Forming</a></li>
@@ -163,8 +162,8 @@
 <div class="breadcrumb-area">
     <!-- Top Breadcrumb Area -->
     {% block backgroundimg %}{% endblock %}
-        {% block tt %}{% endblock %}
-    </div>
+    {% block tt %}{% endblock %}
+</div>
 </div>
 <div class="container">
     <div class="row">
@@ -238,10 +237,10 @@
                         <!-- Single Best Seller Products -->
                         <div class="single-best-seller-product d-flex align-items-center">
                             <div class="product-thumbnail">
-                                <a href="{{ path('base_shop_details')}}"><img src="{{ asset('img/bg-img/4.jpg')}}" alt=""></a>
+                                <a href=""><img src="{{ asset('img/bg-img/4.jpg')}}" alt=""></a>
                             </div>
                             <div class="product-info">
-                                <a href="{{ path('base_shop_details')}}">Cactus Flower</a>
+                                <a href="">Cactus Flower</a>
                                 <p>$10.99</p>
                             </div>
                         </div>
@@ -249,10 +248,10 @@
                         <!-- Single Best Seller Products -->
                         <div class="single-best-seller-product d-flex align-items-center">
                             <div class="product-thumbnail">
-                                <a href="{{ path('base_shop_details')}}"><img src="{{ asset('img/bg-img/5.jpg')}}" alt=""></a>
+                                <a href=""><img src="{{ asset('img/bg-img/5.jpg')}}" alt=""></a>
                             </div>
                             <div class="product-info">
-                                <a href="{{ path('base_shop_details')}}">Tulip Flower</a>
+                                <a href="">Tulip Flower</a>
                                 <p>$11.99</p>
                             </div>
                         </div>

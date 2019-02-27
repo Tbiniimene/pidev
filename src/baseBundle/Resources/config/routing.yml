@@ -26,13 +26,17 @@ base_portfolio:
     path:     /base/portfolio
     defaults: { _controller: baseBundle:Default:portfolio }
 
+
 base_shop:
     path:     /base/shop
     defaults: { _controller: baseBundle:Default:shop }
 
 base_shop_details:
-    path:     /base/shop_details
+    path:     /base/shop_details/{id}
     defaults: { _controller: baseBundle:Default:shop_details}
+
+
+
 
 base_portfolio_details:
     path:     /base/portfolio_details
@@ -41,6 +45,7 @@ base_portfolio_details:
 base_blog_details:
     path:     /base/blog_details
     defaults: { _controller: baseBundle:Default:blog_details}
+
 
 base_event:
     path:     /base/event
