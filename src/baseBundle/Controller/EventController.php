@@ -166,4 +166,12 @@ class EventController extends Controller
     {
         return $this->render('@base/event/test.html.twig');
     }
+
+    public function myStandAction()
+    {
+        $aa = $this->getDoctrine()->getRepository(ParticipantsEvenement::class)->findAll();
+        return $this->render('@base/event/myStand.html.twig', array(
+            'aa' => $aa
+        ));
+    }
 }
