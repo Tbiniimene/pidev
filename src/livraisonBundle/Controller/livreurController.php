@@ -13,6 +13,13 @@ class livreurController extends Controller
             $name=$_POST['username'];
             $pass=$_POST['pass'];
 
+            $data = array(
+                'name' => $name,
+                'pass'=>$pass
+            );
+            $pusher = $this->get('mrad.pusher.notificaitons');
+            $pusher->trigger($data);
+
             //check data base else render login route
 
             return $this->redirectToRoute('livreur_index');

@@ -212,8 +212,17 @@ class LivreurController extends Controller
             $livraison->setIdLivreur($em->getReference(Livreur::class,$idLiv));
             $livraison->setPrix($tot);
 
+            // From your controller or service
+            $data = array(
+                'my-message' => "New Delivery",
+            );
+            $pusher = $this->get('mrad.pusher.notificaitons');
+            $pusher->trigger($data);
+
             $em->persist($livraison);
             $em->flush();
+
+
         }
 
         $commands=$this->getDoctrine()->getRepository	(Commande::class)->findAll();
