@@ -8,32 +8,26 @@
 
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="index.html">Dashboard</a>
-                </li>
-                <li class="breadcrumb-item active">Catégorie </li>
+                <li class="breadcrumb-item active">Catégorie  </li>
             </ol>
 
             <!-- Page Content -->
             <h2> Catégorie list </h2>
             <hr>
 
+
             {{ form_start(form) }}
 
             <tr>
                 <td>Nom : </td>
-                <td>{{ form_widget(form.nom) }}</td>
+                <td>{{ form_widget(form.nom) }}      <button class="btn btn-primary" type="submit">Add cat</button>
+                    {{ form_end(form) }}                       </td>
             </tr>
 
 
 
             </table>
-            <br>
-             <button class="btn btn-primary" type="submit">Add cat</button>
-            {{ form_end(form) }}
 
-
-        </div>
 
 
 

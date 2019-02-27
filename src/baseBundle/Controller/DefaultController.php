@@ -44,12 +44,25 @@ class DefaultController extends Controller
 
     public function shopAction()
     {
-        return $this->render('@base/Default/shop.html.twig');
+
+            $em = $this->getDoctrine()->getManager();
+            $categories = $em->getRepository('baseBundle:Categorie')->findAll();
+            $matriels = $em->getRepository('baseBundle:Materiels')->findAll();
+
+            return $this->render('@base/Default/shop.html.twig',
+                array("categories" => $categories, "matriels" => $matriels));
+
     }
 
-    public function shop_detailsAction()
+
+
+    public function shop_detailsAction(Request $request, $id)
+
     {
-        return $this->render('@base/Default/shop-details.html.twig');
+        $matriel = $this->getDoctrine()->getRepository(Materiels::class)->find($id);
+        $categories = $this->getDoctrine()->getRepository('baseBundle:Categorie')->findAll();
+
+        return $this->render('@base/Default/shop-details.html.twig', array("categories" => $categories,"matriels" => $matriel));
     }
 
     public function portfolio_detailsAction()
