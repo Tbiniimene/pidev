@@ -157,6 +157,10 @@ show_par:
     path:     /admin/par
     defaults: { _controller: baseBundle:Event:par }
 
+myStand:
+    path:     /base/myStand
+    defaults: { _controller: baseBundle:Event:myStand }
+
 test:
     path: /test
     defaults: { _controller: baseBundle:Event:test }
