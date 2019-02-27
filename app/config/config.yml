@@ -86,3 +86,14 @@ fos_user:
     from_email:
         address: "mohamedyacine.missaoui@esprit.tn"
         sender_name: "FOS User Postman"
+
+# NotificationsBundle configuration
+notifications:
+    app_id:     724428
+    app_key:    1684e470c0e06c88d88f
+    app_secret: 21c018b6c73f423267c3
+    cluster:    eu
+    # Optional
+    # Default false: work without ssl encryption
+    # Set it to true to work with ssl encryption
+    encrypted:  false

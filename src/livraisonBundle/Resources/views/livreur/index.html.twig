@@ -1,8 +1,21 @@
 <html>
-    <head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('livreur/MDB-notifications/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ asset('livreur/MDB-notifications/css/mdb.min.css') }}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{ asset('livreur/MDB-notifications/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('livreur/MDB-notifications/css/toastr.min.css') }}" rel="stylesheet">
+</head>
 
-    </head>
-    <style>
+<style>
         body{
             width: 100%;
             height: 100%;
@@ -13,7 +26,68 @@
         }
     </style>
 <body>
+{# Call NotificationsBundles's assets #}
+{{ notifications_assets() }}
 
+<!-- Start your project here-->
+
+<!-- /Start your project here-->
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="{{ asset('livreur/MDB-notifications/js/jquery-3.3.1.min.js') }}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{{ asset('livreur/MDB-notifications/js/popper.min.js') }}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{{ asset('livreur/MDB-notifications/js/bootstrap.min.js') }}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{{ asset('livreur/MDB-notifications/js/mdb.js') }}"></script>
+<script type="text/javascript" src="{{ asset('livreur/MDB-notifications/js/toastr.js') }}"></script>
+
+<script>
+    $(document).ready(function()
+    {
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        /**
+         * After calling notifications_assets() "pusher" is now available
+         * and you can use it this way
+         */
+
+            // select the channel you want to listen to
+        var channel = pusher.subscribe("notifications");// notifications channel
+        channel.bind("my-event", function(data) {
+
+
+            toastr["info"](data['name'],data['pass']);
+
+
+            
+            /*
+            var channel = pusher.subscribe("messages");// messages channel
+            channel.bind("my-event", function(data) {
+                console.log('from messages channel', data);
+            });
+            */
+        });
+    });
+
+</script>
 </body>
 
 
