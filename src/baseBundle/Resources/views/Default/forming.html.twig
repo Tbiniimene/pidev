@@ -8,9 +8,10 @@
 {% block body %}
 
     <!-- Events -->
-            {%  for formations in f %}
-    <div class="events">
-        <div class="container">
+               <div class="events">
+                   {%  for formations in f %}
+
+                   <div class="container">
             <div class="row">
                 <div class="col">
              <!-- Forming session -->
@@ -33,7 +34,7 @@
                                 </div>
                                 <div class="col-lg-6 event_col">
                                     <div class="event_content">
-                                        <div><br><h5>{{ formations.nom }}  <h3>{{ formations.idFormation}}  </h3> </h5></div>
+                                        <div><br><h5>{{ formations.nom }} </h5></div>
                                         <div class="event_location"> </div>
                                         <div class="event_text">
                                             <p>{{ formations.description }}</p>
@@ -62,12 +63,13 @@
                                     </div>
                                 </div>
                             </div>
-                </div>
+                        </div>
 
                         <div><br></div>
-                    {% endfor %}
-                </div>
+                </form>
             </div>
+                   </div>
+                   {% endfor %}
             <div><br></div>
             <div class="row">
                 <div class="col-12">
