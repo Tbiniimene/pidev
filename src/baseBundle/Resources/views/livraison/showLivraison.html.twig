@@ -1,0 +1,119 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Show deliveries{% endblock %}
+{% block body %}
+
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{ path('base_homepage') }}">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Show deliveries</li>
+            </ol>
+
+            <!-- Page Content -->
+            <h1>Show deliveries</h1>
+            <hr>
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    Liste des Livreurs
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>Livraison</th>
+                                <th>Commande</th>
+                                <th>Reservation</th>
+                                <th>Detail commande</th>
+                                <th>Delivery man</th>
+                                <th>Price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for v in livraisons %}
+                                <tr>
+                                    <td>{{ v.IdLivraison }}</td>
+                                    <td>
+                                        <ul>
+                                            {% if not v.IdCommande is null  %}
+                                                <li>{{ v.IdCommande.IdClient.Username }}</li>
+                                                <li>{{ v.IdCommande.DateCmd|date('Y-m-d') }}</li>
+                                                <li>{{ v.IdCommande.Prix }}</li>
+                                            {% endif %}
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            {% if not v.IdReservation is null  %}
+
+                                            <li>{{ v.IdReservation.IdClient.Username }}</li>
+                                            <li>{{ v.IdReservation.DateDebut|date('Y-m-d') }}</li>
+                                            <li>{{ v.IdReservation.DateFin|date('Y-m-d')  }}</li>
+                                            <li>{{ v.IdReservation.Prix }}</li>
+                                            {% endif %}
+                                        </ul>
+                                    </td>
+
+                                    <td>
+                                        {% for dc in detailCmd %}
+
+                                            {% set dcId=dc.IdDc|number_format %}
+                                            {% set cIDc=v.IdCommande.IdDc.IdDc|number_format %}
+
+                                            {% if dcId ==cIDc %}
+
+                                                {% if not dc.IdP is null  %}
+                                                    <ul>
+                                                        <li>{{ dc.IdP.Nom}}</li>
+                                                        <li>{{ dc.IdP.Prix}}</li>
+                                                    </ul>
+
+                                                {% endif %}
+                                                {% if not dc.IdM is null  %}
+
+                                                    <ul>
+                                                        <li>{{ dc.IdM.Nom }}</li>
+                                                        <li>{{ dc.IdM.Prix }}</li>
+                                                    </ul>
+
+                                                {% endif %}
+
+                                            {% endif %}
+
+                                        {% endfor %}
+                                    </td>
+                                    <td>{{ v.IdLivreur.Nom }} {{ v.IdLivreur.Prenom }}</td>
+                                    <td>{{ v.Prix }}</td>
+
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}

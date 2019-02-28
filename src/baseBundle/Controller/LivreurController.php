@@ -215,7 +215,8 @@ class LivreurController extends Controller
 
             // From your controller or service
             $data = array(
-                'my-message' => "New Delivery",
+                'livreur'=>$idLiv,
+                'message' => "New Delivery have been assigned to you !",
             );
             $pusher = $this->get('mrad.pusher.notificaitons');
             $pusher->trigger($data);
@@ -223,6 +224,7 @@ class LivreurController extends Controller
             $em->persist($livraison);
             $em->flush();
 
+            return $this->redirectToRoute('admin_showLivraison');
 
         }
 
