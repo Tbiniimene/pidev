@@ -3,7 +3,6 @@
 namespace baseBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Model\User as BaseUser;
 
 /**
  * User
@@ -11,7 +10,7 @@ use FOS\UserBundle\Model\User as BaseUser;
  * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_8D93D64992FC23A8", columns={"username_canonical"}), @ORM\UniqueConstraint(name="UNIQ_8D93D649A0D96FBF", columns={"email_canonical"}), @ORM\UniqueConstraint(name="UNIQ_8D93D649C05FB297", columns={"confirmation_token"})})
  * @ORM\Entity
  */
-class User extends BaseUser
+class User
 {
     /**
      * @var integer
@@ -20,7 +19,7 @@ class User extends BaseUser
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    protected $id;
+    private $id;
 
     /**
      * @var integer
@@ -125,6 +124,7 @@ class User extends BaseUser
         $this->password = $password;
     }
 
+
     /**
      * @return string
      */
@@ -157,7 +157,13 @@ class User extends BaseUser
         $this->id = $id;
     }
 
+    /**
+     * @param array $roles
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+    }
 
 
 }
-

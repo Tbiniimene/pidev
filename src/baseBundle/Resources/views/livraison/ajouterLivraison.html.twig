@@ -13,13 +13,6 @@
             var tel;
             var descrip;
 
-            if( $("#cmd  >tbody >tr").length==0)
-                $("#cmd > tbody ").append(" <tr><td colspan='4' class='text-center'>All orders have been affected !</td></tr>");
-
-            if( $("#rese  >tbody >tr").length==0)
-                $("#rese > tbody ").append(" <tr><td colspan='4' class='text-center'>All reservations have been affected !</td></tr>");
-
-
             {% for liv in livreurs %}
                 {% if liv.Etat=="disponible"%}
                      data=getLatLng('{{ liv.localisation }}');
@@ -130,7 +123,7 @@
                 <br>
                 <div  class="row">
                     <div class="col-6" >
-                        <table class="table table-hover table-secondary" id="cmd">
+                        <table class="table table-hover table-secondary">
                             <thead>
                                 <th>Choose</th>
 
@@ -139,36 +132,24 @@
                                 <th>Price</th>
                             </thead>
                             <tbody>
-
                             {% for com in commands %}
-                                {% set verif="false" %}
 
-                                {% for liv in livraisons %}
-                                    {% if liv.IdCommande %}
-                                        {% if liv.IdCommande.IdCommandeP==com.IdCommandeP %}
-                                        {% set verif="true" %}
-                                        {% endif %}
-                                    {% endif %}
-                                {% endfor %}
-                                {% if verif=="false"  %}
-                                    <tr>
-                                        <td><center><input type="radio" value="{{ com.IdCommandeP }}" onclick="calculTot(this,'com',{{ com.Prix }})" name="cr" class="form-control w-25" /></center></td>
-                                        <td>{{ com.IdClient.Username }}</td>
-                                        <td>{{ com.DateCmd|date('Y-m-d') }}</td>
-                                        <td>{{ com.Prix }}</td>
-                                    </tr>
-                                {% endif %}
+                            <tr>
+                                <td><center><input type="radio" value="{{ com.IdCommandeP }}" onclick="calculTot(this,'com',{{ com.Prix }})" name="cr" class="form-control w-25" /></center></td>
+                                <td>{{ com.IdClient.Username }}</td>
+                                <td>{{ com.DateCmd|date('Y-m-d') }}</td>
+                                <td>{{ com.Prix }}</td>
+                            </tr>
                             {% endfor %}
-
                             </tbody>
                         </table>
                     </div>
                     <div class="form-group col-5 text-center">
-                        <button class="btn btn-secondary btn-block" type="button" style="color:white;" data-toggle="collapse" data-target="#res">
+                        <button class="btn btn-secondary btn-block" type="button" style="color:white;" data-toggle="collapse" data-target="#demo3">
                             Booking
                         </button>
-                        <div id="res" class="collapse">
-                            <table class="table table-hover" id="rese">
+                        <div id="demo3" class="collapse">
+                            <table class="table table-hover">
                                 <thead>
                                 <th>Choose</th>
 
@@ -178,17 +159,7 @@
                                 <th>Prix</th>
                                 </thead>
                                 <tbody>
-
                                 {% for res in reservations %}
-                                    {% set verif="false" %}
-                                    {% for liv in livraisons %}
-                                        {% if liv.IdReservation %}
-                                            {% if res.IdRes==liv.IdReservation.IdRes %}
-                                                {% set verif="true" %}
-                                            {% endif %}
-                                        {% endif %}
-                                    {% endfor %}
-                                    {% if verif=="false"  %}
                                 <tr>
                                     <td><center><input type="radio" value="{{ res.IdRes }}" onclick="calculTot(this,'res',{{ res.Prix }})" name="rr" class="form-control w-25" /></center></td>
                                     <td>{{ res.IdClient.Username }}</td>
@@ -197,11 +168,7 @@
                                     <td>{{ res.Prix }}</td>
 
                                 </tr>
-
-                                    {% endif %}
                                 {% endfor %}
-
-
                                 </tbody>
                             </table>
                             <br>

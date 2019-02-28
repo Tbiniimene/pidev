@@ -1,6 +1,6 @@
 base_homepage:
     path:     /base/index
-    defaults: { _controller: baseBundle:Default:index }
+    defaults: { _controller: baseBundle:Default:Pdf}
 
 base_blog:
     path:     /base/blog
@@ -235,5 +235,3 @@ update_cat:
 delete_cat:
     path:     /admin/delete_cat/{id}
     defaults: { _controller: baseBundle:Categorie:deletecat }
-
-
