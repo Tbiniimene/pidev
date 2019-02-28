@@ -23,7 +23,7 @@ class Stand
 
     /**
      * @ORM\ManyToOne(targetEntity="Evenement")
-     * @ORM\JoinColumn(name="id_event",referencedColumnName="id_evenement")
+     * @ORM\JoinColumn(name="id_event",referencedColumnName="id_evenement", onDelete ="CASCADE")
      */
     private $idEvent;
 

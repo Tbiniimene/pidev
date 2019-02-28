@@ -170,6 +170,10 @@ myStand:
     path:     /base/myStand
     defaults: { _controller: baseBundle:Event:myStand }
 
+cancel:
+    path:     /base/cancel/{id}
+    defaults: { _controller: baseBundle:Event:cancel }
+
 test:
     path: /test
     defaults: { _controller: baseBundle:Event:test }

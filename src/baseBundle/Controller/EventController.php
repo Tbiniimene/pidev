@@ -170,8 +170,21 @@ class EventController extends Controller
     public function myStandAction()
     {
         $aa = $this->getDoctrine()->getRepository(ParticipantsEvenement::class)->findAll();
+
         return $this->render('@base/event/myStand.html.twig', array(
             'aa' => $aa
         ));
+    }
+
+    public function cancelAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $cancel = $em->getRepository(ParticipantsEvenement::class)->findby(['idStand' => $id]);
+        $stand = $em->getRepository(Stand::class)->find($id);
+        $stand->setStatutStand('1');
+        $em->remove($cancel[0]);
+        $em->persist($stand);
+        $em->flush();
+        return $this->redirectToRoute("myStand");
     }
 }
