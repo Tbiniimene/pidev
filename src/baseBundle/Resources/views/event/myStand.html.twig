@@ -29,13 +29,14 @@
                     </thead>
                     <tbody>
                     {%  for e in aa %}
-                        <tr id="cin">
+                        <tr class="stands" id="{{ e.cinParticipant }}">
                             <td> {{ e.idStand }} </td>
                             <td> {{ e.idEvenement }} </td>
                             <td> {{ e.cinParticipant }} </td>
                             <td> {{ e.nom }} </td>
                             <td> {{ e.prenom }} </td>
                             <td> {{ e.tel }} </td>
+
                         </tr>
                     {% endfor %}
                     </tbody>
@@ -46,11 +47,17 @@
     <script src="{{ asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
     <script>
     $(document).ready(function(){
-        $('#dataTable').hide();
+        $('.stands').hide();
             $('#ok').click(function() {
-                if ($('#get').value == "555" ){
-                    $('#dataTable').show();
-                }
+                $(".stands").each(function(){
+                   if($(this).attr('id')==$("#get").val())
+                       {
+                           $(this).show();
+                       }
+                       else {
+                            $(this).hide();
+                       }
+                });
             });
         });
     </script>
