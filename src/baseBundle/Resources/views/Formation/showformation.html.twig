@@ -4,6 +4,36 @@
     {% block title %}Admin - Forming sessions{% endblock %}
     {% block body %}
         <!-- Page Content -->
+        <script type="text/javascript">
+            $(function () {
+                $('#calendar-holder').fullCalendar({
+                    header: {
+                        left: 'prev, next, today',
+                        center: 'title',
+                        right: 'month, basicWeek, basicDay'
+                    },
+                    lazyFetching: true,
+                    navLinks: true,
+                    eventSources: [
+                        {
+                            url: '/fc-load-events',
+                            type: 'POST',
+                            data: {
+                                filters: {}
+                            },
+                            error: function () {
+                                alert('There was an error while fetching FullCalendar!');
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
+        <link rel="stylesheet" href="{{ asset('bundles/fullcalendar/css/fullcalendar/fullcalendar.min.css') }}" />
+        <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/lib/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/lib/moment.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/fullcalendar/js/fullcalendar/fullcalendar.min.js') }}"></script>
+
         <div class="card mb-3">
             <div class="card-header">
                 <i class="fas fa-table"></i>
@@ -69,5 +99,7 @@
                 </div>
             </div>
         </div>
-    {% endblock %}
+
+{% endblock %}
+
 

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Livraison
  *
- * @ORM\Table(name="livraison", indexes={@ORM\Index(name="id_livreur", columns={"id_livreur"}), @ORM\Index(name="id_commande", columns={"id_commande"}), @ORM\Index(name="id_reservation", columns={"id_reservation"})})
+ * @ORM\Table(name="livraison", indexes={@ORM\Index(name="id_livreur", columns={"id_livreur"})})
  * @ORM\Entity
  */
 class Livraison
@@ -38,16 +38,7 @@ class Livraison
      */
     private $idLivreur;
 
-    /**
-     * @var \Commande
-     *
-     * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="Commande")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_commande", referencedColumnName="id_commande_p", nullable=true)
-     * })
-     */
-    private $idCommande;
+
 
     /**
      * @var \ReservationMateriel
