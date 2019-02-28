@@ -127,6 +127,10 @@ admin_ajouterLivraison:
     path:     /admin/ajouterLiv
     defaults: { _controller: baseBundle:Livreur:ajouterLiv}
 
+admin_showLivraison:
+    path:     /admin/showLiv
+    defaults: { _controller: baseBundle:Livreur:showLiv}
+
 
 #----------------------------------------------------------
 

@@ -3,6 +3,7 @@
 namespace baseBundle\Controller;
 
 use baseBundle\Entity\Commande;
+use baseBundle\Entity\DetailCommande;
 use baseBundle\Entity\Disponibilite;
 use baseBundle\Entity\Livraison;
 use baseBundle\Entity\Livreur;
@@ -231,6 +232,17 @@ class LivreurController extends Controller
 
         return $this->render('@base/livraison/ajouterLivraison.html.twig',array('commands'=>$commands,'reservations'=>$reservations,'livreurs'=>$livreurs)
         );
+
+    }
+    public function showLivAction()
+    {
+        $detailCommande=$this->getDoctrine()->getRepository	(DetailCommande::class)->findAll();
+        $ReservationMateriel=$this->getDoctrine()->getRepository	(ReservationMateriel::class)->findAll();
+        $livraisons = $this->getDoctrine()->getRepository	(Livraison::class)->findAll();
+
+        return $this->render('@base/livraison/showLivraison.html.twig', array(
+            'livraisons' => $livraisons,'detailCmd'=>$detailCommande,'resMat'=>$ReservationMateriel
+        ));
 
     }
 }
