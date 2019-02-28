@@ -30,99 +30,6 @@ class User extends BaseUser
     private $cin;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="username", type="string", length=180, nullable=false)
-     */
-    private $username;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="username_canonical", type="string", length=180, nullable=false)
-     */
-    private $usernameCanonical;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=180, nullable=false)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email_canonical", type="string", length=180, nullable=false)
-     */
-    private $emailCanonical;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="enabled", type="boolean", nullable=false)
-     */
-    private $enabled;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="salt", type="string", length=255, nullable=true)
-     */
-    private $salt;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=255, nullable=false)
-     */
-    private $password;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="last_login", type="datetime", nullable=true)
-     */
-    private $lastLogin;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="confirmation_token", type="string", length=180, nullable=true)
-     */
-    private $confirmationToken;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="password_requested_at", type="datetime", nullable=true)
-     */
-    private $passwordRequestedAt;
-
-    /**
-     * @var array
-     *
-     * @ORM\Column(name="roles", type="array", nullable=false)
-     */
-    private $roles;
-
-    /**
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
      * @return int
      */
     public function getCin()
@@ -203,38 +110,6 @@ class User extends BaseUser
     }
 
     /**
-     * @return bool
-     */
-    public function isEnabled()
-    {
-        return $this->enabled;
-    }
-
-    /**
-     * @param bool $enabled
-     */
-    public function setEnabled($enabled)
-    {
-        $this->enabled = $enabled;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSalt()
-    {
-        return $this->salt;
-    }
-
-    /**
-     * @param string $salt
-     */
-    public function setSalt($salt)
-    {
-        $this->salt = $salt;
-    }
-
-    /**
      * @return string
      */
     public function getPassword()
@@ -251,46 +126,35 @@ class User extends BaseUser
     }
 
     /**
-     * @return \DateTime
-     */
-    public function getLastLogin()
-    {
-        return $this->lastLogin;
-    }
-
-
-
-    /**
      * @return string
      */
-    public function getConfirmationToken()
+    public function getPlainPassword()
     {
-        return $this->confirmationToken;
+        return $this->plainPassword;
     }
 
     /**
-     * @param string $confirmationToken
+     * @param string $plainPassword
      */
-    public function setConfirmationToken($confirmationToken)
+    public function setPlainPassword($plainPassword)
     {
-        $this->confirmationToken = $confirmationToken;
+        $this->plainPassword = $plainPassword;
     }
 
     /**
-     * @return \DateTime
+     * @return int
      */
-    public function getPasswordRequestedAt()
+    public function getId()
     {
-        return $this->passwordRequestedAt;
+        return $this->id;
     }
 
-
     /**
-     * @return array
+     * @param int $id
      */
-    public function getRoles()
+    public function setId($id)
     {
-        return $this->roles;
+        $this->id = $id;
     }
 
 
