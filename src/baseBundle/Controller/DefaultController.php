@@ -173,4 +173,8 @@ class DefaultController extends Controller
             )
         );
     }
+    public function formingcalenderAction()
+    {
+        return $this->render('@base/Default/formationcalender.html.twig');
+    }
 }
