@@ -35,8 +35,7 @@ class EventController extends Controller
         if ($form->isValid()) {
             //6-creation de l'entity manager
             $em = $this->getDoctrine()->getManager();
-            $event->setDateDeb(new \DateTime());
-            $event->setDateFin(new \DateTime());
+           
 
             $dest='Uploads/Event/'.$event->getNom().'.jpg';
             $img=$event->getImg();
