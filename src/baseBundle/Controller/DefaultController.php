@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 class DefaultController extends Controller
@@ -155,4 +156,25 @@ class DefaultController extends Controller
         return $this->render('@base/Default/login.html.twig');
     }
 
+
+    public function PdfAction(Request $request)
+
+    {
+        $snappy = $this->get('knp_snappy.pdf');
+
+        $html = $this->renderView('@base/Default/pdf.html.twig', array(
+            'title' => 'Hello World !'
+        ));
+
+        $filename = 'myFirstSnappyPDF';
+
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            array(
+                'Content-Type'          => 'application/pdf',
+                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
+            )
+        );
+    }
 }
