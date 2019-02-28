@@ -23,26 +23,28 @@
                         <td>qte : </td>
                         <td>{{ form_widget(form.qte) }}</td>
                     </tr>
-                    <tr>
-                        <td>statut: </td>
 
-                        {{ form_label(form.statut) }}
-                        {{ form_errors(form.statut) }}
-                        {{ form_widget(form.statut) }}
-
-
-                        <td>{{ form_widget(form.statut) }}</td>
-                    </tr>
                     <tr>
                         <td>image : </td>
                         <td>{{ form_widget(form.file) }}</td>
                     </tr>
 
+                    <tr>
+                        <td>statut : </td>
+                         {{ form_label(form.statut) }}
+                        {{ form_errors(form.statut) }}
+                        <td>{{ form_widget(form.statut) }}</td>
+
+
+                    </tr>
+
                 </table>
                 <br>
-                <center><button class="btn btn-primary" type="submit">update</button></center>
+
                 {{ form_end(form) }}
             </div>
+
         </div>
+        <center><button class="btn btn-primary" type="submit">update</button></center>
     </div>
 {% endblock %}

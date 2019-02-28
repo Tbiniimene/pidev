@@ -23,7 +23,7 @@ class MaterielsType extends AbstractType
             ->add('prix')
 
             ->add('qte')
-            ->add('statut')
+
             ->add('file')
         ->add('statut', ChoiceType::class, [
             'choices'  => [
@@ -41,14 +41,10 @@ class MaterielsType extends AbstractType
 
                 'attr'=>array('class'=>'form-control')
 
-                // used to render a select box, check boxes or radios
-                // 'multiple' => true,
-                // 'expanded' => true,
+
             ]);
          ;
-    }/**
-     * {@inheritdoc}
-     */
+    }
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
