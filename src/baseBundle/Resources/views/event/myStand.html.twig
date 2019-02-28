@@ -41,6 +41,7 @@
                     {% endfor %}
                     </tbody>
                 </table>
+                <div id="msg"><center><h1> You didn't rent any Stands</h1></center></div>
             </div>
         </div>
     </div>
@@ -53,9 +54,11 @@
                    if($(this).attr('id')==$("#get").val())
                        {
                            $(this).show();
+                           $('#msg').hide();
                        }
-                       else {
-                            $(this).hide();
+                       else
+                       {
+                           $(this).hide();
                        }
                 });
             });
