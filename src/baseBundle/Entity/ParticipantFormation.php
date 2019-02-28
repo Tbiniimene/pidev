@@ -44,8 +44,8 @@ class ParticipantFormation
 
 
     /**
-     * @ORM\OneToOne(targetEntity="Formation")
-     * @ORM\JoinColumn(name="id_formation",referencedColumnName="id_formation")
+     * @ORM\ManyToOne(targetEntity="Formation",cascade={"remove"})
+     * @ORM\JoinColumn(name="id_formation",referencedColumnName="id_formation" , onDelete = "SET NULL")
      *
      */
     private $PFormation;
