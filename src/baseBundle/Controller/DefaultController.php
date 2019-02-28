@@ -88,7 +88,8 @@ class DefaultController extends Controller
             ])
 
             ->add('price', HiddenType::class, array('attr' => array('class' => 'hidden', 'value' => $matriel->getPrix())))
-            ->add('add_to_cart', SubmitType::class, array('label' => 'Add to cart','attr'
+            ->add('add_to
+                $my_session = $session->get($matriel->getIdMatriel());_cart', SubmitType::class, array('label' => 'Add to cart','attr'
             => array('class' => 'btn btn-outline-primary text-uppercase', 'style' => 'margin-right:10px')))
             ->getForm();
 
@@ -98,15 +99,10 @@ class DefaultController extends Controller
 //recuperer ssesion
                 $session = $this->get('session');
 
-                $my_session = $session->get($matriel->getIdMatriel());
                 if(isset($my_session) && !empty($my_session)){
-                    if($my_session['quantite'] !== 0){
-                        $sess_quantite = $my_session['quantite'] + $commande_form['quantite']->getData();
-                        $sess_price = $commande_form['price']->getData();
-                    }else{
-                        $sess_quantite = $commande_form['quantite']->getData();
-                        $sess_price = $commande_form['price']->getData();
-                    }
+                    $sess_quantite = $my_session['quantite'] + $commande_form['quantite']->getData();
+                    $sess_price = $commande_form['price']->getData();
+
                     $session->set($matriel->getIdMatriel(), array('quantite' => $sess_quantite, 'price' => $sess_price));
                 }else{
                     $session->set($matriel->getIdMatriel(), array('quantite' => $commande_form['quantite']->getData(), 'price' => $commande_form['price']->getData()));
