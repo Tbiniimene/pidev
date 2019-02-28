@@ -26,7 +26,8 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new baseBundle\baseBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new SBC\NotificationsBundle\NotificationsBundle()
+            new SBC\NotificationsBundle\NotificationsBundle(),
+            new Nomaya\SocialBundle\NomayaSocialBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
