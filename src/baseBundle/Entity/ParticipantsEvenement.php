@@ -143,7 +143,7 @@ class ParticipantsEvenement
      * @ORM\GeneratedValue(strategy="NONE")
      * @ORM\OneToOne(targetEntity="Evenement")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_evenement", referencedColumnName="id_evenement")
+     *   @ORM\JoinColumn(name="id_evenement", referencedColumnName="id_evenement", onDelete ="CASCADE")
      * })
      */
     private $idEvenement;
