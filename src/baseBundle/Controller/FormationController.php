@@ -204,4 +204,13 @@ class FormationController extends Controller
 
     }
 
+    public function showwAction(Formation $Formation)
+    {
+
+        return $this->render('@base/Formation/show.html.twig', array(
+            'Formation' => $Formation,
+        ));
+    }
+
+
 }
