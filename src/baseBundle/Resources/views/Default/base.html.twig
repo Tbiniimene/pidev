@@ -129,7 +129,13 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{ path('base_shop')}}">Shop</a></li>
-                                <li><a href="{{ path('base_event')}}">Event</a></li>
+
+                                <li><a href="{{ path('base_event')}}">Event</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{{ path('base_event')}}">Events</a></li>
+                                        <li><a href="{{ path('myStand')}}">Rented Stand</a></li>
+                                    </ul>
+                                </li>
 
                                 <li><a href="{{ path('base_forming')}}">Forming</a></li>
 

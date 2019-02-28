@@ -30,17 +30,18 @@
                     <tbody>
                     {%  for e in aa %}
                         <tr class="stands" id="{{ e.cinParticipant }}">
-                            <td> {{ e.idStand }} </td>
+                            <td> {{ e.IdStand }} </td>
                             <td> {{ e.idEvenement }} </td>
                             <td> {{ e.cinParticipant }} </td>
                             <td> {{ e.nom }} </td>
                             <td> {{ e.prenom }} </td>
                             <td> {{ e.tel }} </td>
-
+                            <td> <a href="{{ path('cancel',{'id':e.idStand}) }}" class="btn btn-danger"/> Cancel </td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
+                <div id="msg"><center><h1> You didn't rent any Stands</h1></center></div>
             </div>
         </div>
     </div>
@@ -53,9 +54,11 @@
                    if($(this).attr('id')==$("#get").val())
                        {
                            $(this).show();
+                           $('#msg').hide();
                        }
-                       else {
-                            $(this).hide();
+                       else
+                       {
+                           $(this).hide();
                        }
                 });
             });

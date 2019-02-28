@@ -48,15 +48,17 @@ class DefaultController extends Controller
         return $this->render('@base/Default/portfolio.html.twig');
     }
 
-    public function shopAction()
+    public function shopAction(Request $request)
     {
 
             $em = $this->getDoctrine()->getManager();
             $categories = $em->getRepository('baseBundle:Categorie')->findAll();
             $matriels = $em->getRepository('baseBundle:Materiels')->findAll();
 
+            $matrielspaginator  = $this->get('knp_paginator')->paginate($matriels, $request->query->getInt('page', 1), 2);
+
             return $this->render('@base/Default/shop.html.twig',
-                array("categories" => $categories, "matriels" => $matriels));
+                array("categories" => $categories, "matriels" => $matrielspaginator));
 
     }
 
