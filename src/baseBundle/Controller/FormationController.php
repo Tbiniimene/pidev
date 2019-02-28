@@ -2,6 +2,9 @@
 
 namespace baseBundle\Controller;
 use baseBundle\Entity\ParticipantFormation;
+
+use baseBundle\Entity\User;
+
 use baseBundle\Entity\Formateur;
 use baseBundle\Entity\Formation;
 use baseBundle\Form\FormateurType;
@@ -83,9 +86,18 @@ class FormationController extends Controller
 
 
     public function supprimerfAction($id){
+
+        //$par=new ParticipantFormation();
         $em= $this->getDoctrine()->getManager();
+
         $formation= $this->getDoctrine()->getRepository(Formation::class)->find($id);
+        //wait here for a sec
+
+        //$partfor= $this->getDoctrine()->getRepository(ParticipantFormation::class)->findBy(array('PFormation'=>$par->getPFormation()));
+
         $em->remove($formation);
+        //$em->remove($partfor);
+
         $em->flush();
         return $this->redirectToRoute("afficherformation");
     }
@@ -110,35 +122,81 @@ class FormationController extends Controller
     }
 
 
-
-    public function participerAction($idFormation)
+    public function loginAction($idFormation)
     {
-        $pe=new ParticipantFormation();
-        //5-validation du formulaire
-        if (isset($_POST['cin']) && isset($_POST['Nom']) && isset($_POST['Prenom']) && isset($_POST['Tel'])  ) {
+
+        $us=new User();
+        if (isset($_POST['cin']) && isset($_POST['password'])  ) {
 
             $cin=$_POST['cin'];
-            $nom=$_POST['Nom'];
-            $prenom=$_POST['Prenom'];
-            $tel=$_POST['Tel'];
+            $password=$_POST['password'];
 
-            $em = $this->getDoctrine()->getManager();
-            $pe->setPFormation($em->getReference(Formation::class,$idFormation));
+                $em = $this->getDoctrine()->getManager();
 
-            $pe->setCin($cin);
-            $pe->setNom($nom);
-            $pe->setPrenom($prenom);
-            $pe->setTel($tel);
+                    /* $query=$em->createQuery('select s from baseBundle:User s
+                    where s.cin = :ccin AND s.password= :ppassword ')
+                ->setParameter('ccin',$cin)
+                ->setParameter('ppassword',$password);
+                    $query->getResults();*/
 
-             $formation=$em->getRepository(Formation::class)->find($idFormation);
-            $formation->setnbmax($formation->getnbmax() - 1);
-            $em->persist($formation);
-            $em->persist($pe);
-            $em->flush();
+           // $user= $this->entityManager->getRepository('baseBundle:User')->findBy(['ccin' => $cin]);
 
-            return $this->redirectToRoute('base_forming');
+            //$user =$em->getRepository(User::class)->findBy((array('cin'=>$us->getCin())));
+            $user =$em->getRepository(User::class)->find($cin);
+             if (!$user) {
+
+                 return $this->render('@base/Formation/participer.html.twig', array(
+                     'idformation' => $idFormation
+                 ));
+            }
+            else{
+
+                $pe=new ParticipantFormation();
+
+                  $pe->setPFormation($em->getReference(Formation::class,$idFormation));
+
+                    $pe->setCin($cin);
+                    $pe->setNom($us->getUsername());
+                    $pe->setPrenom($us->getUsernameCanonical());
+                    //$pe->setTel($us->getTel());
+
+                $formation=$em->getRepository(Formation::class)->find($idFormation);
+                $formation->setnbmax($formation->getnbmax() - 1);
+                $em->persist($formation);
+                $em->persist($pe);
+                $em->flush();
+
+                return $this->redirectToRoute('base_forming');
+            }
+
         }
+          return $this->render('@base/Formation/login.html.twig', array(
+            'idformation' => $idFormation
+        ));
 
+    }
+    public function participerAction($idFormation)
+    {
+        $pf=new ParticipantFormation();
+        if (isset($_POST['cin']) && isset($_POST['Nom']) && isset($_POST['Prenom']) && isset($_POST['Tel'])  ) {
+         $cin=$_POST['cin'];
+         $nom=$_POST['Nom'];
+         $prenom=$_POST['Prenom'];
+         $tel=$_POST['Tel'];
+        $em = $this->getDoctrine()->getManager();
+        $pf->setPFormation($em->getReference(Formation::class,$idFormation));
+        $pf->setCin($cin);
+        $pf->setNom($nom);
+        $pf->setPrenom($prenom);
+        $pf->setTel($tel);
+
+         $formation=$em->getRepository(Formation::class)->find($idFormation);
+            $formation->setnbmax($formation->getnbmax() - 1);
+       $em->persist($formation);
+       $em->persist($pf);
+       $em->flush();
+                     return $this->redirectToRoute('base_forming');
+        }
 
         return $this->render('@base/Formation/participer.html.twig', array(
             'idformation' => $idFormation

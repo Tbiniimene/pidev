@@ -33,7 +33,7 @@ class Livraison
      *
      * @ORM\ManyToOne(targetEntity="Livreur")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_livreur", referencedColumnName="id_livreur")
+     *   @ORM\JoinColumn(name="id_livreur", referencedColumnName="id_livreur", nullable=false)
      * })
      */
     private $idLivreur;
@@ -44,7 +44,7 @@ class Livraison
      * @ORM\GeneratedValue(strategy="NONE")
      * @ORM\OneToOne(targetEntity="Commande")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_commande", referencedColumnName="id_commande_p")
+     *   @ORM\JoinColumn(name="id_commande", referencedColumnName="id_commande_p", nullable=true)
      * })
      */
     private $idCommande;
@@ -55,7 +55,7 @@ class Livraison
      * @ORM\GeneratedValue(strategy="NONE")
      * @ORM\OneToOne(targetEntity="ReservationMateriel")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_reservation", referencedColumnName="id_res")
+     *   @ORM\JoinColumn(name="id_reservation", referencedColumnName="id_res", nullable=true)
      * })
      */
     private $idReservation;

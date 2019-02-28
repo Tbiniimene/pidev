@@ -127,6 +127,10 @@ admin_ajouterLivraison:
     path:     /admin/ajouterLiv
     defaults: { _controller: baseBundle:Livreur:ajouterLiv}
 
+admin_showLivraison:
+    path:     /admin/showLiv
+    defaults: { _controller: baseBundle:Livreur:showLiv}
+
 
 #----------------------------------------------------------
 
@@ -194,8 +198,9 @@ supp_formation:
 modif_formation:
     path: /admin/modifierf/{id}
     defaults: { _controller: baseBundle:Formation:modifierf }
-
-
+login_formation:
+    path: /base/login/{idFormation}
+    defaults: { _controller: baseBundle:Formation:login }
 participer_formation:
     path: /base/participer/{idFormation}
     defaults: { _controller: baseBundle:Formation:participer }

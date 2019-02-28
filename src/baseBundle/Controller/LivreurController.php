@@ -3,6 +3,7 @@
 namespace baseBundle\Controller;
 
 use baseBundle\Entity\Commande;
+use baseBundle\Entity\DetailCommande;
 use baseBundle\Entity\Disponibilite;
 use baseBundle\Entity\Livraison;
 use baseBundle\Entity\Livreur;
@@ -214,7 +215,8 @@ class LivreurController extends Controller
 
             // From your controller or service
             $data = array(
-                'my-message' => "New Delivery",
+                'livreur'=>$idLiv,
+                'message' => "New Delivery have been assigned to you !",
             );
             $pusher = $this->get('mrad.pusher.notificaitons');
             $pusher->trigger($data);
@@ -222,6 +224,7 @@ class LivreurController extends Controller
             $em->persist($livraison);
             $em->flush();
 
+            return $this->redirectToRoute('admin_showLivraison');
 
         }
 
@@ -231,6 +234,17 @@ class LivreurController extends Controller
 
         return $this->render('@base/livraison/ajouterLivraison.html.twig',array('commands'=>$commands,'reservations'=>$reservations,'livreurs'=>$livreurs)
         );
+
+    }
+    public function showLivAction()
+    {
+        $detailCommande=$this->getDoctrine()->getRepository	(DetailCommande::class)->findAll();
+        $ReservationMateriel=$this->getDoctrine()->getRepository	(ReservationMateriel::class)->findAll();
+        $livraisons = $this->getDoctrine()->getRepository	(Livraison::class)->findAll();
+
+        return $this->render('@base/livraison/showLivraison.html.twig', array(
+            'livraisons' => $livraisons,'detailCmd'=>$detailCommande,'resMat'=>$ReservationMateriel
+        ));
 
     }
 }

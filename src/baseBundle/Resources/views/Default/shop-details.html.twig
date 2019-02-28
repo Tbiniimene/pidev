@@ -16,7 +16,7 @@
                     <article class="gallery-wrap">
                         <div class="img-big-wrap">
                             <div>     <a href="{{ path("base_shop_details", {'id':matriels.idMatriel}) }}">
-                                    <center><  <img  style="width:400px;height: 500px" src="{{ asset('images/'~ matriels.nomImage) }}" alt=""></center>
+                                    <center>  <img  style="width:400px;height: 500px" src="{{ asset('images/'~ matriels.nomImage) }}" alt=""></center>
                                 </a><</div>
                         </div> <!-- slider-product.// -->
 
@@ -24,6 +24,7 @@
                 </aside>
                 <aside class="col-sm-7">
                     <article class="card-body p-5">
+                        {{ form_start(commande_form) }}
                         <p class="price-detail-wrap"     >
                             <a href="shop-details.html">
 
@@ -48,17 +49,10 @@
                         <div class="row">
                             <div class="col-sm-5">
                                 <dl class="param param-inline">
+
                                     <dt>Quantity: </dt>
-
-
-
-
                                     <dd>
-                                        <select class="form-control form-control-sm" style="width:70px;">
-                                            <option> 1 </option>
-                                            <option> 2 </option>
-                                            <option> 3 </option>
-                                        </select>
+                                        {{ form_widget(commande_form.quantite) }}
                                     </dd>
                                 </dl>  <!-- item-property .// -->
                             </div> <!-- col.// -->
@@ -67,16 +61,81 @@
                             </div> <!-- col.// -->
                         </div> <!-- row.// -->
 
-
-
                         <hr>
-                        <a href="{{ path("base_shop", {'id':matriels.idMatriel}) }}"  class="btn btn-lg btn-primary text-uppercase"> rtourne  a page </a>
-                        <a href="base_shop_details" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+                        <div class="row">
+                            {{ form_widget(commande_form.add_to_cart) }}
+                            {{ form_widget(commande_form.price) }}
+                            <a href="{{ path("base_shop", {'id':matriels.idMatriel}) }}"  class="btn btn-outline-primary text-uppercase"> Retour </a>
+                          </div>
+                         {{ form_end(commande_form) }}
                     </article> <!-- card-body.// -->
 
                 </aside> <!-- col.// -->
             </div>
         </div>
     </section>
+
+
+    {% if(open_popup == true) %}
+    <script type="text/javascript">
+       $(window).on('load', function(){
+          $('#open-modal').trigger('click');
+       });
+    </script>
+    <!-- Button trigger modal -->
+    <button id="open-modal" type="hidden" data-toggle="modal" data-target="#exampleModal"></button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-check"></i>Produit ajouté au panier avec succès</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <table class="table-bordered" style="width: 100%;color:#000;">
+                <thead>
+                <tr>
+                <th style="text-align: center">Matériel</th>
+    <th style="text-align: center">Prix Unit</th>
+    <th style="text-align: center">Quantité</th>
+    </tr>
+</thead>
+            {% set total = 0 %}
+            {% for mat in list_materiels %}
+                {% set my_session = app.session.get(mat.idMatriel) %}
+                {% if my_session is not null and my_session is defined %}
+
+                    {% set total = total + (my_session.quantite * my_session.price) %}
+                    <tr>
+                   <td style="text-align: center">{{ mat.nom }}</td>
+                   <td style="text-align: center">{{ my_session.quantite }}</td>
+                   <td style="text-align: center">{{ my_session.price }}</td>
+
+                  </tr>
+
+                {%  endif %}
+            {% endfor %}
+
+</table>
+
+    <span style="margin:20px;font-size: 20px;color:#9CCC65;font-weight: 700;display: block;">Total : {{ total }}</span>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" href="{{ path('base_shop') }}">Continuer mes achats</button>
+            <button type="button" class="btn btn-primary" href="javascript:">Commander</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+
     <!-- ##### Shop Area End ##### -->
 {% endblock %}
