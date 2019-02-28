@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: Toiba\FullCalendarBundle
-        psr4_prefix: Toiba\FullCalendarBundle
-        src_path: .

@@ -11,8 +11,6 @@ use baseBundle\Form\FormateurType;
 use baseBundle\Form\FormationType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use baseBundle\Repository\UserRepository;
-use \Doctrine\ORM\EntityRepository;
 
 class FormationController extends Controller
 {
@@ -144,11 +142,8 @@ class FormationController extends Controller
            // $user= $this->entityManager->getRepository('baseBundle:User')->findBy(['ccin' => $cin]);
 
             //$user =$em->getRepository(User::class)->findBy((array('cin'=>$us->getCin())));
-           $user =$em->getRepository(User::class)->find($cin);
-
-           // $user=$em->getRepository("baseBundle:User")->finduserPrametre($cin);
-
-            if (!$user) {
+            $user =$em->getRepository(User::class)->find($cin);
+             if (!$user) {
 
                  return $this->render('@base/Formation/participer.html.twig', array(
                      'idformation' => $idFormation
@@ -208,20 +203,5 @@ class FormationController extends Controller
         ));
 
     }
-
-    public function calendarAction()
-    {
-        return $this->render('@base/Default/formationcalender.html.twig');
-    }
-
-
-    public function showwAction(Formation $Formation)
-    {
-
-        return $this->render('@base/Formation/show.html.twig', array(
-            'Formation' => $Formation,
-        ));
-    }
-
 
 }
