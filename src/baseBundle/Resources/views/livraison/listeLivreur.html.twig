@@ -14,7 +14,8 @@
                     $(this).find("td:eq(4)").text(td);
                 }
 
-            })
+            });
+            $(".log").hide();
         });
     </script>
 <div id="content-wrapper">
@@ -36,6 +37,7 @@
         <div class="card-header">
             <i class="fas fa-table"></i>
             Liste des Livreurs
+            <button class="btn btn-dark float-right" onclick="$('.log').toggle('fast')">Show credentials</button>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -47,6 +49,8 @@
                         <th>Etat</th>
                         <th>Téléphone</th>
                         <th>Localisation</th>
+                        <th class="log">Login</th>
+                        <th class="log">Password</th>
                     </tr>
                     </thead>
                     <tfoot>
@@ -56,6 +60,8 @@
                         <th>Etat</th>
                         <th>Téléphone</th>
                         <th>Localisation</th>
+                        <th class="log">Login</th>
+                        <th class="log">Password</th>
                     </tr>
                     </tfoot>
                     <tbody>
@@ -72,7 +78,8 @@
                             {% endif %}
                             <td>{{ v.tel }}</td>
                             <td>{{ v.localisation }}</td>
-
+                            <td class="log">{{ v.Login }}</td>
+                            <td class="log">{{ v.Password }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>

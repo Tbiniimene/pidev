@@ -55,6 +55,50 @@ class Livreur
      * @ORM\Column(name="localisation", type="text", length=65535, nullable=false)
      */
     private $localisation;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="login", type="string", length=255, nullable=false)
+     */
+    private $login;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @return string
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param string $login
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
 
     /**
      * @return int
@@ -152,6 +196,11 @@ class Livreur
         $this->localisation = $localisation;
     }
 
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return (string)$this->idLivreur;
+    }
 
 }
 

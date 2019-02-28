@@ -135,6 +135,10 @@ class Commande
         $this->idClient = $idClient;
     }
 
+    public function __toInt()
+    {
+        return (int)$this->idCommandeP;
+    }
 
 }
 
