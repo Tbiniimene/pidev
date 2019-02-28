@@ -27,8 +27,7 @@ class AppKernel extends Kernel
             new baseBundle\baseBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
-            new SBC\NotificationsBundle\NotificationsBundle(),
-            new Toiba\FullCalendarBundle\FullCalendarBundle()
+            new SBC\NotificationsBundle\NotificationsBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
