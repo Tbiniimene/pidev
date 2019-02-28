@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new livraisonBundle\livraisonBundle(),
             new clientBundle\clientBundle(),
             new evenementBundle\evenementBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new baseBundle\baseBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new SBC\NotificationsBundle\NotificationsBundle()
