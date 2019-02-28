@@ -16,7 +16,6 @@ class ParticipantsEvenement
      * @var integer
      *
      * @ORM\Column(name="cin_participant", type="integer", nullable=false)
-     * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      */
     private $cinParticipant;
@@ -141,7 +140,6 @@ class ParticipantsEvenement
     /**
      * @var \Evenement
      *
-     * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      * @ORM\OneToOne(targetEntity="Evenement")
      * @ORM\JoinColumns({
@@ -152,7 +150,7 @@ class ParticipantsEvenement
 
     /**
      * @var \Stand
-     *
+     * @ORM\Id
      * @ORM\ManyToOne(targetEntity="Stand")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_stand", referencedColumnName="id_stand")

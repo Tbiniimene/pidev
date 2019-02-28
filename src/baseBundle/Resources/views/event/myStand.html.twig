@@ -30,13 +30,13 @@
                     <tbody>
                     {%  for e in aa %}
                         <tr class="stands" id="{{ e.cinParticipant }}">
-                            <td> {{ e.idStand }} </td>
+                            <td> {{ e.IdStand }} </td>
                             <td> {{ e.idEvenement }} </td>
                             <td> {{ e.cinParticipant }} </td>
                             <td> {{ e.nom }} </td>
                             <td> {{ e.prenom }} </td>
                             <td> {{ e.tel }} </td>
-
+                            <td> <a href="{{ path('cancel',{'id':e.idStand}) }}" class="btn btn-danger"/> Cancel </td>
                         </tr>
                     {% endfor %}
                     </tbody>
