@@ -1,0 +1,144 @@
+{% extends '@base/admin/base.html.twig' %}
+
+{% block title %}Admin - article{% endblock %}
+
+{% block body %}
+
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+            <div class="ui-widget">
+                <label for="tags">Tags: </label>
+                <input id="tags">
+                <input type='hidden' id='meta_search_ids' value='' />
+            </div>
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+
+                <li class="breadcrumb-item active"> article</li>
+            </ol>
+
+            <!-- DataTables Example -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                article list </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>id</th>
+                                <th> nom</th>
+                                <th> date</th>
+                                <th> description</th>
+                                <th >titre</th>
+                                <th>image</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            {% for a in Annonce %}
+                                <tr>
+                                    <td>{{ a.idAnnonce }}</td>
+                                    <td>{{ a.nom }}</td>
+                                    <td>{{ a.date|date("m/d/Y") }}</td>
+                                    <td>{{ a.Description }}</td>
+                                    <td>{{ a.titre }}</td>
+
+
+                                    <td>
+                                   <img  style="width:150px;height: 100px"src="{{ asset('images/'~ a.nomImage) }} " >
+                                    </td>
+
+
+                            <td><a class="btn btn-primary m-1" title="Edit" href="
+                              {{ path("update_annonce", {'id':a.idAnnonce}) }}"><i class="update">Update</i></a>
+
+                                <a class="btn btn-danger m-1" title="Delete" href="{{ path("delete_annonce", {'id':a.idAnnonce}) }}"
+                                   onclick="return confirm('Are u sure?')">
+                                    <i class="fa fa-trash"></i></a>
+                            </td>
+
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Bootstrap core JavaScript
+<script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>-->
+    <script src="{{ asset('js/jquery-1.12.4.js') }}"></script>
+    <script src="{{ asset('js/jquery-ui.js') }}"></script>
+
+
+    <script>
+        $(function () {
+            $("#tags").autocomplete(
+                {
+                    search: function () {
+                    },
+                    source: function (request, response) {
+                        $.ajax(
+                            {
+                                url: 'http://localhost/amira/web/app_dev.php/load-annonce',
+                                dataType: "json",
+                                data:
+                                    {
+                                        term: request.term,
+                                    },
+                                success: function (data) {
+                                    response(data.result);
+                                }
+                            });
+                    },
+                    minLength: 2,
+                    select: function (event, ui) {
+                        event.preventDefault();
+                        $("#meta_search_ids").val(ui.item.value);
+                        $(this).val(ui.item.label);
+                    }
+                });
+
+
+        });
+    </script>
+    <script src="{{ asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <script src="{{ asset('admin/vendor/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset('admin/vendor/datatables/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.js') }}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('admin/js/sb-admin.min.js') }}"></script>
+
+    <!-- Demo scripts for this page-->
+    <script src="{{ asset('admin/js/demo/datatables-demo.js') }}"></script>
+    <script src="{{ asset('admin/js/demo/chart-area-demo.js') }}"></script>
+
+
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}

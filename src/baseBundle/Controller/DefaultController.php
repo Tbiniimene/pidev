@@ -26,7 +26,15 @@ class DefaultController extends Controller
 
     public function blogAction()
     {
-        return $this->render('@base/Default/blog.html.twig');
+
+        $em = $this->getDoctrine()->getManager();
+        $annonce = $em->getRepository('baseBundle:Annonce')->findAll();
+        $genre = $em->getRepository('baseBundle:Genre')->findAll();
+
+        return $this->render('@base/Default/blog.html.twig',
+            array("Annonce" => $annonce, "Genre" => $genre));
+
+
     }
 
     public function cartAction()

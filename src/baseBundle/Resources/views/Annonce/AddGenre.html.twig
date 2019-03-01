@@ -1,0 +1,49 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Types{% endblock %}
+{% block body %}
+    <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // $("#eventImg").on('change',function()
+            // {
+            //     console.log($(this).val());
+            // }) ;
+        });
+    </script>
+    <!-- Page Content -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+         Types List
+        </div>
+        <div class="card-body">
+            <div class="table-responsive table-hover">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    {{ form_start(form) }}
+
+
+                    <td>id_Genre : </td>
+                    <td>{{ form_widget(form.id_Genre) }}</td>
+
+
+
+                    <td>types : </td>
+                    <td>{{ form_widget(form.type) }}</td>
+
+                    <tr>
+                        <td> pays: </td>
+                        <td>{{ form_widget(form.pays) }}</td>
+                    </tr>
+
+
+                </table>
+                <tr> <center>  <button class="btn btn-primary" type="submit">Add </button></center>
+                    {{ form_end(form) }}
+                </tr>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

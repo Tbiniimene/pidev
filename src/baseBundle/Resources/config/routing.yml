@@ -6,6 +6,10 @@ base_blog:
     path:     /base/blog
     defaults: { _controller: baseBundle:Default:blog }
 
+base_blogLike:
+    path:     /base/blogLike/{id}
+    defaults: { _controller: baseBundle:Annonce:Like }
+
 base_about:
     path:     /base/about
     defaults: { _controller: baseBundle:Default:about }
@@ -244,3 +248,41 @@ update_cat:
 delete_cat:
     path:     /admin/delete_cat/{id}
     defaults: { _controller: baseBundle:Categorie:deletecat }
+
+#--------------------------------------------------------------
+add_annonce:
+    path:     admin/add
+    defaults: { _controller: baseBundle:Annonce:add }
+delete_annonce:
+    path:     admin/delete/{id}
+    defaults: { _controller: baseBundle:Annonce:delete }
+show_annonce:
+    path:     admin/show
+    defaults: { _controller: baseBundle:Annonce:show }
+update_annonce:
+    path:     admin/update/{id}
+    defaults: { _controller: baseBundle:Annonce:update }
+
+
+
+add_genre:
+    path:     admin/addGenre
+    defaults: { _controller: baseBundle:Genre:addGenre }
+show_genre:
+    path:     admin/show_genre
+    defaults: { _controller: baseBundle:Genre:showGenre }
+update_genre:
+    path:     admin/updateG/{id}
+    defaults: { _controller: baseBundle:Genre:updateGenre }
+delete_genre:
+    path:     admin/deleteG/{id}
+    defaults: { _controller: baseBundle:Genre:deleteGenre }
+
+
+Afficher_user:
+    path:     /afficher
+    defaults: { _controller: baseBundle:User:afficher }
+
+load_annonce:
+    path:     /load-annonce
+    defaults: { _controller: baseBundle:Admin:loaddata }
