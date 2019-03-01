@@ -6,7 +6,3 @@ livreur_login:
     path:     /livraison/login
     defaults: { _controller: livraisonBundle:livreur:login }
 
-livreur_index:
-    path:     /livraison/index
-    defaults: { _controller: livraisonBundle:livreur:index }
-

@@ -31,20 +31,15 @@
 
 <!-- Start your project here-->
 <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:256px;height:174px;"src="https://www.clocklink.com/html5embed.php?clock=046&timezone=Tunisia_Tunis&color=red&size=256&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=red"></iframe>
-<div class="card mb-3">
-    <div class="card-header">
-        <i class="fas fa-table"></i>
-        Your deliveries
-    </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
+
+            <table class="table table-light table-bordered"  id="dataTable" width="100%" cellspacing="0">
+                <thead class="bg-primary" style="color:white">
                 <tr>
                     <th>Livraison</th>
-                    <th>Commande</th>
+                    <th>Order</th>
                     <th>Reservation</th>
-                    <th>Detail commande</th>
+                    <th>Order details</th>
+                    <th>Delivery man</th>
                     <th>Price</th>
                     <th>State</th>
                 </tr>
@@ -55,24 +50,54 @@
                         <tr>
                             <td>{{ v.IdLivraison }}</td>
                             <td>
-                                <ul>
-                                    {% if not v.IdCommande is null  %}
-                                        <li>{{ v.IdCommande.IdClient.Username }}</li>
-                                        <li>{{ v.IdCommande.DateCmd|date('Y-m-d') }}</li>
-                                        <li>{{ v.IdCommande.Prix }}</li>
-                                    {% endif %}
-                                </ul>
+                                {% if not v.IdCommande is null  %}
+                                    <table class="table table-borderless">
+                                        <tr><th>Client name</th>
+                                            <td>{{ v.IdCommande.IdClient.Username }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Date</th>
+                                            <td>{{ v.IdCommande.DateCmd|date('Y-m-d') }}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Price</th>
+                                            <td>{{ v.IdCommande.Prix }}</td>
+
+                                        </tr>
+                                    </table>
+                                {% else %}
+                                    <b class="text-center">No order in this delivery</b>
+
+                                {% endif %}
                             </td>
                             <td>
-                                <ul>
-                                    {% if not v.IdReservation is null  %}
 
-                                        <li>{{ v.IdReservation.IdClient.Username }}</li>
-                                        <li>{{ v.IdReservation.DateDebut|date('Y-m-d') }}</li>
-                                        <li>{{ v.IdReservation.DateFin|date('Y-m-d')  }}</li>
-                                        <li>{{ v.IdReservation.Prix }}</li>
-                                    {% endif %}
-                                </ul>
+                                {% if not v.IdReservation is null  %}
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <th>Client name</th>
+                                            <td>{{ v.IdReservation.IdClient.Username }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Start date</th>
+                                            <td>{{ v.IdReservation.DateDebut|date('Y-m-d') }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>End date</th>
+                                            <td>{{ v.IdReservation.DateFin|date('Y-m-d')  }}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Price</th>
+                                            <td>{{ v.IdReservation.Prix }}</td>
+
+                                        </tr>
+                                    </table>
+                                {% else %}
+                                    <b class="text-center">No reservation in this delivery</b>
+                                {% endif %}
+
                             </td>
 
                             <td>
@@ -84,18 +109,31 @@
                                     {% if dcId ==cIDc %}
 
                                         {% if not dc.IdP is null  %}
-                                            <ul>
-                                                <li>{{ dc.IdP.Nom}}</li>
-                                                <li>{{ dc.IdP.Prix}}</li>
-                                            </ul>
-
+                                            <table class="table table-borderless">
+                                                <tr>
+                                                    <th>Product Name</th>
+                                                    <td>{{ dc.IdP.Nom}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Price</th>
+                                                    <td>{{ dc.IdP.Prix}}</td>
+                                                </tr>
+                                            </table>
                                         {% endif %}
                                         {% if not dc.IdM is null  %}
 
-                                            <ul>
-                                                <li>{{ dc.IdM.Nom }}</li>
-                                                <li>{{ dc.IdM.Prix }}</li>
-                                            </ul>
+                                            <table class="table table-borderless">
+                                                <tr>
+                                                    <th>Material name</th>
+                                                    <td>{{ dc.IdM.Nom }}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>Price</th>
+                                                    <td>{{ dc.IdM.Prix }}</td>
+
+                                                </tr>
+                                            </table>
 
                                         {% endif %}
 
@@ -103,17 +141,15 @@
 
                                 {% endfor %}
                             </td>
+                            <td>{{ v.IdLivreur.Nom }} {{ v.IdLivreur.Prenom }}</td>
                             <td>{{ v.Prix }}</td>
-                            <td>{{ v.Prix }}</td>
+                            <td>{{ v.Etat }}</td>
 
                         </tr>
                     {% endif %}
                 {% endfor %}
                 </tbody>
             </table>
-        </div>
-    </div>
-</div>
 
 
 <!-- /Start your project here-->
