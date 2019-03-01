@@ -33,3 +33,5 @@ fos_user:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+toiba_fullcalendar:
+    resource: "@FullCalendarBundle/Resources/config/routing.yaml"

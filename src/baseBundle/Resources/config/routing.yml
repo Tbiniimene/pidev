@@ -54,6 +54,15 @@ base_forming:
     path:     /base/forming
     defaults: { _controller: baseBundle:Default:forming}
 
+base_formingcalendar:
+    path:     /base/formingcalenderr
+    defaults: { _controller: baseBundle:Default:formingcalender}
+
+base_formationone:
+    path:     /{id}/showw
+    defaults: { _controller: baseBundle:Formation:showw}
+    methods:  GET
+
 base_login:
     path:     /base/login
     defaults: { _controller: baseBundle:Default:login}

@@ -83,7 +83,7 @@ class Formation
     private $nbmax;
     /**
      * @ORM\ManyToOne(targetEntity="Formateur")
-     * @ORM\JoinColumn(name="formateur_id",referencedColumnName="id_formateur" ,onDelete = "SET NULL")
+     * @ORM\JoinColumn(name="formateur_id",referencedColumnName="id_formateur" ,onDelete = "CASCADE")
      *
      */
     private $Formateur;
