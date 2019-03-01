@@ -29,6 +29,51 @@ class Livreur
     private $nom;
 
     /**
+     * @return string
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param string $login
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="login", type="string", length=255, nullable=false)
+     */
+    private $login;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     */
+    private $password;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=20, nullable=false)

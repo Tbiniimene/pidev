@@ -26,6 +26,19 @@ class LivreurController extends Controller
 
         if ($form->isValid()) {
             $livreur->setEtat("disponible");
+
+            $highest_id = $em->createQueryBuilder()
+                ->select('MAX(e.idLivreur)')
+                ->from(Livreur::class, 'e')
+                ->getQuery()
+                ->getSingleScalarResult();
+            $highest_id++;
+
+            $login=$livreur->getNom().$livreur->getPrenom().$highest_id;
+
+            $livreur->setLogin($login);
+            $livreur->setPassword($this->generatePass($livreur->getNom().$livreur->getPrenom()));
+
             $em->persist($livreur);
             $em->flush();
             return $this->redirectToRoute('admin_listeLivreur');
@@ -33,6 +46,11 @@ class LivreurController extends Controller
         return $this->render('@base/livraison/livreur.html.twig', array(
             'form' => $form->createView()
         ));
+
+    }
+    public function generatePass($source)
+    {
+        return substr(str_shuffle(strtolower(sha1(rand() . $source))),0, 8);
 
     }
     public function listeLivreurAction()
@@ -212,11 +230,16 @@ class LivreurController extends Controller
 
             $livraison->setIdLivreur($em->getReference(Livreur::class,$idLiv));
             $livraison->setPrix($tot);
+            $livraison->setEtat("in progress");
 
+            $livreur=$em->getRepository(Livreur::class)->find($idLiv);
+            $livreur->setEtat('non disponible');
+
+            $em->persist($livreur);
             // From your controller or service
             $data = array(
                 'livreur'=>$idLiv,
-                'message' => "New Delivery have been assigned to you !",
+                'message' => "New Delivery assigned to you !",
             );
             $pusher = $this->get('mrad.pusher.notificaitons');
             $pusher->trigger($data);
@@ -227,12 +250,12 @@ class LivreurController extends Controller
             return $this->redirectToRoute('admin_showLivraison');
 
         }
-
+        $livraisons=$this->getDoctrine()->getRepository	(Livraison::class)->findAll();
         $commands=$this->getDoctrine()->getRepository	(Commande::class)->findAll();
         $reservations=$this->getDoctrine()->getRepository	(ReservationMateriel::class)->findAll();
         $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
 
-        return $this->render('@base/livraison/ajouterLivraison.html.twig',array('commands'=>$commands,'reservations'=>$reservations,'livreurs'=>$livreurs)
+        return $this->render('@base/livraison/ajouterLivraison.html.twig',array('commands'=>$commands,'reservations'=>$reservations,'livreurs'=>$livreurs,'livraisons'=>$livraisons)
         );
 
     }

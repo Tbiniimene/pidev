@@ -2,6 +2,10 @@
 
 namespace livraisonBundle\Controller;
 
+use baseBundle\Entity\DetailCommande;
+use baseBundle\Entity\Livraison;
+use baseBundle\Entity\Livreur;
+use baseBundle\Entity\ReservationMateriel;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class livreurController extends Controller
@@ -13,12 +17,13 @@ class livreurController extends Controller
             $name=$_POST['username'];
             $pass=$_POST['pass'];
 
-            $data = array(
-                'name' => $name,
-                'pass'=>$pass
-            );
-            $pusher = $this->get('mrad.pusher.notificaitons');
-            $pusher->trigger($data);
+            $livreur=$this->getDoctrine()->getRepository(Livreur::class)->findOneBy(['login'=>$name,'password'=>$pass]);
+            $detailCommande=$this->getDoctrine()->getRepository	(DetailCommande::class)->findAll();
+            $ReservationMateriel=$this->getDoctrine()->getRepository	(ReservationMateriel::class)->findAll();
+            $livraisons = $this->getDoctrine()->getRepository	(Livraison::class)->findAll();
+
+            if($livreur)
+                return $this->render('@livraison/livreur/index.html.twig',array('idLivreur'=>$livreur->getIdLivreur(),'livraisons'=>$livraisons,'detailCmd'=>$detailCommande,'resMat'=>$ReservationMateriel));
 
             //check data base else render login route
 
