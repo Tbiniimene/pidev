@@ -27,12 +27,13 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
-                                <th>Livraison</th>
-                                <th>Commande</th>
+                                <th>Delivery</th>
+                                <th>Order</th>
                                 <th>Reservation</th>
-                                <th>Detail commande</th>
+                                <th>Order details</th>
                                 <th>Delivery man</th>
                                 <th>Price</th>
+                                <th>State</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -40,24 +41,54 @@
                                 <tr>
                                     <td>{{ v.IdLivraison }}</td>
                                     <td>
-                                        <ul>
                                             {% if not v.IdCommande is null  %}
-                                                <li>{{ v.IdCommande.IdClient.Username }}</li>
-                                                <li>{{ v.IdCommande.DateCmd|date('Y-m-d') }}</li>
-                                                <li>{{ v.IdCommande.Prix }}</li>
+                                        <table class="table table-borderless">
+                                            <tr><th>Client name</th>
+                                                <td>{{ v.IdCommande.IdClient.Username }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Date</th>
+                                                <td>{{ v.IdCommande.DateCmd|date('Y-m-d') }}</td>
+
+                                            </tr>
+                                            <tr>
+                                                <th>Price</th>
+                                                <td>{{ v.IdCommande.Prix }}</td>
+
+                                            </tr>
+                                        </table>
+                                            {% else %}
+                                                <b class="text-center">No order in this delivery</b>
+
                                             {% endif %}
-                                        </ul>
                                     </td>
                                     <td>
-                                        <ul>
-                                            {% if not v.IdReservation is null  %}
 
-                                            <li>{{ v.IdReservation.IdClient.Username }}</li>
-                                            <li>{{ v.IdReservation.DateDebut|date('Y-m-d') }}</li>
-                                            <li>{{ v.IdReservation.DateFin|date('Y-m-d')  }}</li>
-                                            <li>{{ v.IdReservation.Prix }}</li>
+                                            {% if not v.IdReservation is null  %}
+                                        <table class="table table-borderless">
+                                            <tr>
+                                                <th>Client name</th>
+                                                  <td>{{ v.IdReservation.IdClient.Username }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Start date</th>
+                                                <td>{{ v.IdReservation.DateDebut|date('Y-m-d') }}</td>
+                                            </tr>
+                                           <tr>
+                                               <th>End date</th>
+                                               <td>{{ v.IdReservation.DateFin|date('Y-m-d')  }}</td>
+
+                                           </tr>
+                                            <tr>
+                                                <th>Price</th>
+                                                <td>{{ v.IdReservation.Prix }}</td>
+
+                                            </tr>
+                                        </table>
+                                            {% else %}
+                                                <b class="text-center">No reservation in this delivery</b>
                                             {% endif %}
-                                        </ul>
+
                                     </td>
 
                                     <td>
@@ -69,18 +100,31 @@
                                             {% if dcId ==cIDc %}
 
                                                 {% if not dc.IdP is null  %}
-                                                    <ul>
-                                                        <li>{{ dc.IdP.Nom}}</li>
-                                                        <li>{{ dc.IdP.Prix}}</li>
-                                                    </ul>
-
+                                                    <table class="table table-borderless">
+                                                    <tr>
+                                                        <th>Product Name</th>
+                                                        <td>{{ dc.IdP.Nom}}</td>
+                                                    </tr>
+                                                        <tr>
+                                                        <th>Price</th>
+                                                        <td>{{ dc.IdP.Prix}}</td>
+                                                        </tr>
+                                                    </table>
                                                 {% endif %}
                                                 {% if not dc.IdM is null  %}
 
-                                                    <ul>
-                                                        <li>{{ dc.IdM.Nom }}</li>
-                                                        <li>{{ dc.IdM.Prix }}</li>
-                                                    </ul>
+                                                    <table class="table table-borderless">
+                                                        <tr>
+                                                            <th>Material name</th>
+                                                            <td>{{ dc.IdM.Nom }}</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Price</th>
+                                                            <td>{{ dc.IdM.Prix }}</td>
+
+                                                        </tr>
+                                                    </table>
 
                                                 {% endif %}
 
