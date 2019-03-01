@@ -46,7 +46,7 @@ class FullCalendarListener
 
             // this create the events with your own entity (here booking entity) to populate calendar
             $bookingEvent = new Event(
-                $formation->getIdFormation(),
+                $formation->getNom(),
                 $formation->getDateDeb(),
                 $formation->getDateFin() // If the end date is null or not defined, it creates a all day event
             );
