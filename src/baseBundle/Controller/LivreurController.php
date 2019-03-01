@@ -254,8 +254,9 @@ class LivreurController extends Controller
         $commands=$this->getDoctrine()->getRepository	(Commande::class)->findAll();
         $reservations=$this->getDoctrine()->getRepository	(ReservationMateriel::class)->findAll();
         $livreurs = $this->getDoctrine()->getRepository	(Livreur::class)->findAll();
+        $dispos = $this->getDoctrine()->getRepository	(Disponibilite::class)->findAll();
 
-        return $this->render('@base/livraison/ajouterLivraison.html.twig',array('commands'=>$commands,'reservations'=>$reservations,'livreurs'=>$livreurs,'livraisons'=>$livraisons)
+        return $this->render('@base/livraison/ajouterLivraison.html.twig',array('dispos'=>$dispos,'commands'=>$commands,'reservations'=>$reservations,'livreurs'=>$livreurs,'livraisons'=>$livraisons)
         );
 
     }

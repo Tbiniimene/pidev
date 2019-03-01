@@ -23,20 +23,34 @@
 
             {% for liv in livreurs %}
                 {% if liv.Etat=="disponible"%}
-                     data=getLatLng('{{ liv.localisation }}');
-                     nom="{{ liv.Nom }}";
-                     prenom="{{ liv.Prenom }}";
-                     tel="{{ liv.Tel }}";
-                     descrip="<h3>Delivery man description</h3>Name: <b>"+nom+"</b><br/>Last name: <b>"+prenom+"</b><br/>Phone number: <b>"+tel+"</b>";
-                    titLatLng={
-                        tit:data[0],
-                        lat:data[1],
-                        lng:data[2],
-                        desc:descrip
-                    };
+                     {% set verif="true" %}
+                        {% for disp in dispos %}
+                            {% if disp.IdLivreur.IdLivreur==liv.IdLivreur %}
+                                    let disp='{{ disp.DateDispo }}';
+                                    let currDay=new Date().getDay();
+                                    if(disp.indexOf(currDay)!=-1)
+                                    {
+                                        {% set verif="false" %}
+                                    }
+                            {% endif %}
+                        {% endfor %}
+                {% if verif=="true" %}
+                         data=getLatLng('{{ liv.localisation }}');
+                         nom="{{ liv.Nom }}";
+                         prenom="{{ liv.Prenom }}";
+                         tel="{{ liv.Tel }}";
+                         descrip="<h3>Delivery man description</h3>Name: <b>"+nom+"</b><br/>Last name: <b>"+prenom+"</b><br/>Phone number: <b>"+tel+"</b>";
+                        titLatLng={
+                            tit:data[0],
+                            lat:data[1],
+                            lng:data[2],
+                            desc:descrip
+                        };
 
-                    livsTab.push(titLatLng);
+                        livsTab.push(titLatLng);
+
                 {% endif %}
+            {% endif %}
             locLivs.push(
                             {
                                 id:{{ liv.IdLivreur}},
