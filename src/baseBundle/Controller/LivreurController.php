@@ -230,7 +230,7 @@ class LivreurController extends Controller
 
             $livraison->setIdLivreur($em->getReference(Livreur::class,$idLiv));
             $livraison->setPrix($tot);
-            $livraison->setEtat("in progress");
+            $livraison->setEtat("pending");
 
             $livreur=$em->getRepository(Livreur::class)->find($idLiv);
             $livreur->setEtat('non disponible');
@@ -239,7 +239,7 @@ class LivreurController extends Controller
             // From your controller or service
             $data = array(
                 'livreur'=>$idLiv,
-                'message' => "New Delivery assigned to you !",
+                'message' => "New Delivery assigned to you !"
             );
             $pusher = $this->get('mrad.pusher.notificaitons');
             $pusher->trigger($data);

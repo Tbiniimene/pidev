@@ -6,3 +6,11 @@ livreur_login:
     path:     /livraison/login
     defaults: { _controller: livraisonBundle:livreur:login }
 
+livreur_notif:
+    path:     /livraison/notif/{id}
+    defaults: { _controller: livraisonBundle:livreur:notif }
+
+livreur_confirm:
+    path:     /livraison/confirm/{id}
+    defaults: { _controller: livraisonBundle:livreur:confirm }
+

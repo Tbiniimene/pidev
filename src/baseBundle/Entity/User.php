@@ -28,6 +28,28 @@ class User extends BaseUser
      * @ORM\Column(name="cin", type="integer", nullable=false)
      */
     private $cin;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string",length=255, nullable=false)
+     */
+    private $adresse;
+
+    /**
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * @param string $adresse
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+    }
 
     /**
      * @return int

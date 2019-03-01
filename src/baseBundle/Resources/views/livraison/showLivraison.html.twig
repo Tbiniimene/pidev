@@ -46,6 +46,9 @@
                                             <tr><th>Client name</th>
                                                 <td>{{ v.IdCommande.IdClient.Username }}</td>
                                             </tr>
+                                            <tr><th>Address</th>
+                                                <td>{{ v.IdCommande.IdClient.Adresse }}</td>
+                                            </tr>
                                             <tr>
                                                 <th>Date</th>
                                                 <td>{{ v.IdCommande.DateCmd|date('Y-m-d') }}</td>
@@ -68,7 +71,11 @@
                                         <table class="table table-borderless">
                                             <tr>
                                                 <th>Client name</th>
-                                                  <td>{{ v.IdReservation.IdClient.Username }}</td>
+                                                <td>{{ v.IdReservation.IdClient.Username }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Address</th>
+                                                <td>{{ v.IdReservation.IdClient.Adresse }}</td>
                                             </tr>
                                             <tr>
                                                 <th>Start date</th>
@@ -134,9 +141,16 @@
                                     </td>
                                     <td>{{ v.IdLivreur.Nom }} {{ v.IdLivreur.Prenom }}</td>
                                     <td>{{ v.Prix }}</td>
-                                    <td>{{ v.Etat }}</td>
 
-                                </tr>
+                                    {% if v.Etat=="in progress" %}
+                                    <td><b class="badge badge-warning" style="font-size: 15px">{{ v.Etat }}</b></td>
+                                    {% elseif v.Etat=="delivered" %}
+                                        <td><b class="badge badge-success" style="font-size: 15px">{{ v.Etat }}</b></td>
+                                    {% else %}
+                                        <td><b class="badge badge-info" style="font-size: 15px">{{ v.Etat }}</b></td>
+                                    {% endif %}
+
+                                    </tr>
                             {% endfor %}
                             </tbody>
                         </table>

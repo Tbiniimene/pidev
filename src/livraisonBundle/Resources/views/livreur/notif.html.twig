@@ -1,0 +1,191 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('livreur/MDB-notifications/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{ asset('livreur/MDB-notifications/css/mdb.min.css') }}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+
+</head>
+
+<style>
+        body{
+            width: 100%;
+            height: 100%;
+            background: url("{{ asset("livreur/images/bg.jpg") }}") no-repeat;
+            background-size: cover;
+
+
+            /* fallback for old browsers */
+            /*background: -webkit-linear-gradient(to right, #34495e, #bdc3c7);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to bottom, #192a56,#273c75 ); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+        }
+
+    </style>
+
+
+
+<body>
+
+<div class="container">
+    <br/>
+    <div>
+        <h1 style="color:white"><b>Your new delivery !</b></h1>
+
+    </div>
+    <br/>
+    <table class="table table-bordered table-light" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+        <tr class="bg-info" style="color:white">
+            <th>Delivery</th>
+            <th>Order</th>
+            <th>Reservation</th>
+            <th>Order details</th>
+            <th>Price</th>
+            <th>State</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% set v=livraison %}
+            <tr>
+                <td>{{ v.IdLivraison }}</td>
+                <td>
+                    {% if not v.IdCommande is null  %}
+                        <table class="table table-borderless">
+                            <tr><th>Client name</th>
+                                <td>{{ v.IdCommande.IdClient.Username }}</td>
+                            </tr>
+                            <tr><th>Address</th>
+                                <td>{{ v.IdCommande.IdClient.Adresse }}</td>
+                            </tr>
+                            <tr>
+                                <th>Date</th>
+                                <td>{{ v.IdCommande.DateCmd|date('Y-m-d') }}</td>
+
+                            </tr>
+                            <tr>
+                                <th>Price</th>
+                                <td>{{ v.IdCommande.Prix }}</td>
+
+                            </tr>
+                        </table>
+                    {% else %}
+                        <b class="text-center">No order in this delivery</b>
+
+                    {% endif %}
+                </td>
+                <td>
+
+                    {% if not v.IdReservation is null  %}
+                        <table class="table table-borderless">
+                            <tr>
+                                <th>Client name</th>
+                                <td>{{ v.IdReservation.IdClient.Username }}</td>
+                            </tr>
+                            <tr>
+                                <th>Address</th>
+                                <td>{{ v.IdReservation.IdClient.Adresse }}</td>
+                            </tr>
+                            <tr>
+                                <th>Start date</th>
+                                <td>{{ v.IdReservation.DateDebut|date('Y-m-d') }}</td>
+                            </tr>
+                            <tr>
+                                <th>End date</th>
+                                <td>{{ v.IdReservation.DateFin|date('Y-m-d')  }}</td>
+
+                            </tr>
+                            <tr>
+                                <th>Price</th>
+                                <td>{{ v.IdReservation.Prix }}</td>
+
+                            </tr>
+                        </table>
+                    {% else %}
+                        <b class="text-center">No reservation in this delivery</b>
+                    {% endif %}
+
+                </td>
+
+                <td>
+                    {% for dc in detailCmd %}
+
+                        {% set dcId=dc.IdDc|number_format %}
+                        {% set cIDc=v.IdCommande.IdDc.IdDc|number_format %}
+
+                        {% if dcId ==cIDc %}
+
+                            {% if not dc.IdP is null  %}
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <th>Product Name</th>
+                                        <td>{{ dc.IdP.Nom}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Price</th>
+                                        <td>{{ dc.IdP.Prix}}</td>
+                                    </tr>
+                                </table>
+                            {% endif %}
+                            {% if not dc.IdM is null  %}
+
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <th>Material name</th>
+                                        <td>{{ dc.IdM.Nom }}</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th>Price</th>
+                                        <td>{{ dc.IdM.Prix }}</td>
+
+                                    </tr>
+                                </table>
+
+                            {% endif %}
+
+                        {% endif %}
+
+                    {% endfor %}
+                </td>
+                <td>{{ v.Prix }}</td>
+                <td>{{ v.Etat }}</td>
+
+            </tr>
+        <tr>
+            <td colspan="6" class="text-center"><a href="{{ path('livreur_confirm',{'id':livraison.IdLivraison}) }}" class="btn btn-success">Delivered</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<!-- /Start your project here-->
+
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="{{ asset('livreur/MDB-notifications/js/jquery-3.3.1.min.js') }}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{{ asset('livreur/MDB-notifications/js/popper.min.js') }}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{{ asset('livreur/MDB-notifications/js/bootstrap.min.js') }}"></script>
+<!-- MDB core JavaScript -->
+
+<script>
+    $(document).ready(function()
+    {
+
+    });
+
+</script>
+</body>
+
+
+</html>
