@@ -35,8 +35,6 @@ class EventController extends Controller
         if ($form->isValid()) {
             //6-creation de l'entity manager
             $em = $this->getDoctrine()->getManager();
-            $event->setDateDeb(new \DateTime());
-            $event->setDateFin(new \DateTime());
 
             $dest='Uploads/Event/'.$event->getNom().'.jpg';
             $img=$event->getImg();
@@ -170,7 +168,6 @@ class EventController extends Controller
     public function myStandAction()
     {
         $aa = $this->getDoctrine()->getRepository(ParticipantsEvenement::class)->findAll();
-
         return $this->render('@base/event/myStand.html.twig', array(
             'aa' => $aa
         ));
