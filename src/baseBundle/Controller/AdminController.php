@@ -48,6 +48,21 @@ class AdminController extends Controller
     {
         return $this->render('@base/Admin/tables.html.twig');
     }
+    public function loaddataAction()
+    {
+        $annonces = $this->getDoctrine ()->getRepository ( 'baseBundle:Annonce' )->findAll ();
+        $data = [];
+        foreach ($annonces as $k => $item) {
+            //$data[$k] = $item->getNom();
+            array_push ($data, array('label'=>$item->getNom(), 'value'=>$item->getIdAnnonce()));
+        }
+        $response = array(
+            'message' => 'success',
+            'errors' => null,
+            'result' => $data
+        );
 
+        return new JsonResponse( $response, 200 );
+    }
 
 }

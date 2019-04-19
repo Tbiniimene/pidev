@@ -1,0 +1,49 @@
+{% extends '@base/admin/base.html.twig' %}
+{% block title %}Admin - Articles{% endblock %}
+{% block body %}
+    <!-- Page Content -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+           Articles list
+        </div>
+        <div class="card-body">
+            <div class="table-responsive table-hover">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <tbody>
+
+                    <tr>
+                        <td>nom : </td>
+                        <td>{{ form_widget(form.nom) }}</td>
+                    </tr>
+                    <tr>
+                        <td>date : </td>
+                        <td>{{ form_widget(form.date) }}</td>
+                    </tr>
+                    <tr>
+                        <td>description: </td>
+
+                        {{ form_label(form.description) }}
+                        {{ form_errors(form.description) }}
+                        {{ form_widget(form.description) }}
+
+
+                        <td>{{ form_widget(form.description) }}</td>
+                    </tr>
+                    <tr>
+                        <td>titre: </td>
+                        <td>{{ form_widget(form.titre) }}</td>
+                    </tr>
+                    <tr>
+                        <td>image : </td>
+                        <td>{{ form_widget(form.file) }}</td>
+                    </tr>
+
+                </table>
+                <br>
+                <center><button class="btn btn-primary" type="submit">update</button></center>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

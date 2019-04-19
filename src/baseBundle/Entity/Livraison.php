@@ -29,6 +29,30 @@ class Livraison
     private $prix;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="etat", type="string", length=30, nullable=false)
+     */
+    private $etat;
+
+    /**
+     * @return string
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param string $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
+
+
+    /**
      * @var \Livreur
      *
      * @ORM\ManyToOne(targetEntity="Livreur")

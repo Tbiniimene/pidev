@@ -19,19 +19,189 @@
         body{
             width: 100%;
             height: 100%;
-            background: #141E30;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, black, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, black, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: url("{{ asset("livreur/images/bg.jpg") }}") no-repeat;
+            background-size: cover;
+
+
+            /* fallback for old browsers */
+            /*background: -webkit-linear-gradient(to right, #34495e, #bdc3c7);  !* Chrome 10-25, Safari 5.1-6 *!*/
+            /*background: linear-gradient(to bottom, #192a56,#273c75 ); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
         }
+        .notification {
+
+            color: white;
+            text-decoration: none;
+            padding: 15px 26px;
+            position: relative;
+            display: inline-block;
+            border-radius: 2px;
+            margin: 2%;
+        }
+
+        .notification:hover {
+            background: #f1f8e9;
+        }
+
+        .notification .badge {
+            position: absolute;
+            top: 3px;
+            right: 10px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background: red;
+            color: white;
+        }
     </style>
+
+
+
 <body>
 {# Call NotificationsBundles's assets #}
 {{ notifications_assets() }}
 
 <!-- Start your project here-->
-<iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:256px;height:174px;"src="https://www.clocklink.com/html5embed.php?clock=046&timezone=Tunisia_Tunis&color=red&size=256&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=red"></iframe>
+<a href="{{ path('livreur_notif',{'id':idLivreur}) }}" onclick="$('.notification').hide('fast');" class="notification float-right">
+    <i class="fa fa-bell" style="font-size:36px"></i>
+    <span class="badge">1</span>
+</a>
+
+<iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:256px;height:174px;"src="https://www.clocklink.com/html5embed.php?clock=046&timezone=Tunisia_Tunis&color=blue&size=256&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=red"></iframe>
+<br/>
+<div class="container">
+            <table class="table table-light table-bordered"  id="dataTable" width="100%" cellspacing="0">
+                <thead class="bg-dark" style="color:white">
+                <tr>
+                    <th>Livraison</th>
+                    <th>Order</th>
+                    <th>Reservation</th>
+                    <th>Order details</th>
+                    <th>Price</th>
+                    <th>State</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for v in livraisons %}
+                    {% if v.IdLivreur.IdLivreur==idLivreur %}
+                        <tr>
+                            <td>{{ v.IdLivraison }}</td>
+                            <td>
+                                {% if not v.IdCommande is null  %}
+                                    <table class="table table-borderless">
+                                        <tr><th>Client name</th>
+                                            <td>{{ v.IdCommande.IdClient.Username }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Adress</th>
+                                            <td>{{ v.IdCommande.IdClient.Adresse }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Date</th>
+                                            <td>{{ v.IdCommande.DateCmd|date('Y-m-d') }}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Price</th>
+                                            <td>{{ v.IdCommande.Prix }}</td>
+
+                                        </tr>
+                                    </table>
+                                {% else %}
+                                    <b class="text-center">No order in this delivery</b>
+
+                                {% endif %}
+                            </td>
+                            <td>
+
+                                {% if not v.IdReservation is null  %}
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <th>Client name</th>
+                                            <td>{{ v.IdReservation.IdClient.Username }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Adress</th>
+                                            <td>{{ v.IdReservation.IdClient.Adresse }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Start date</th>
+                                            <td>{{ v.IdReservation.DateDebut|date('Y-m-d') }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>End date</th>
+                                            <td>{{ v.IdReservation.DateFin|date('Y-m-d')  }}</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th>Price</th>
+                                            <td>{{ v.IdReservation.Prix }}</td>
+
+                                        </tr>
+                                    </table>
+                                {% else %}
+                                    <b class="text-center">No reservation in this delivery</b>
+                                {% endif %}
+
+                            </td>
+
+                            <td>
+                                {% for dc in detailCmd %}
+
+                                    {% set dcId=dc.IdDc|number_format %}
+                                    {% set cIDc=v.IdCommande.IdDc.IdDc|number_format %}
+
+                                    {% if dcId ==cIDc %}
+
+                                        {% if not dc.IdP is null  %}
+                                            <table class="table table-borderless">
+                                                <tr>
+                                                    <th>Product Name</th>
+                                                    <td>{{ dc.IdP.Nom}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Price</th>
+                                                    <td>{{ dc.IdP.Prix}}</td>
+                                                </tr>
+                                            </table>
+                                        {% endif %}
+                                        {% if not dc.IdM is null  %}
+
+                                            <table class="table table-borderless">
+                                                <tr>
+                                                    <th>Material name</th>
+                                                    <td>{{ dc.IdM.Nom }}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>Price</th>
+                                                    <td>{{ dc.IdM.Prix }}</td>
+
+                                                </tr>
+                                            </table>
+
+                                        {% endif %}
+
+                                    {% endif %}
+
+                                {% endfor %}
+                            </td>
+                            <td>{{ v.Prix }}</td>
+                            {% if v.Etat=="in progress" %}
+                                <td><b class="badge badge-warning" style="font-size: 15px">{{ v.Etat }}</b></td>
+                            {% elseif v.Etat=="delivered" %}
+                                <td><b class="badge badge-success" style="font-size: 15px">{{ v.Etat }}</b></td>
+                            {% else %}
+                                <td><b class="badge badge-info" style="font-size: 15px">{{ v.Etat }}</b></td>
+                            {% endif %}
+                         </tr>
+                    {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+
+</div>
 <!-- /Start your project here-->
+
 
 <!-- SCRIPTS -->
 <!-- JQuery -->
@@ -64,26 +234,20 @@
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
         };
-        /**
-         * After calling notifications_assets() "pusher" is now available
-         * and you can use it this way
-         */
+         $(".notification").hide();
 
-            // select the channel you want to listen to
+        var currLiv={{ idLivreur }};
+        // select the channel you want to listen to
         var channel = pusher.subscribe("notifications");// notifications channel
         channel.bind("my-event", function(data) {
-
-
-            toastr["info"](data['livreur'],data['message']);
-
-
-            
-            /*
-            var channel = pusher.subscribe("messages");// messages channel
-            channel.bind("my-event", function(data) {
-                console.log('from messages channel', data);
-            });
-            */
+            var dataLiv=data['livreur'];
+            var  dataMsg=data['message'];
+            var title="New Delivery";
+            if(dataLiv==currLiv)
+            {
+                toastr["info"](dataMsg,title);
+                $(".notification").show("slow");
+            }
         });
     });
 

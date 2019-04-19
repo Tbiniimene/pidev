@@ -1496,6 +1496,71 @@
         ]
     },
     {
+        "name": "nomaya/social-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "Nomaya/SocialBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nomayann/NomayaSocialButtonsBundle.git",
+            "reference": "5a8a24954189e6f2d39368f755498bc2e13e0e6f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nomayann/NomayaSocialButtonsBundle/zipball/5a8a24954189e6f2d39368f755498bc2e13e0e6f",
+            "reference": "5a8a24954189e6f2d39368f755498bc2e13e0e6f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2",
+            "twig/twig": "*"
+        },
+        "require-dev": {
+            "matthiasnoback/symfony-config-test": "0.*",
+            "symfony/framework-bundle": ">=2.1"
+        },
+        "time": "2016-01-28T15:39:34+00:00",
+        "type": "symfony-bundle",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Nomaya\\SocialBundle\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Yann Chauvel",
+                "email": "yann@nomaya.net",
+                "homepage": "http://www.nomaya.net/"
+            }
+        ],
+        "description": "A bundle to easily add facebook, twitter, G+, Linkedin buttons to your templates",
+        "homepage": "http://github.com/nomayann/NomayaSocialButtonsBundle",
+        "keywords": [
+            "Symfony2",
+            "bundle",
+            "buttons",
+            "facebook",
+            "google plus",
+            "like",
+            "linkedin",
+            "share",
+            "social",
+            "symfony",
+            "symfony2bundle",
+            "twitter"
+        ]
+    },
+    {
         "name": "paragonie/random_compat",
         "version": "v2.0.18",
         "version_normalized": "2.0.18.0",
@@ -2986,6 +3051,61 @@
         ]
     },
     {
+        "name": "toiba/fullcalendar-bundle",
+        "version": "v6.2.4",
+        "version_normalized": "6.2.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/toiba/FullCalendarBundle.git",
+            "reference": "d8b22cc3a159819fa2a4bbd1c7aad026c6bbad74"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/toiba/FullCalendarBundle/zipball/d8b22cc3a159819fa2a4bbd1c7aad026c6bbad74",
+            "reference": "d8b22cc3a159819fa2a4bbd1c7aad026c6bbad74",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.5|^7.0",
+            "symfony/framework-bundle": "^3.4|^4.0"
+        },
+        "require-dev": {
+            "phpspec/phpspec": "^2.5"
+        },
+        "time": "2018-08-09T18:06:32+00:00",
+        "type": "symfony-bundle",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Toiba\\FullCalendarBundle\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Rebeca Mora Anca",
+                "email": "anca.rebeca@gmail.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Théo Attali",
+                "email": "theoattali@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Symfony integration of FullCalendar.js library. Events can be stored with Doctrine, MongoDB, CouchDB and others",
+        "homepage": "https://github.com/toiba/FullCalendarBundle",
+        "keywords": [
+            "calendar",
+            "fullcalendar",
+            "jquery calendar",
+            "symfony calendar"
+        ]
+    },
+    {
         "name": "twig/twig",
         "version": "v1.37.1",
         "version_normalized": "1.37.1.0",
@@ -3051,61 +3171,6 @@
         "homepage": "https://twig.symfony.com",
         "keywords": [
             "templating"
-        ]
-    },
-    {
-        "name": "toiba/fullcalendar-bundle",
-        "version": "v6.2.4",
-        "version_normalized": "6.2.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/toiba/FullCalendarBundle.git",
-            "reference": "d8b22cc3a159819fa2a4bbd1c7aad026c6bbad74"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/toiba/FullCalendarBundle/zipball/d8b22cc3a159819fa2a4bbd1c7aad026c6bbad74",
-            "reference": "d8b22cc3a159819fa2a4bbd1c7aad026c6bbad74",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.5|^7.0",
-            "symfony/framework-bundle": "^3.4|^4.0"
-        },
-        "require-dev": {
-            "phpspec/phpspec": "^2.5"
-        },
-        "time": "2018-08-09T18:06:32+00:00",
-        "type": "symfony-bundle",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Toiba\\FullCalendarBundle\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Rebeca Mora Anca",
-                "email": "anca.rebeca@gmail.com",
-                "role": "Developer"
-            },
-            {
-                "name": "Théo Attali",
-                "email": "theoattali@gmail.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Symfony integration of FullCalendar.js library. Events can be stored with Doctrine, MongoDB, CouchDB and others",
-        "homepage": "https://github.com/toiba/FullCalendarBundle",
-        "keywords": [
-            "calendar",
-            "fullcalendar",
-            "jquery calendar",
-            "symfony calendar"
         ]
     }
 ]

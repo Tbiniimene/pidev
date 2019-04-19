@@ -13,22 +13,44 @@
             var tel;
             var descrip;
 
+            if( $("#cmd  >tbody >tr").length==0)
+                $("#cmd > tbody ").append(" <tr><td colspan='4' class='text-center'>All orders have been affected !</td></tr>");
+
+            if( $("#rese  >tbody >tr").length==0)
+                $("#rese > tbody ").append(" <tr><td colspan='4' class='text-center'>All reservations have been affected !</td></tr>");
+
+
+
             {% for liv in livreurs %}
                 {% if liv.Etat=="disponible"%}
-                     data=getLatLng('{{ liv.localisation }}');
-                     nom="{{ liv.Nom }}";
-                     prenom="{{ liv.Prenom }}";
-                     tel="{{ liv.Tel }}";
-                     descrip="<h3>Delivery man description</h3>Name: <b>"+nom+"</b><br/>Last name: <b>"+prenom+"</b><br/>Phone number: <b>"+tel+"</b>";
-                    titLatLng={
-                        tit:data[0],
-                        lat:data[1],
-                        lng:data[2],
-                        desc:descrip
-                    };
+                     {% set verif="true" %}
+                        {% for disp in dispos %}
+                            {% if disp.IdLivreur.IdLivreur==liv.IdLivreur %}
+                                    let disp='{{ disp.DateDispo }}';
+                                    let currDay=new Date().getDay();
+                                    if(disp.indexOf(currDay)!=-1)
+                                    {
+                                        {% set verif="false" %}
+                                    }
+                            {% endif %}
+                        {% endfor %}
+                {% if verif=="true" %}
+                         data=getLatLng('{{ liv.localisation }}');
+                         nom="{{ liv.Nom }}";
+                         prenom="{{ liv.Prenom }}";
+                         tel="{{ liv.Tel }}";
+                         descrip="<h3>Delivery man description</h3>Name: <b>"+nom+"</b><br/>Last name: <b>"+prenom+"</b><br/>Phone number: <b>"+tel+"</b>";
+                        titLatLng={
+                            tit:data[0],
+                            lat:data[1],
+                            lng:data[2],
+                            desc:descrip
+                        };
 
-                    livsTab.push(titLatLng);
+                        livsTab.push(titLatLng);
+
                 {% endif %}
+            {% endif %}
             locLivs.push(
                             {
                                 id:{{ liv.IdLivreur}},
@@ -123,7 +145,7 @@
                 <br>
                 <div  class="row">
                     <div class="col-6" >
-                        <table class="table table-hover table-secondary">
+                        <table class="table table-hover table-secondary" id="cmd">
                             <thead>
                                 <th>Choose</th>
 
@@ -133,23 +155,34 @@
                             </thead>
                             <tbody>
                             {% for com in commands %}
+                                {% set verif="false" %}
 
-                            <tr>
-                                <td><center><input type="radio" value="{{ com.IdCommandeP }}" onclick="calculTot(this,'com',{{ com.Prix }})" name="cr" class="form-control w-25" /></center></td>
-                                <td>{{ com.IdClient.Username }}</td>
-                                <td>{{ com.DateCmd|date('Y-m-d') }}</td>
-                                <td>{{ com.Prix }}</td>
-                            </tr>
+                                {% for liv in livraisons %}
+                                    {% if liv.IdCommande %}
+                                        {% if liv.IdCommande.IdCommandeP==com.IdCommandeP %}
+                                            {% set verif="true" %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if verif=="false"  %}
+                                    <tr>
+                                        <td><center><input type="radio" value="{{ com.IdCommandeP }}" onclick="calculTot(this,'com',{{ com.Prix }})" name="cr" class="form-control w-25" /></center></td>
+                                        <td>{{ com.IdClient.Username }}</td>
+                                        <td>{{ com.DateCmd|date('Y-m-d') }}</td>
+                                        <td>{{ com.Prix }}</td>
+                                    </tr>
+                                {% endif %}
                             {% endfor %}
+
                             </tbody>
                         </table>
                     </div>
                     <div class="form-group col-5 text-center">
-                        <button class="btn btn-secondary btn-block" type="button" style="color:white;" data-toggle="collapse" data-target="#demo3">
+                        <button class="btn btn-secondary btn-block" type="button" style="color:white;" data-toggle="collapse" data-target="#res">
                             Booking
                         </button>
-                        <div id="demo3" class="collapse">
-                            <table class="table table-hover">
+                        <div id="res" class="collapse">
+                            <table class="table table-hover" id="rese">
                                 <thead>
                                 <th>Choose</th>
 
@@ -160,15 +193,27 @@
                                 </thead>
                                 <tbody>
                                 {% for res in reservations %}
-                                <tr>
-                                    <td><center><input type="radio" value="{{ res.IdRes }}" onclick="calculTot(this,'res',{{ res.Prix }})" name="rr" class="form-control w-25" /></center></td>
-                                    <td>{{ res.IdClient.Username }}</td>
-                                    <td>{{ res.DateDebut|date('Y-m-d') }}</td>
-                                    <td>{{ res.DateFin|date('Y-m-d') }}</td>
-                                    <td>{{ res.Prix }}</td>
+                                    {% set verif="false" %}
+                                    {% for liv in livraisons %}
+                                        {% if liv.IdReservation %}
+                                            {% if res.IdRes==liv.IdReservation.IdRes %}
+                                                {% set verif="true" %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% if verif=="false"  %}
+                                        <tr>
+                                            <td><center><input type="radio" value="{{ res.IdRes }}" onclick="calculTot(this,'res',{{ res.Prix }})" name="rr" class="form-control w-25" /></center></td>
+                                            <td>{{ res.IdClient.Username }}</td>
 
-                                </tr>
+                                            <td>{{ res.Prix }}</td>
+
+                                        </tr>
+
+                                    {% endif %}
                                 {% endfor %}
+
+
                                 </tbody>
                             </table>
                             <br>
