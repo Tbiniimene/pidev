@@ -36,10 +36,10 @@ class EventController extends Controller
             //6-creation de l'entity manager
             $em = $this->getDoctrine()->getManager();
 
-            $dest='Uploads/Event/'.$event->getNom().'.jpg';
+            $dest=$event->getNom().'.jpg';
             $img=$event->getImg();
             $event->setImg($dest);
-            copy($img,$dest);
+            copy($img,'Uploads/Event/'.$dest);
 
             //7-persister les donnes dans L'ORM (doctrine)
             $em->persist($event);
@@ -68,10 +68,10 @@ class EventController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
             $em = $this->getDoctrine()->getManager();
-            $dest='Uploads/Event/'.$event->getNom().'.jpg';
+            $dest=$event->getNom().'.jpg';
             $img=$event->getImg();
             $event->setImg($dest);
-            copy($img,$dest);
+            copy($img,'Uploads/Event/'.$dest);
             unlink($img);
             $em->persist($event);
             $em->flush();
